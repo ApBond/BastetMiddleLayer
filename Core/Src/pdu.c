@@ -17,7 +17,7 @@ const int corstrainMaxPoint = 1706;
 
 const float baseLenght = 0.94;
 const int maxSpeed = 3;
-const float maxRotate = 0.78539816;
+const float maxRotate = 1;
 const float maxCourse = 0.78539816*2;
 
 uint8_t sbusData[BUFF_SIZE];
@@ -201,17 +201,16 @@ rcCommand_t normaliz(int course, int speed, int rotate, int corstrain, uint8_t e
 	if (fabs(corstrain)<20) corstrain=0;
 
 	generalGam=rotate*maxRotate/(rotateMaxPoint-rotateZeroPoint);
-	command.R=baseLenght/2/tan(generalGam);
-	if (fabs(command.R)<0.1) command.R=0.1*sign(command.R);//минимальный радиус поворота
-	if (fabs(command.R)>50) command.R=16000;
+	command.wz=generalGam;
+	//if (fabs(command.wz)<0.05) command.wz=0.05*sign(command.wz);//минимальный радиус поворота
+	//if (fabs(command.wz)>50) command.wz=16000;
 
-	command.V=(speed)/((float)(speedMaxPoint-speedZeroPoint));
+	command.Vx=(speed)/((float)(speedMaxPoint-speedZeroPoint));
 	vel_coef=(corstrain/((float)(corstrainMaxPoint-corstrainZeroPoint)));
-	command.V=command.V*vel_coef*maxSpeed;
+	command.Vx=command.Vx*vel_coef*maxSpeed;
 
-	command.gam=(course*maxCourse)/((float)(courseMaxPoint-courseZeroPoint));
-	if (fabs(command.gam)<0.01) command.gam=0;
-	if (command.gam!=0) command.R=16000;
+	command.Vy=(course)/((float)(courseMaxPoint-courseZeroPoint));
+	command.Vy=command.Vy*vel_coef*maxSpeed;
 	return command;
 }
 

@@ -134,17 +134,15 @@ int main(void)
 				}
 				if(changedChannels->motionControlChanged)
 				{
-					temp=(int16_t)((float)(command.V*2048));
+					temp=(int16_t)((float)(command.Vx*2048));
 					sendData[0]=temp&0x00FF;
 					sendData[1]=(temp>>8);
-					temp = (int16_t)((float)command.gam*2048);
+					temp = (int16_t)((float)command.Vy*2048);
 					sendData[2]=temp&0x00FF;
 					sendData[3]=(temp>>8);
-					tmpR = (int32_t)((float)command.R*65535);
-					sendData[4]=tmpR & 0x000000FF;
-					sendData[5]=(tmpR & 0x0000FF00)>>8;
-					sendData[6]=(tmpR & 0x00FF0000)>>16;
-					sendData[7]=(tmpR & 0xFF000000)>>24;
+					tmpR = (int32_t)((float)command.wz*2048);
+					sendData[4]=tmpR & 0x00FF;
+					sendData[5]=tmpR >> 8;
 					canWrite(sendData,8,0x02);
 				}
 			}

@@ -48,9 +48,9 @@ typedef struct
 
 typedef struct
 {
-    float V;
-    float R;
-    float gam;
+    float Vx;
+    float Vy;
+    float wz;
 } rcCommand_t;
 
 void sbusInit(uint32_t coreFreq, uint32_t baudRate);
