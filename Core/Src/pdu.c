@@ -28,8 +28,6 @@ static PDU_Changed_Channels_t changedChannels;
 uint8_t pduErrorState=1;
 uint8_t flag=0;
 
-extern SemaphoreHandle_t xPduCompleteSemaphore;
-
 double sign(double a){
 	if (a>0) return 1;
 	else if (a<0) return -1;
@@ -55,24 +53,9 @@ void USART2_IRQHandler(void)
 		if(state==SBUS_COMPLETE || state==SBUS_ERROR)
 		{
 			USART2->CR1&=~USART_CR1_UE;
-			//USART2->CR1&=~USART_CR1_RXNEIE;
 			flag=1;
-			//xSemaphoreGiveFromISR(xPduCompleteSemaphore,&xHigherPriorityTaskWoken);
-			//portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
-		}
-		// sbusData[i]=USART2->RDR;
-		// //uartTransmitt(sbusData[i]);
-		// i++;
-		// // sbusData[i]=USART2->RDR;
-		// // i++;
-		// if(i==BUFF_SIZE)
-		// {
-		// 	i=0;
-		// 	USART2->CR1&=~USART_CR1_UE;
-		// 	flag=1;
-		// }
-		
-		}
+		}	
+	}
 }
 
 void sbubRead(void)
@@ -110,6 +93,7 @@ Sbus_state_t sbusParce(uint8_t data)
 {
 	static uint8_t prevByte=0;
 	static int parserState=-1;
+	static uint16_t errorCounter=0;
 	if(data==0x0F && prevByte==0x00)
 	{
 		parserState++;

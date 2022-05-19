@@ -12,8 +12,4 @@
 #include <stdlib.h>
 
 
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
-
 #endif

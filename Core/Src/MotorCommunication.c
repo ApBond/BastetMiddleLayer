@@ -34,3 +34,19 @@ void motorSetAngleDeg(int16_t angle,uint16_t motorId)
     data[2] = angle >> 8;
     canWrite(data,3,motorId);
 }
+
+void motorSetCommunicationMode(Communication_mode_t mode,uint16_t motorId)
+{
+    uint8_t temp[2];
+    temp[0] = CHANGE_DEVICE_COMMUNICATION_MODE;
+    temp[1]=mode;
+    canWrite(temp,2,motorId);
+}
+
+void motorSetMotionMode(Motion_control_mode_t mode,uint16_t motorId)
+{
+    uint8_t temp[2];
+    temp[0] = CHANGE_MOTION_CONTROL_MODE;
+    temp[1]=mode;
+    canWrite(temp,2,motorId);
+}

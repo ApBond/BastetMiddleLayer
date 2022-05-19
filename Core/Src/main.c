@@ -1,10 +1,6 @@
 #include "main.h"
 
-SemaphoreHandle_t xPduCompleteSemaphore;
-
 extern uint8_t sbusData[BUFF_SIZE];
-static StaticTask_t xIdleTaskTCBBuffer;
-static StackType_t xIdleStack[configMINIMAL_STACK_SIZE];
 
 uint8_t state=0;
 
@@ -31,28 +27,6 @@ void timer6Init(void)
     NVIC_EnableIRQ(TIM6_DAC1_IRQn);
 }
 
-void vPDUControlTask(void * pvParameters)
-{
-    PDU_Data_t data;
-    PDU_Changed_Channels_t changedChannels;
-    rcCommand_t command;
-    uint8_t sendData[8];
-    uint16_t temp;
-    uint32_t tmpR;
-    while(1)
-    {
-        sbubRead();
-        
-        if(xSemaphoreTake( xPduCompleteSemaphore, ( TickType_t ) 10 ) == pdTRUE)
-		{
-			flag=0;
-			uartTransmitt(0x1);
-		}
-        vTaskDelay(100);
-    }
-
-}
-
 extern uint8_t demoState;
 extern uint8_t intFlag;
 
@@ -65,44 +39,14 @@ int main(void)
     uint16_t temp;
     uint32_t tmpR;
 
-    TaskHandle_t xHandle = NULL;
     RccClockInit();
 	timer6Init();
 
 	delayInit();
 	canInit(0x011c0008);
-	// demoInit();
     sbusInit(36000000,100000);
-	
-    //GPIOB->MODER |= GPIO_MODER_MODER0_0;
-    
-    //xTaskCreate(vPDUControlTask,"PDU",configMINIMAL_STACK_SIZE,NULL,4,&xHandle);
-
-	//xPduCompleteSemaphore=xSemaphoreCreateBinary();
-
-    //vTaskStartScheduler();
     while(1)
     {
-		// if(intFlag==1)
-		// {
-		// 	TIM17->CR1 |= TIM_CR1_CEN;
-		// 	motorStart(1);
-		// 	delay_ms(10);
-		// 	motorSetSpeedRpm(70,1);
-		// 	delay_ms(10);
-		// 	motorSetAngleDeg(90,1);
-		// 	delay_ms(4000);
-		// 	motorSetAngleDeg(-90,1);
-		// 	delay_ms(8000);
-		// 	motorSetAngleDeg(0,1);
-		// 	delay_ms(4000);
-		// 	motorStop(1);
-		// 	TIM17->CR1 &= ~TIM_CR1_CEN;
-		// 	GPIOB->BSRR = GPIO_BSRR_BR_0;
-		// 	delay_ms(10);
-		// 	intFlag=0;
-		// }
-
 		if(testTimer>=100)
         {
             sbubRead();
@@ -123,13 +67,12 @@ int main(void)
 					sendData[0]=0x01;
 					if(data.GEAR)
 					{
-						sendData[1]=0x1;
+						motorStart(BROADCAST_ID);
 					}
 					else
 					{
-						sendData[1]=0x0;
+						motorStop(BROADCAST_ID);
 					}
-					canWrite(sendData,2,0x01);
 					changedChannels->gearChanged=0;
 				}
 				if(changedChannels->motionControlChanged)
@@ -146,22 +89,23 @@ int main(void)
 					sendData[6]=(tmpR & 0x00FF0000)>>16;
 					sendData[7]=(tmpR & 0xFF000000)>>24;
 					canWrite(sendData,8,0x02);
+					changedChannels->motionControlChanged=0;
+				}
+				if(changedChannels->mixChanged)
+				{
+					motorSetCommunicationMode(data.MIX,BROADCAST_ID);
+					changedChannels->mixChanged=0;
+				}
+				if(changedChannels->elevChanged)
+				{
+					motorSetMotionMode(data.ELEV,BROADCAST_ID);
+					changedChannels->elevChanged=0;
 				}
 			}
 			else
 			{
-				// sendData[0]=0x01;
-				// sendData[1]=0x0;
-				// canWrite(sendData,2,0x01);
+				//motorStop(BROADCAST_ID);
 			}
 		}
      }
-}
-
-void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize )
-{
-  *ppxIdleTaskTCBBuffer = &xIdleTaskTCBBuffer;
-  *ppxIdleTaskStackBuffer = &xIdleStack[0];
-  *pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
-  /* place for user code */
 }

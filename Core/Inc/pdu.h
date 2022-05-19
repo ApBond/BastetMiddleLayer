@@ -3,6 +3,8 @@
 
 #include "main.h"
 
+#define PDU_ERROR_COUNT 100
+
 #define BUFF_SIZE 50
 
 #define pi 3.14159265

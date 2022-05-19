@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
   24              		.fpu fpv4-sp-d16
   26              	motorStart:
   27              	.LVL0:
-  28              	.LFB131:
+  28              	.LFB126:
   29              		.file 1 "Core/Src/MotorCommunication.c"
    1:Core/Src/MotorCommunication.c **** #include "MotorCommunication.h"
    2:Core/Src/MotorCommunication.c **** 
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
   48              		.loc 1 8 5 is_stmt 1 view .LVU5
   49              		.loc 1 8 12 is_stmt 0 view .LVU6
   50 000c 8DF80530 		strb	r3, [sp, #5]
-ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 2
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 2
 
 
    9:Core/Src/MotorCommunication.c ****     canWrite(data,2,motorId);
@@ -77,7 +77,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
   62              		@ sp needed
   63 001a 5DF804FB 		ldr	pc, [sp], #4
   64              		.cfi_endproc
-  65              	.LFE131:
+  65              	.LFE126:
   67              		.section	.text.motorStop,"ax",%progbits
   68              		.align	1
   69              		.global	motorStop
@@ -87,7 +87,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
   73              		.fpu fpv4-sp-d16
   75              	motorStop:
   76              	.LVL3:
-  77              	.LFB132:
+  77              	.LFB127:
   11:Core/Src/MotorCommunication.c **** 
   12:Core/Src/MotorCommunication.c **** void motorStop(uint16_t motorId)
   13:Core/Src/MotorCommunication.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
   99 000e 8DF80530 		strb	r3, [sp, #5]
   17:Core/Src/MotorCommunication.c ****     canWrite(data,2,motorId);
  100              		.loc 1 17 5 is_stmt 1 view .LVU17
-ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 3
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 3
 
 
  101 0012 0221     		movs	r1, #2
@@ -135,7 +135,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
  111              		@ sp needed
  112 001c 5DF804FB 		ldr	pc, [sp], #4
  113              		.cfi_endproc
- 114              	.LFE132:
+ 114              	.LFE127:
  116              		.section	.text.motorSetSpeedRpm,"ax",%progbits
  117              		.align	1
  118              		.global	motorSetSpeedRpm
@@ -145,7 +145,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
  122              		.fpu fpv4-sp-d16
  124              	motorSetSpeedRpm:
  125              	.LVL6:
- 126              	.LFB133:
+ 126              	.LFB128:
   19:Core/Src/MotorCommunication.c **** 
   20:Core/Src/MotorCommunication.c **** void motorSetSpeedRpm(int16_t speed,uint16_t motorId)
   21:Core/Src/MotorCommunication.c **** {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
   25:Core/Src/MotorCommunication.c ****     data[2] = speed >> 8;
  150              		.loc 1 25 5 is_stmt 1 view .LVU28
  151              		.loc 1 25 13 is_stmt 0 view .LVU29
-ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 4
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 4
 
 
  152 0010 0012     		asrs	r0, r0, #8
@@ -198,7 +198,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
  164              		@ sp needed
  165 001e 5DF804FB 		ldr	pc, [sp], #4
  166              		.cfi_endproc
- 167              	.LFE133:
+ 167              	.LFE128:
  169              		.section	.text.motorSetAngleDeg,"ax",%progbits
  170              		.align	1
  171              		.global	motorSetAngleDeg
@@ -208,7 +208,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
  175              		.fpu fpv4-sp-d16
  177              	motorSetAngleDeg:
  178              	.LVL10:
- 179              	.LFB134:
+ 179              	.LFB129:
   28:Core/Src/MotorCommunication.c **** 
   29:Core/Src/MotorCommunication.c **** void motorSetAngleDeg(int16_t angle,uint16_t motorId)
   30:Core/Src/MotorCommunication.c **** {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
  200 000c 8DF80500 		strb	r0, [sp, #5]
   34:Core/Src/MotorCommunication.c ****     data[2] = angle >> 8;
  201              		.loc 1 34 5 is_stmt 1 view .LVU40
-ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 5
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 5
 
 
  202              		.loc 1 34 13 is_stmt 0 view .LVU41
@@ -262,39 +262,162 @@ ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 1
  218              		@ sp needed
  219 0020 5DF804FB 		ldr	pc, [sp], #4
  220              		.cfi_endproc
- 221              	.LFE134:
- 223              		.section	.bss.TimingDelay,"aw",%nobits
- 224              		.align	2
- 227              	TimingDelay:
- 228 0000 00000000 		.space	4
- 229              		.text
- 230              	.Letext0:
- 231              		.file 2 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\machine\\_defau
- 232              		.file 3 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
- 233              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
- 234              		.file 5 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 235              		.file 6 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
- 236              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
- 237              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
- 238              		.file 9 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\reent.h"
- 239              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
- 240              		.file 11 "Core/Inc/rcc.h"
- 241              		.file 12 "Core/Inc/can.h"
-ARM GAS  C:\Users\worker\AppData\Local\Temp\ccT7cifh.s 			page 6
+ 221              	.LFE129:
+ 223              		.section	.text.motorSetCommunicationMode,"ax",%progbits
+ 224              		.align	1
+ 225              		.global	motorSetCommunicationMode
+ 226              		.syntax unified
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.fpu fpv4-sp-d16
+ 231              	motorSetCommunicationMode:
+ 232              	.LVL14:
+ 233              	.LFB130:
+  37:Core/Src/MotorCommunication.c **** 
+  38:Core/Src/MotorCommunication.c **** void motorSetCommunicationMode(Communication_mode_t mode,uint16_t motorId)
+  39:Core/Src/MotorCommunication.c **** {
+ 234              		.loc 1 39 1 is_stmt 1 view -0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 8
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238              		.loc 1 39 1 is_stmt 0 view .LVU47
+ 239 0000 00B5     		push	{lr}
+ 240              	.LCFI12:
+ 241              		.cfi_def_cfa_offset 4
+ 242              		.cfi_offset 14, -4
+ 243 0002 83B0     		sub	sp, sp, #12
+ 244              	.LCFI13:
+ 245              		.cfi_def_cfa_offset 16
+ 246 0004 0A46     		mov	r2, r1
+  40:Core/Src/MotorCommunication.c ****     uint8_t temp[2];
+ 247              		.loc 1 40 5 is_stmt 1 view .LVU48
+  41:Core/Src/MotorCommunication.c ****     temp[0] = CHANGE_DEVICE_COMMUNICATION_MODE;
+ 248              		.loc 1 41 5 view .LVU49
+ 249              		.loc 1 41 13 is_stmt 0 view .LVU50
+ 250 0006 0623     		movs	r3, #6
+ 251 0008 8DF80430 		strb	r3, [sp, #4]
+  42:Core/Src/MotorCommunication.c ****     temp[1]=mode;
+ 252              		.loc 1 42 5 is_stmt 1 view .LVU51
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 6
+
+
+ 253              		.loc 1 42 12 is_stmt 0 view .LVU52
+ 254 000c 8DF80500 		strb	r0, [sp, #5]
+  43:Core/Src/MotorCommunication.c ****     canWrite(temp,2,motorId);
+ 255              		.loc 1 43 5 is_stmt 1 view .LVU53
+ 256 0010 0221     		movs	r1, #2
+ 257              	.LVL15:
+ 258              		.loc 1 43 5 is_stmt 0 view .LVU54
+ 259 0012 01A8     		add	r0, sp, #4
+ 260              	.LVL16:
+ 261              		.loc 1 43 5 view .LVU55
+ 262 0014 FFF7FEFF 		bl	canWrite
+ 263              	.LVL17:
+  44:Core/Src/MotorCommunication.c **** }
+ 264              		.loc 1 44 1 view .LVU56
+ 265 0018 03B0     		add	sp, sp, #12
+ 266              	.LCFI14:
+ 267              		.cfi_def_cfa_offset 4
+ 268              		@ sp needed
+ 269 001a 5DF804FB 		ldr	pc, [sp], #4
+ 270              		.cfi_endproc
+ 271              	.LFE130:
+ 273              		.section	.text.motorSetMotionMode,"ax",%progbits
+ 274              		.align	1
+ 275              		.global	motorSetMotionMode
+ 276              		.syntax unified
+ 277              		.thumb
+ 278              		.thumb_func
+ 279              		.fpu fpv4-sp-d16
+ 281              	motorSetMotionMode:
+ 282              	.LVL18:
+ 283              	.LFB131:
+  45:Core/Src/MotorCommunication.c **** 
+  46:Core/Src/MotorCommunication.c **** void motorSetMotionMode(Motion_control_mode_t mode,uint16_t motorId)
+  47:Core/Src/MotorCommunication.c **** {
+ 284              		.loc 1 47 1 is_stmt 1 view -0
+ 285              		.cfi_startproc
+ 286              		@ args = 0, pretend = 0, frame = 8
+ 287              		@ frame_needed = 0, uses_anonymous_args = 0
+ 288              		.loc 1 47 1 is_stmt 0 view .LVU58
+ 289 0000 00B5     		push	{lr}
+ 290              	.LCFI15:
+ 291              		.cfi_def_cfa_offset 4
+ 292              		.cfi_offset 14, -4
+ 293 0002 83B0     		sub	sp, sp, #12
+ 294              	.LCFI16:
+ 295              		.cfi_def_cfa_offset 16
+ 296 0004 0A46     		mov	r2, r1
+  48:Core/Src/MotorCommunication.c ****     uint8_t temp[2];
+ 297              		.loc 1 48 5 is_stmt 1 view .LVU59
+  49:Core/Src/MotorCommunication.c ****     temp[0] = CHANGE_MOTION_CONTROL_MODE;
+ 298              		.loc 1 49 5 view .LVU60
+ 299              		.loc 1 49 13 is_stmt 0 view .LVU61
+ 300 0006 0723     		movs	r3, #7
+ 301 0008 8DF80430 		strb	r3, [sp, #4]
+  50:Core/Src/MotorCommunication.c ****     temp[1]=mode;
+ 302              		.loc 1 50 5 is_stmt 1 view .LVU62
+ 303              		.loc 1 50 12 is_stmt 0 view .LVU63
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 7
+
+
+ 304 000c 8DF80500 		strb	r0, [sp, #5]
+  51:Core/Src/MotorCommunication.c ****     canWrite(temp,2,motorId);
+ 305              		.loc 1 51 5 is_stmt 1 view .LVU64
+ 306 0010 0221     		movs	r1, #2
+ 307              	.LVL19:
+ 308              		.loc 1 51 5 is_stmt 0 view .LVU65
+ 309 0012 01A8     		add	r0, sp, #4
+ 310              	.LVL20:
+ 311              		.loc 1 51 5 view .LVU66
+ 312 0014 FFF7FEFF 		bl	canWrite
+ 313              	.LVL21:
+  52:Core/Src/MotorCommunication.c **** }...
+ 314              		.loc 1 52 1 view .LVU67
+ 315 0018 03B0     		add	sp, sp, #12
+ 316              	.LCFI17:
+ 317              		.cfi_def_cfa_offset 4
+ 318              		@ sp needed
+ 319 001a 5DF804FB 		ldr	pc, [sp], #4
+ 320              		.cfi_endproc
+ 321              	.LFE131:
+ 323              		.section	.bss.TimingDelay,"aw",%nobits
+ 324              		.align	2
+ 327              	TimingDelay:
+ 328 0000 00000000 		.space	4
+ 329              		.text
+ 330              	.Letext0:
+ 331              		.file 2 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\machine\\_defau
+ 332              		.file 3 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 333              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 334              		.file 5 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 335              		.file 6 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
+ 336              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
+ 337              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
+ 338              		.file 9 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\reent.h"
+ 339              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
+ 340              		.file 11 "Core/Inc/MotorCommunication.h"
+ 341              		.file 12 "Core/Inc/rcc.h"
+ 342              		.file 13 "Core/Inc/can.h"
+ARM GAS  C:\Users\ba123\AppData\Local\Temp\cccqfzot.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MotorCommunication.c
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:18     .text.motorStart:0000000000000000 $t
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:26     .text.motorStart:0000000000000000 motorStart
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:68     .text.motorStop:0000000000000000 $t
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:75     .text.motorStop:0000000000000000 motorStop
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:117    .text.motorSetSpeedRpm:0000000000000000 $t
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:124    .text.motorSetSpeedRpm:0000000000000000 motorSetSpeedRpm
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:170    .text.motorSetAngleDeg:0000000000000000 $t
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:177    .text.motorSetAngleDeg:0000000000000000 motorSetAngleDeg
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:224    .bss.TimingDelay:0000000000000000 $d
-C:\Users\worker\AppData\Local\Temp\ccT7cifh.s:227    .bss.TimingDelay:0000000000000000 TimingDelay
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:18     .text.motorStart:0000000000000000 $t
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:26     .text.motorStart:0000000000000000 motorStart
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:68     .text.motorStop:0000000000000000 $t
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:75     .text.motorStop:0000000000000000 motorStop
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:117    .text.motorSetSpeedRpm:0000000000000000 $t
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:124    .text.motorSetSpeedRpm:0000000000000000 motorSetSpeedRpm
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:170    .text.motorSetAngleDeg:0000000000000000 $t
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:177    .text.motorSetAngleDeg:0000000000000000 motorSetAngleDeg
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:224    .text.motorSetCommunicationMode:0000000000000000 $t
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:231    .text.motorSetCommunicationMode:0000000000000000 motorSetCommunicationMode
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:274    .text.motorSetMotionMode:0000000000000000 $t
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:281    .text.motorSetMotionMode:0000000000000000 motorSetMotionMode
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:324    .bss.TimingDelay:0000000000000000 $d
+C:\Users\ba123\AppData\Local\Temp\cccqfzot.s:327    .bss.TimingDelay:0000000000000000 TimingDelay
 
 UNDEFINED SYMBOLS
 canWrite
