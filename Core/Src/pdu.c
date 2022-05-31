@@ -15,10 +15,12 @@ const int speedMaxPoint = 1706;
 const int courseMaxPoint = 1706;
 const int corstrainMaxPoint = 1706;
 
-const float baseLenght = 0.94;
-const int maxSpeed = 3;
+const float baseLenght = 0.53;
+const int maxSpeed = 5;
 const float maxRotate = 0.78539816;
 const float maxCourse = 0.78539816*2;
+
+const int deadZone = 50;
 
 uint8_t sbusData[BUFF_SIZE];
 uint8_t payload[24];
@@ -179,10 +181,10 @@ rcCommand_t normaliz(int course, int speed, int rotate, int corstrain, uint8_t e
 	float generalGam;
 	float vel_coef;
 	rcCommand_t command;
-	if (fabs(course)<20) course=0;
-	if (fabs(speed)<20) speed=0;
-	if (fabs(rotate)<20) rotate=0;
-	if (fabs(corstrain)<20) corstrain=0;
+	if (fabs(course)<deadZone) course=0;
+	if (fabs(speed)<deadZone) speed=0;
+	if (fabs(rotate)<deadZone) rotate=0;
+	if (fabs(corstrain)<deadZone) corstrain=0;
 
 	generalGam=rotate*maxRotate/(rotateMaxPoint-rotateZeroPoint);
 	command.R=baseLenght/2/tan(generalGam);
