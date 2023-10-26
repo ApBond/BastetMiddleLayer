@@ -19,11 +19,12 @@ const uint8_t dim_curve[256] = {
   193, 196, 200, 203, 207, 211, 214, 218, 222, 226, 230, 234, 238, 242, 248, 255,
 };
 
-uint16_t ledsBuff[LEDS_COUNT*24+2];
+uint8_t ledsBuff[LEDS_COUNT*24+2];
 uint8_t idleFlag=0;
 
 void DMA1_Channel6_IRQHandler(void)
 {
+
 	DMA1_Channel6->CCR&=~(DMA_CCR_EN);//Выключить ДМА
 	DMA1->IFCR=(DMA_IFCR_CGIF6 | DMA_IFCR_CTCIF6 | DMA_IFCR_CHTIF6 | DMA_IFCR_CTEIF6);
 	TIM3->CR1 &= ~(TIM_CR1_CEN); //останавливаем таймер
@@ -34,12 +35,14 @@ void DMA1_Channel6_IRQHandler(void)
 
 void TIM1_UP_TIM16_IRQHandler(void)
 {
+  static uint8_t state=0;
 	if((TIM16->SR &TIM_SR_UIF)!=0)
 	{
-		TIM16->SR&=~TIM_SR_UIF;//Сброс флага прерывания
-		TIM16->CR1 &= ~(TIM_CR1_CEN); //останавливаем таймер
-		TIM16->DIER &= ~(TIM_DIER_UIE); //запрещаем прерывание таймера
-		idleFlag=0;
+      TIM16->SR&=~TIM_SR_UIF;//Сброс флага прерывания
+      TIM16->CR1 &= ~(TIM_CR1_CEN); //останавливаем таймер
+      TIM16->DIER &= ~(TIM_DIER_UIE); //запрещаем прерывание таймера
+      idleFlag=0;
+      state=0;
 	}
 }
 
@@ -71,7 +74,7 @@ void ledInit(void)
   DMA1_Channel6->CCR|= DMA_CCR_PL//Высокий приоретет 
   | DMA_CCR_MINC//Инкремент памяти
 	| DMA_CCR_PSIZE_0//Размер периферии 16бит
-  | DMA_CCR_MSIZE_0//Размер памяти 16бит
+  //| DMA_CCR_MSIZE_0//Размер памяти 16бит
 	| DMA_CCR_TCIE//Разрешить прерывание по завершению передачи
 	| DMA_CCR_DIR//Из памяти в переферию
   ;
@@ -97,7 +100,7 @@ uint8_t ledUpdate(void)
 	if(!idleFlag)
 	{
 		DMA1_Channel6->CCR&=~(DMA_CCR_EN);//Выключить ДМА
-		DMA1_Channel6->CNDTR =sizeof(ledsBuff)/2;//Кол-во данных для передачи
+		DMA1_Channel6->CNDTR =sizeof(ledsBuff);//Кол-во данных для передачи
 		DMA1_Channel6->CCR|=DMA_CCR_EN;//Включить ДМА
 		TIM3->CR1|=TIM_CR1_CEN;//Включить таймер
 		idleFlag=1;
@@ -213,7 +216,7 @@ uint8_t ledSetHSV(uint16_t led,uint16_t hue, uint16_t sat, uint16_t val)
 uint8_t ledSetBlockRGB(uint16_t ledStart,uint16_t ledCount,uint8_t r,uint8_t g, uint8_t b)
 {
 	uint16_t i;
-	if(ledStart+ledCount>LEDS_COUNT-1 || idleFlag==1) return 0;
+	if(ledStart+ledCount>LEDS_COUNT || idleFlag==1) return 0;
 	for(i=ledStart;i<ledCount+ledStart;i++)
 	{
 		if(!ledSetRGB(i,r,g,b)) return 0;
@@ -224,7 +227,7 @@ uint8_t ledSetBlockRGB(uint16_t ledStart,uint16_t ledCount,uint8_t r,uint8_t g, 
 uint8_t ledSetBlockHSV(uint16_t ledStart,uint16_t ledCount,uint16_t hue, uint16_t sat, uint16_t val)
 {
 	uint16_t i;
-	if(ledStart+ledCount>LEDS_COUNT-1 || idleFlag==1) return 0;
+	if(ledStart+ledCount>LEDS_COUNT || idleFlag==1) return 0;
  
 	for(i=ledStart;i<ledCount+ledStart;i++)
 	{

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 1
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 1
   23:Core/Src/animation.c **** 	// TIM14->PSC|=16800;//Предделитель на 10кГц
   24:Core/Src/animation.c **** 	// TIM14->ARR=9;//Делитель на 1кГц
   25:Core/Src/animation.c **** 	// TIM14->DIER|=TIM_DIER_UIE;//Разрешить прерывание по переполнени
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 2
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s 			page 2
 
 
   26:Core/Src/animation.c **** 	// NVIC_EnableIRQ(TIM8_TRG_COM_TIM14_IRQn);
@@ -102,179 +102,98 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 1
   36:Core/Src/animation.c **** 	static uint8_t hueDir=0;
   64              		.loc 1 36 2 view .LVU7
   37:Core/Src/animation.c **** 	
-  38:Core/Src/animation.c **** 			if(hueAnimation==359)
-  65              		.loc 1 38 4 view .LVU8
-  66              		.loc 1 38 19 is_stmt 0 view .LVU9
+  38:Core/Src/animation.c **** 	if(hueAnimation==359)
+  65              		.loc 1 38 2 view .LVU8
+  66              		.loc 1 38 17 is_stmt 0 view .LVU9
   67 0004 124B     		ldr	r3, .L9
   68 0006 1B88     		ldrh	r3, [r3]
-  69              		.loc 1 38 6 view .LVU10
+  69              		.loc 1 38 4 view .LVU10
   70 0008 40F26712 		movw	r2, #359
   71 000c 9342     		cmp	r3, r2
   72 000e 04D0     		beq	.L8
-  39:Core/Src/animation.c **** 			{
-  40:Core/Src/animation.c **** 					hueDir=1;
-  41:Core/Src/animation.c **** 			}
-  42:Core/Src/animation.c **** 			else if(hueAnimation==0)
-  73              		.loc 1 42 9 is_stmt 1 view .LVU11
-  74              		.loc 1 42 11 is_stmt 0 view .LVU12
+  39:Core/Src/animation.c **** 	{
+  40:Core/Src/animation.c **** 		hueDir=1;
+  41:Core/Src/animation.c **** 	}
+  42:Core/Src/animation.c **** 	else if(hueAnimation==0)
+  73              		.loc 1 42 7 is_stmt 1 view .LVU11
+  74              		.loc 1 42 9 is_stmt 0 view .LVU12
   75 0010 33B9     		cbnz	r3, .L4
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 3
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s 			page 3
 
 
-  43:Core/Src/animation.c **** 			{
-  44:Core/Src/animation.c **** 				hueDir=0;
-  76              		.loc 1 44 5 is_stmt 1 view .LVU13
-  77              		.loc 1 44 11 is_stmt 0 view .LVU14
+  43:Core/Src/animation.c **** 	{
+  44:Core/Src/animation.c **** 		hueDir=0;
+  76              		.loc 1 44 3 is_stmt 1 view .LVU13
+  77              		.loc 1 44 9 is_stmt 0 view .LVU14
   78 0012 104A     		ldr	r2, .L9+4
   79 0014 0021     		movs	r1, #0
   80 0016 1170     		strb	r1, [r2]
   81 0018 02E0     		b	.L4
   82              	.L8:
-  40:Core/Src/animation.c **** 			}
-  83              		.loc 1 40 6 is_stmt 1 view .LVU15
-  40:Core/Src/animation.c **** 			}
-  84              		.loc 1 40 12 is_stmt 0 view .LVU16
+  40:Core/Src/animation.c **** 	}
+  83              		.loc 1 40 3 is_stmt 1 view .LVU15
+  40:Core/Src/animation.c **** 	}
+  84              		.loc 1 40 9 is_stmt 0 view .LVU16
   85 001a 0E4A     		ldr	r2, .L9+4
   86 001c 0121     		movs	r1, #1
   87 001e 1170     		strb	r1, [r2]
   88              	.L4:
-  45:Core/Src/animation.c **** 			}
-  46:Core/Src/animation.c **** 			if(hueDir)
-  89              		.loc 1 46 4 is_stmt 1 view .LVU17
-  90              		.loc 1 46 7 is_stmt 0 view .LVU18
+  45:Core/Src/animation.c **** 	}
+  46:Core/Src/animation.c **** 	if(hueDir)
+  89              		.loc 1 46 2 is_stmt 1 view .LVU17
+  90              		.loc 1 46 5 is_stmt 0 view .LVU18
   91 0020 0C4A     		ldr	r2, .L9+4
   92 0022 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
-  93              		.loc 1 46 6 view .LVU19
-  94 0024 7AB1     		cbz	r2, .L5
-  47:Core/Src/animation.c **** 				hueAnimation--;
-  95              		.loc 1 47 5 is_stmt 1 view .LVU20
-  96              		.loc 1 47 17 is_stmt 0 view .LVU21
+  93              		.loc 1 46 4 view .LVU19
+  94 0024 82B1     		cbz	r2, .L5
+  47:Core/Src/animation.c **** 		hueAnimation--;
+  95              		.loc 1 47 3 is_stmt 1 view .LVU20
+  96              		.loc 1 47 15 is_stmt 0 view .LVU21
   97 0026 013B     		subs	r3, r3, #1
   98 0028 094A     		ldr	r2, .L9
   99 002a 1380     		strh	r3, [r2]	@ movhi
  100              	.L6:
-  48:Core/Src/animation.c **** 			else
-  49:Core/Src/animation.c **** 				hueAnimation++;
-  50:Core/Src/animation.c **** 	ledSetBlockHSV(0,LEDS_COUNT-1,hueAnimation,255,255);
+  48:Core/Src/animation.c **** 	else
+  49:Core/Src/animation.c **** 	hueAnimation++;
+  50:Core/Src/animation.c **** 	ledSetBlockHSV(0,LEDS_COUNT,hueAnimation,255,255);
  101              		.loc 1 50 2 is_stmt 1 view .LVU22
  102 002c FF23     		movs	r3, #255
  103 002e 0093     		str	r3, [sp]
  104 0030 074A     		ldr	r2, .L9
  105 0032 1288     		ldrh	r2, [r2]
- 106 0034 B821     		movs	r1, #184
- 107 0036 0020     		movs	r0, #0
- 108 0038 FFF7FEFF 		bl	ledSetBlockHSV
+ 106 0034 4FF49571 		mov	r1, #298
+ 107 0038 0020     		movs	r0, #0
+ 108 003a FFF7FEFF 		bl	ledSetBlockHSV
  109              	.LVL0:
   51:Core/Src/animation.c **** 	ledUpdate();
  110              		.loc 1 51 2 view .LVU23
- 111 003c FFF7FEFF 		bl	ledUpdate
+ 111 003e FFF7FEFF 		bl	ledUpdate
  112              	.LVL1:
-  52:Core/Src/animation.c **** 	//if(mode==0)
-  53:Core/Src/animation.c **** 	//{
-  54:Core/Src/animation.c **** 	// 	if(blinkTimer1>500)
-  55:Core/Src/animation.c **** 	// 	{
-  56:Core/Src/animation.c **** 	// 		if(blinkState1==0)
-  57:Core/Src/animation.c **** 	// 			{
-  58:Core/Src/animation.c **** 	// 				ledSetBlockRGB(0,88,255,100,0);
-  59:Core/Src/animation.c **** 	// 				blinkState1=1;
-  60:Core/Src/animation.c **** 	// 			}
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 4
-
-
-  61:Core/Src/animation.c **** 	// 			else
-  62:Core/Src/animation.c **** 	// 			{
-  63:Core/Src/animation.c **** 	// 				ledSetBlockRGB(0,88,0,0,0);
-  64:Core/Src/animation.c **** 	// 				blinkState1=0;
-  65:Core/Src/animation.c **** 	// 			}
-  66:Core/Src/animation.c **** 	// 			blinkTimer1=0;
-  67:Core/Src/animation.c **** 	// 			ledUpdate();
-  68:Core/Src/animation.c **** 	// 	}
-  69:Core/Src/animation.c **** 	// }
-  70:Core/Src/animation.c **** 	// else if(redBlink && blinkTimer>200 && (mode==1))
-  71:Core/Src/animation.c **** 	// {
-  72:Core/Src/animation.c **** 	// 	if(blinkState==0)
-  73:Core/Src/animation.c **** 	// 	{
-  74:Core/Src/animation.c **** 	// 		ledSetBlockRGB(0,88,255,0,0);
-  75:Core/Src/animation.c **** 	// 		blinkState=1;
-  76:Core/Src/animation.c **** 	// 	}
-  77:Core/Src/animation.c **** 	// 	else
-  78:Core/Src/animation.c **** 	// 	{
-  79:Core/Src/animation.c **** 	// 		ledSetBlockRGB(0,88,0,0,0);
-  80:Core/Src/animation.c **** 	// 		blinkState=0;
-  81:Core/Src/animation.c **** 	// 	}
-  82:Core/Src/animation.c **** 	// 	blinkTimer=0;
-  83:Core/Src/animation.c **** 	// 	ledUpdate();
-  84:Core/Src/animation.c **** 	// }
-  85:Core/Src/animation.c **** 	// else if((mode==1) ? updateTimer>100 : updateTimer>20)
-  86:Core/Src/animation.c **** 	// {
-  87:Core/Src/animation.c **** 	// 	if(mode==1)
-  88:Core/Src/animation.c **** 	// 	{
-  89:Core/Src/animation.c **** 	// 		if(war>40)
-  90:Core/Src/animation.c **** 	// 		{
-  91:Core/Src/animation.c **** 	// 			redBlink=0;
-  92:Core/Src/animation.c **** 	// 			//rangeIndication(0,88,war,400,40);
-  93:Core/Src/animation.c **** 	// 			rangeIndication(0,5,(uint16_t)echo_mes[10],450,50);//10
-  94:Core/Src/animation.c **** 	// 			rangeIndication(5,7,(uint16_t)echo_mes[11],450,50);//11
-  95:Core/Src/animation.c **** 	// 			rangeIndication(12,6,(uint16_t)echo_mes[0],450,50);//0
-  96:Core/Src/animation.c **** 	// 			rangeIndication(18,6,(uint16_t)echo_mes[1],450,50);//1
-  97:Core/Src/animation.c **** 	// 			rangeIndication(24,6,(uint16_t)echo_mes[2],450,50);//2
-  98:Core/Src/animation.c **** 	// 			rangeIndication(30,7,(uint16_t)echo_mes[3],450,50);//3
-  99:Core/Src/animation.c **** 	// 			rangeIndication(37,7,(uint16_t)echo_mes[4],450,50);//5
- 100:Core/Src/animation.c **** 	// 			rangeIndication(44,7,(uint16_t)echo_mes[5],450,50);//6
- 101:Core/Src/animation.c **** 	// 			rangeIndication(51,7,(uint16_t)echo_mes[6],450,50);//6
- 102:Core/Src/animation.c **** 	// 			rangeIndication(58,6,(uint16_t)echo_mes[7],450,50);//7
- 103:Core/Src/animation.c **** 	// 			rangeIndication(64,7,(uint16_t)echo_mes[8],450,50);//8
- 104:Core/Src/animation.c **** 	// 			rangeIndication(71,8,(uint16_t)echo_mes[9],450,50);//9
- 105:Core/Src/animation.c **** 	// 		}
- 106:Core/Src/animation.c **** 	// 		else
- 107:Core/Src/animation.c **** 	// 		{
- 108:Core/Src/animation.c **** 	// 			redBlink=1;
- 109:Core/Src/animation.c **** 	// 			return;
- 110:Core/Src/animation.c **** 	// 		}	
- 111:Core/Src/animation.c **** 	// 	}
- 112:Core/Src/animation.c **** 	// 	else if(mode==2 || mode==3)
- 113:Core/Src/animation.c **** 	// 	{
- 114:Core/Src/animation.c **** 	// 		ledSetBlockHSV(0,79,hueAnimation,255,255);
- 115:Core/Src/animation.c **** 	// 		if(hueAnimation==359)
- 116:Core/Src/animation.c **** 	// 		{
- 117:Core/Src/animation.c **** 	// 				hueDir=1;
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 5
-
-
- 118:Core/Src/animation.c **** 	// 		}
- 119:Core/Src/animation.c **** 	// 		else if(hueAnimation==0)
- 120:Core/Src/animation.c **** 	// 		{
- 121:Core/Src/animation.c **** 	// 			hueDir=0;
- 122:Core/Src/animation.c **** 	// 		}
- 123:Core/Src/animation.c **** 	// 		if(hueDir)
- 124:Core/Src/animation.c **** 	// 			hueAnimation--;
- 125:Core/Src/animation.c **** 	// 		else
- 126:Core/Src/animation.c **** 	// 			hueAnimation++;
- 127:Core/Src/animation.c **** 	// 	}
- 128:Core/Src/animation.c **** 		
- 129:Core/Src/animation.c **** 		//updateTimer=0;
- 130:Core/Src/animation.c **** 	//}
- 131:Core/Src/animation.c **** }
- 113              		.loc 1 131 1 is_stmt 0 view .LVU24
- 114 0040 03B0     		add	sp, sp, #12
+  52:Core/Src/animation.c **** 
+  53:Core/Src/animation.c **** }
+ 113              		.loc 1 53 1 is_stmt 0 view .LVU24
+ 114 0042 03B0     		add	sp, sp, #12
  115              	.LCFI2:
  116              		.cfi_remember_state
  117              		.cfi_def_cfa_offset 4
  118              		@ sp needed
- 119 0042 5DF804FB 		ldr	pc, [sp], #4
+ 119 0044 5DF804FB 		ldr	pc, [sp], #4
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s 			page 4
+
+
  120              	.L5:
  121              	.LCFI3:
  122              		.cfi_restore_state
-  49:Core/Src/animation.c **** 	ledSetBlockHSV(0,LEDS_COUNT-1,hueAnimation,255,255);
- 123              		.loc 1 49 5 is_stmt 1 view .LVU25
-  49:Core/Src/animation.c **** 	ledSetBlockHSV(0,LEDS_COUNT-1,hueAnimation,255,255);
- 124              		.loc 1 49 17 is_stmt 0 view .LVU26
- 125 0046 0133     		adds	r3, r3, #1
- 126 0048 014A     		ldr	r2, .L9
- 127 004a 1380     		strh	r3, [r2]	@ movhi
- 128 004c EEE7     		b	.L6
+  49:Core/Src/animation.c **** 	ledSetBlockHSV(0,LEDS_COUNT,hueAnimation,255,255);
+ 123              		.loc 1 49 2 is_stmt 1 view .LVU25
+  49:Core/Src/animation.c **** 	ledSetBlockHSV(0,LEDS_COUNT,hueAnimation,255,255);
+ 124              		.loc 1 49 14 is_stmt 0 view .LVU26
+ 125 0048 0133     		adds	r3, r3, #1
+ 126 004a 014A     		ldr	r2, .L9
+ 127 004c 1380     		strh	r3, [r2]	@ movhi
+ 128 004e EDE7     		b	.L6
  129              	.L10:
- 130 004e 00BF     		.align	2
+ 130              		.align	2
  131              	.L9:
  132 0050 00000000 		.word	.LANCHOR0
  133 0054 00000000 		.word	.LANCHOR1
@@ -298,9 +217,6 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 1
  158 0000 0000     		.space	2
  159              		.section	.bss.hueAnimation.8536,"aw",%nobits
  160              		.align	1
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 6
-
-
  161              		.set	.LANCHOR0,. + 0
  164              	hueAnimation.8536:
  165 0000 0000     		.space	2
@@ -322,6 +238,9 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 1
  187              		.file 3 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
  188              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  189              		.file 5 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s 			page 5
+
+
  190              		.file 6 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
  191              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
  192              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
@@ -329,30 +248,30 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 1
  194              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
  195              		.file 11 "Core/Inc/rcc.h"
  196              		.file 12 "Core/Inc/LedControl.h"
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s 			page 7
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 animation.c
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:18     .text.animationInit:0000000000000000 $t
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:26     .text.animationInit:0000000000000000 animationInit
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:40     .text.animationLoop:0000000000000000 $t
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:47     .text.animationLoop:0000000000000000 animationLoop
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:132    .text.animationLoop:0000000000000050 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:182    .bss.war:0000000000000000 war
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:176    .bss.updateTimer:0000000000000000 updateTimer
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:157    .bss.blinkTimer1:0000000000000000 blinkTimer1
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:151    .bss.blinkTimer:0000000000000000 blinkTimer
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:142    .bss.TimingDelay:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:145    .bss.TimingDelay:0000000000000000 TimingDelay
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:148    .bss.blinkTimer:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:154    .bss.blinkTimer1:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:160    .bss.hueAnimation.8536:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:164    .bss.hueAnimation.8536:0000000000000000 hueAnimation.8536
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:170    .bss.hueDir.8537:0000000000000000 hueDir.8537
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:171    .bss.hueDir.8537:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:173    .bss.updateTimer:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\cciCdIJU.s:179    .bss.war:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:18     .text.animationInit:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:26     .text.animationInit:0000000000000000 animationInit
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:40     .text.animationLoop:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:47     .text.animationLoop:0000000000000000 animationLoop
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:132    .text.animationLoop:0000000000000050 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:182    .bss.war:0000000000000000 war
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:176    .bss.updateTimer:0000000000000000 updateTimer
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:157    .bss.blinkTimer1:0000000000000000 blinkTimer1
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:151    .bss.blinkTimer:0000000000000000 blinkTimer
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:142    .bss.TimingDelay:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:145    .bss.TimingDelay:0000000000000000 TimingDelay
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:148    .bss.blinkTimer:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:154    .bss.blinkTimer1:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:160    .bss.hueAnimation.8536:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:164    .bss.hueAnimation.8536:0000000000000000 hueAnimation.8536
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:170    .bss.hueDir.8537:0000000000000000 hueDir.8537
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:171    .bss.hueDir.8537:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:173    .bss.updateTimer:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\cciN8Ma2.s:179    .bss.war:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 ledSetBlockHSV

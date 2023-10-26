@@ -57,7 +57,7 @@ int main(void)
             sbubRead();
             testTimer=0;
         }
-		if(animationTImer>20)
+		if(animationTImer>10)
 		{
 			animationTImer=0;
 			animationLoop();

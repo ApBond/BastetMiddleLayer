@@ -5,7 +5,7 @@
 #include "rcc.h"
 #include "string.h"
 
-#define LEDS_COUNT 185
+#define LEDS_COUNT 298
 #define WAIT_TIME_US 1000
 #define TIMER_ARR 90-1
 #define PWM_LOW 26-1
