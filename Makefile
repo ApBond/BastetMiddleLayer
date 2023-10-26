@@ -42,6 +42,8 @@ Core/Src/demo.c \
 Core/Src/MotorCommunication.c \
 Core/Src/rcc.c \
 Core/Src/pdu.c \
+Core/Src/animation.c \
+Core/Src/LedControl.c \
 Core/Src/system_stm32f3xx.c 
 # FreeRTOS/croutine.c \
 # FreeRTOS/event_groups.c \

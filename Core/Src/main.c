@@ -1,10 +1,12 @@
 #include "main.h"
 
+
 extern uint8_t sbusData[BUFF_SIZE];
 
 uint8_t state=0;
 
 static uint16_t testTimer=0;
+static uint16_t animationTImer=0;
 
 extern uint8_t flag;
 
@@ -14,6 +16,7 @@ void TIM6_DAC1_IRQHandler(void)
     {
         TIM6->SR &=~TIM_SR_UIF;
         testTimer++;
+		animationTImer++;
     }
 }
 
@@ -45,13 +48,20 @@ int main(void)
 	delayInit();
 	canInit(0x011c0008);
     sbusInit(36000000,100000);
+	ledInit();
     while(1)
     {
+		
 		if(testTimer>=100)
         {
             sbubRead();
             testTimer=0;
         }
+		if(animationTImer>20)
+		{
+			animationTImer=0;
+			animationLoop();
+		}
 		if(flag==1)
 		{
 			flag=0;

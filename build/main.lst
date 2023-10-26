@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -30,115 +30,125 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
   28              		.file 1 "Core/Src/main.c"
    1:Core/Src/main.c **** #include "main.h"
    2:Core/Src/main.c **** 
-   3:Core/Src/main.c **** extern uint8_t sbusData[BUFF_SIZE];
-   4:Core/Src/main.c **** 
-   5:Core/Src/main.c **** uint8_t state=0;
-   6:Core/Src/main.c **** 
-   7:Core/Src/main.c **** static uint16_t testTimer=0;
-   8:Core/Src/main.c **** 
-   9:Core/Src/main.c **** extern uint8_t flag;
+   3:Core/Src/main.c **** 
+   4:Core/Src/main.c **** extern uint8_t sbusData[BUFF_SIZE];
+   5:Core/Src/main.c **** 
+   6:Core/Src/main.c **** uint8_t state=0;
+   7:Core/Src/main.c **** 
+   8:Core/Src/main.c **** static uint16_t testTimer=0;
+   9:Core/Src/main.c **** static uint16_t animationTImer=0;
   10:Core/Src/main.c **** 
-  11:Core/Src/main.c **** void TIM6_DAC1_IRQHandler(void)
-  12:Core/Src/main.c **** {
-  29              		.loc 1 12 1 view -0
+  11:Core/Src/main.c **** extern uint8_t flag;
+  12:Core/Src/main.c **** 
+  13:Core/Src/main.c **** void TIM6_DAC1_IRQHandler(void)
+  14:Core/Src/main.c **** {
+  29              		.loc 1 14 1 view -0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   33              		@ link register save eliminated.
-  13:Core/Src/main.c ****     if(TIM6->SR & TIM_SR_UIF)
-  34              		.loc 1 13 5 view .LVU1
-  35              		.loc 1 13 12 is_stmt 0 view .LVU2
-  36 0000 074B     		ldr	r3, .L3
+  15:Core/Src/main.c ****     if(TIM6->SR & TIM_SR_UIF)
+  34              		.loc 1 15 5 view .LVU1
+  35              		.loc 1 15 12 is_stmt 0 view .LVU2
+  36 0000 094B     		ldr	r3, .L3
   37 0002 1B69     		ldr	r3, [r3, #16]
-  38              		.loc 1 13 7 view .LVU3
+  38              		.loc 1 15 7 view .LVU3
   39 0004 13F0010F 		tst	r3, #1
-  40 0008 08D0     		beq	.L1
-  14:Core/Src/main.c ****     {
-  15:Core/Src/main.c ****         TIM6->SR &=~TIM_SR_UIF;
-  41              		.loc 1 15 9 is_stmt 1 view .LVU4
-  42              		.loc 1 15 18 is_stmt 0 view .LVU5
-  43 000a 054A     		ldr	r2, .L3
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 2
+  40 0008 0CD0     		beq	.L1
+  16:Core/Src/main.c ****     {
+  17:Core/Src/main.c ****         TIM6->SR &=~TIM_SR_UIF;
+  41              		.loc 1 17 9 is_stmt 1 view .LVU4
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 2
 
 
+  42              		.loc 1 17 18 is_stmt 0 view .LVU5
+  43 000a 074A     		ldr	r2, .L3
   44 000c 1369     		ldr	r3, [r2, #16]
   45 000e 23F00103 		bic	r3, r3, #1
   46 0012 1361     		str	r3, [r2, #16]
-  16:Core/Src/main.c ****         testTimer++;
-  47              		.loc 1 16 9 is_stmt 1 view .LVU6
-  48              		.loc 1 16 18 is_stmt 0 view .LVU7
-  49 0014 034A     		ldr	r2, .L3+4
+  18:Core/Src/main.c ****         testTimer++;
+  47              		.loc 1 18 9 is_stmt 1 view .LVU6
+  48              		.loc 1 18 18 is_stmt 0 view .LVU7
+  49 0014 054A     		ldr	r2, .L3+4
   50 0016 1388     		ldrh	r3, [r2]
   51 0018 0133     		adds	r3, r3, #1
   52 001a 1380     		strh	r3, [r2]	@ movhi
-  53              	.L1:
-  17:Core/Src/main.c ****     }
-  18:Core/Src/main.c **** }
-  54              		.loc 1 18 1 view .LVU8
-  55 001c 7047     		bx	lr
-  56              	.L4:
-  57 001e 00BF     		.align	2
-  58              	.L3:
-  59 0020 00100040 		.word	1073745920
-  60 0024 00000000 		.word	.LANCHOR0
-  61              		.cfi_endproc
-  62              	.LFE126:
-  64              		.section	.text.timer6Init,"ax",%progbits
-  65              		.align	1
-  66              		.global	timer6Init
-  67              		.syntax unified
-  68              		.thumb
-  69              		.thumb_func
-  70              		.fpu fpv4-sp-d16
-  72              	timer6Init:
-  73              	.LFB127:
-  19:Core/Src/main.c **** 
-  20:Core/Src/main.c **** void timer6Init(void)
-  21:Core/Src/main.c **** { 
-  74              		.loc 1 21 1 is_stmt 1 view -0
-  75              		.cfi_startproc
-  76              		@ args = 0, pretend = 0, frame = 0
-  77              		@ frame_needed = 0, uses_anonymous_args = 0
-  78              		@ link register save eliminated.
-  22:Core/Src/main.c ****     RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;
-  79              		.loc 1 22 5 view .LVU10
-  80              		.loc 1 22 18 is_stmt 0 view .LVU11
-  81 0000 0B4A     		ldr	r2, .L6
-  82 0002 D369     		ldr	r3, [r2, #28]
-  83 0004 43F01003 		orr	r3, r3, #16
-  84 0008 D361     		str	r3, [r2, #28]
-  23:Core/Src/main.c ****     TIM6->PSC = 7200-1;
-  85              		.loc 1 23 5 is_stmt 1 view .LVU12
-  86              		.loc 1 23 15 is_stmt 0 view .LVU13
-  87 000a 0A4B     		ldr	r3, .L6+4
-  88 000c 41F61F42 		movw	r2, #7199
-  89 0010 9A62     		str	r2, [r3, #40]
-  24:Core/Src/main.c ****     TIM6->ARR = 10-1;
-  90              		.loc 1 24 5 is_stmt 1 view .LVU14
-  91              		.loc 1 24 15 is_stmt 0 view .LVU15
-  92 0012 0922     		movs	r2, #9
-  93 0014 DA62     		str	r2, [r3, #44]
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 3
+  19:Core/Src/main.c **** 		animationTImer++;
+  53              		.loc 1 19 3 is_stmt 1 view .LVU8
+  54              		.loc 1 19 17 is_stmt 0 view .LVU9
+  55 001c 044A     		ldr	r2, .L3+8
+  56 001e 1388     		ldrh	r3, [r2]
+  57 0020 0133     		adds	r3, r3, #1
+  58 0022 1380     		strh	r3, [r2]	@ movhi
+  59              	.L1:
+  20:Core/Src/main.c ****     }
+  21:Core/Src/main.c **** }
+  60              		.loc 1 21 1 view .LVU10
+  61 0024 7047     		bx	lr
+  62              	.L4:
+  63 0026 00BF     		.align	2
+  64              	.L3:
+  65 0028 00100040 		.word	1073745920
+  66 002c 00000000 		.word	.LANCHOR0
+  67 0030 00000000 		.word	.LANCHOR1
+  68              		.cfi_endproc
+  69              	.LFE126:
+  71              		.section	.text.timer6Init,"ax",%progbits
+  72              		.align	1
+  73              		.global	timer6Init
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  77              		.fpu fpv4-sp-d16
+  79              	timer6Init:
+  80              	.LFB127:
+  22:Core/Src/main.c **** 
+  23:Core/Src/main.c **** void timer6Init(void)
+  24:Core/Src/main.c **** { 
+  81              		.loc 1 24 1 is_stmt 1 view -0
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85              		@ link register save eliminated.
+  25:Core/Src/main.c ****     RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;
+  86              		.loc 1 25 5 view .LVU12
+  87              		.loc 1 25 18 is_stmt 0 view .LVU13
+  88 0000 0B4A     		ldr	r2, .L6
+  89 0002 D369     		ldr	r3, [r2, #28]
+  90 0004 43F01003 		orr	r3, r3, #16
+  91 0008 D361     		str	r3, [r2, #28]
+  26:Core/Src/main.c ****     TIM6->PSC = 7200-1;
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 3
 
 
-  25:Core/Src/main.c ****     TIM6->DIER |= TIM_DIER_UIE;
-  94              		.loc 1 25 5 is_stmt 1 view .LVU16
-  95              		.loc 1 25 16 is_stmt 0 view .LVU17
-  96 0016 DA68     		ldr	r2, [r3, #12]
-  97 0018 42F00102 		orr	r2, r2, #1
-  98 001c DA60     		str	r2, [r3, #12]
-  26:Core/Src/main.c ****     TIM6->CR1 |= TIM_CR1_CEN;
-  99              		.loc 1 26 5 is_stmt 1 view .LVU18
- 100              		.loc 1 26 15 is_stmt 0 view .LVU19
- 101 001e 1A68     		ldr	r2, [r3]
- 102 0020 42F00102 		orr	r2, r2, #1
- 103 0024 1A60     		str	r2, [r3]
-  27:Core/Src/main.c ****     NVIC_EnableIRQ(TIM6_DAC1_IRQn);
- 104              		.loc 1 27 5 is_stmt 1 view .LVU20
- 105              	.LVL0:
- 106              	.LBB4:
- 107              	.LBI4:
- 108              		.file 2 "Drivers/CMSIS/Include/core_cm4.h"
+  92              		.loc 1 26 5 is_stmt 1 view .LVU14
+  93              		.loc 1 26 15 is_stmt 0 view .LVU15
+  94 000a 0A4B     		ldr	r3, .L6+4
+  95 000c 41F61F42 		movw	r2, #7199
+  96 0010 9A62     		str	r2, [r3, #40]
+  27:Core/Src/main.c ****     TIM6->ARR = 10-1;
+  97              		.loc 1 27 5 is_stmt 1 view .LVU16
+  98              		.loc 1 27 15 is_stmt 0 view .LVU17
+  99 0012 0922     		movs	r2, #9
+ 100 0014 DA62     		str	r2, [r3, #44]
+  28:Core/Src/main.c ****     TIM6->DIER |= TIM_DIER_UIE;
+ 101              		.loc 1 28 5 is_stmt 1 view .LVU18
+ 102              		.loc 1 28 16 is_stmt 0 view .LVU19
+ 103 0016 DA68     		ldr	r2, [r3, #12]
+ 104 0018 42F00102 		orr	r2, r2, #1
+ 105 001c DA60     		str	r2, [r3, #12]
+  29:Core/Src/main.c ****     TIM6->CR1 |= TIM_CR1_CEN;
+ 106              		.loc 1 29 5 is_stmt 1 view .LVU20
+ 107              		.loc 1 29 15 is_stmt 0 view .LVU21
+ 108 001e 1A68     		ldr	r2, [r3]
+ 109 0020 42F00102 		orr	r2, r2, #1
+ 110 0024 1A60     		str	r2, [r3]
+  30:Core/Src/main.c ****     NVIC_EnableIRQ(TIM6_DAC1_IRQn);
+ 111              		.loc 1 30 5 is_stmt 1 view .LVU22
+ 112              	.LVL0:
+ 113              	.LBB4:
+ 114              	.LBI4:
+ 115              		.file 2 "Drivers/CMSIS/Include/core_cm4.h"
    1:Drivers/CMSIS/Include/core_cm4.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/core_cm4.h ****  * @file     core_cm4.h
    3:Drivers/CMSIS/Include/core_cm4.h ****  * @brief    CMSIS Cortex-M4 Core Peripheral Access Layer Header File
@@ -168,6 +178,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
   27:Drivers/CMSIS/Include/core_cm4.h **** #elif defined (__clang__)
   28:Drivers/CMSIS/Include/core_cm4.h ****   #pragma clang system_header   /* treat file as system include file */
   29:Drivers/CMSIS/Include/core_cm4.h **** #endif
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 4
+
+
   30:Drivers/CMSIS/Include/core_cm4.h **** 
   31:Drivers/CMSIS/Include/core_cm4.h **** #ifndef __CORE_CM4_H_GENERIC
   32:Drivers/CMSIS/Include/core_cm4.h **** #define __CORE_CM4_H_GENERIC
@@ -178,9 +191,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
   37:Drivers/CMSIS/Include/core_cm4.h ****  extern "C" {
   38:Drivers/CMSIS/Include/core_cm4.h **** #endif
   39:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 4
-
-
   40:Drivers/CMSIS/Include/core_cm4.h **** /**
   41:Drivers/CMSIS/Include/core_cm4.h ****   \page CMSIS_MISRA_Exceptions  MISRA-C:2004 Compliance Exceptions
   42:Drivers/CMSIS/Include/core_cm4.h ****   CMSIS violates the following MISRA-C:2004 rules:
@@ -228,6 +238,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
   84:Drivers/CMSIS/Include/core_cm4.h ****   #else
   85:Drivers/CMSIS/Include/core_cm4.h ****     #define __FPU_USED         0U
   86:Drivers/CMSIS/Include/core_cm4.h ****   #endif
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 5
+
+
   87:Drivers/CMSIS/Include/core_cm4.h **** 
   88:Drivers/CMSIS/Include/core_cm4.h **** #elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
   89:Drivers/CMSIS/Include/core_cm4.h ****   #if defined __ARM_PCS_VFP
@@ -238,9 +251,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
   94:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       0U
   95:Drivers/CMSIS/Include/core_cm4.h ****     #endif
   96:Drivers/CMSIS/Include/core_cm4.h ****   #else
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 5
-
-
   97:Drivers/CMSIS/Include/core_cm4.h ****     #define __FPU_USED         0U
   98:Drivers/CMSIS/Include/core_cm4.h ****   #endif
   99:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -288,6 +298,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  141:Drivers/CMSIS/Include/core_cm4.h ****       #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
  142:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       0U
  143:Drivers/CMSIS/Include/core_cm4.h ****     #endif
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 6
+
+
  144:Drivers/CMSIS/Include/core_cm4.h ****   #else
  145:Drivers/CMSIS/Include/core_cm4.h ****     #define __FPU_USED         0U
  146:Drivers/CMSIS/Include/core_cm4.h ****   #endif
@@ -298,9 +311,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  151:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       1U
  152:Drivers/CMSIS/Include/core_cm4.h ****     #else
  153:Drivers/CMSIS/Include/core_cm4.h ****       #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 6
-
-
  154:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       0U
  155:Drivers/CMSIS/Include/core_cm4.h ****     #endif
  156:Drivers/CMSIS/Include/core_cm4.h ****   #else
@@ -348,6 +358,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  198:Drivers/CMSIS/Include/core_cm4.h ****     #define __NVIC_PRIO_BITS          3U
  199:Drivers/CMSIS/Include/core_cm4.h ****     #warning "__NVIC_PRIO_BITS not defined in device header file; using default!"
  200:Drivers/CMSIS/Include/core_cm4.h ****   #endif
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 7
+
+
  201:Drivers/CMSIS/Include/core_cm4.h **** 
  202:Drivers/CMSIS/Include/core_cm4.h ****   #ifndef __Vendor_SysTickConfig
  203:Drivers/CMSIS/Include/core_cm4.h ****     #define __Vendor_SysTickConfig    0U
@@ -358,9 +371,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  208:Drivers/CMSIS/Include/core_cm4.h **** /* IO definitions (access restrictions to peripheral registers) */
  209:Drivers/CMSIS/Include/core_cm4.h **** /**
  210:Drivers/CMSIS/Include/core_cm4.h ****     \defgroup CMSIS_glob_defs CMSIS Global Defines
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 7
-
-
  211:Drivers/CMSIS/Include/core_cm4.h **** 
  212:Drivers/CMSIS/Include/core_cm4.h ****     <strong>IO Type Qualifiers</strong> are used
  213:Drivers/CMSIS/Include/core_cm4.h ****     \li to specify the access to peripheral variables.
@@ -408,6 +418,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  255:Drivers/CMSIS/Include/core_cm4.h **** 
  256:Drivers/CMSIS/Include/core_cm4.h **** /**
  257:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Union type to access the Application Program Status Register (APSR).
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 8
+
+
  258:Drivers/CMSIS/Include/core_cm4.h ****  */
  259:Drivers/CMSIS/Include/core_cm4.h **** typedef union
  260:Drivers/CMSIS/Include/core_cm4.h **** {
@@ -418,9 +431,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  265:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t _reserved1:7;               /*!< bit: 20..26  Reserved */
  266:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag */
  267:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 8
-
-
  268:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag */
  269:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag */
  270:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag */
@@ -468,6 +478,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  312:Drivers/CMSIS/Include/core_cm4.h **** 
  313:Drivers/CMSIS/Include/core_cm4.h **** /**
  314:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Union type to access the Special-Purpose Program Status Registers (xPSR).
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 9
+
+
  315:Drivers/CMSIS/Include/core_cm4.h ****  */
  316:Drivers/CMSIS/Include/core_cm4.h **** typedef union
  317:Drivers/CMSIS/Include/core_cm4.h **** {
@@ -478,9 +491,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  322:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t ICI_IT_1:6;                 /*!< bit: 10..15  ICI/IT part 1 */
  323:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t GE:4;                       /*!< bit: 16..19  Greater than or Equal flags */
  324:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t _reserved1:4;               /*!< bit: 20..23  Reserved */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 9
-
-
  325:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t T:1;                        /*!< bit:     24  Thumb bit */
  326:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t ICI_IT_2:2;                 /*!< bit: 25..26  ICI/IT part 2 */
  327:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag */
@@ -528,6 +538,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  369:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Union type to access the Control Registers (CONTROL).
  370:Drivers/CMSIS/Include/core_cm4.h ****  */
  371:Drivers/CMSIS/Include/core_cm4.h **** typedef union
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 10
+
+
  372:Drivers/CMSIS/Include/core_cm4.h **** {
  373:Drivers/CMSIS/Include/core_cm4.h ****   struct
  374:Drivers/CMSIS/Include/core_cm4.h ****   {
@@ -538,9 +551,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  379:Drivers/CMSIS/Include/core_cm4.h ****   } b;                                   /*!< Structure used for bit  access */
  380:Drivers/CMSIS/Include/core_cm4.h ****   uint32_t w;                            /*!< Type      used for word access */
  381:Drivers/CMSIS/Include/core_cm4.h **** } CONTROL_Type;
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 10
-
-
  382:Drivers/CMSIS/Include/core_cm4.h **** 
  383:Drivers/CMSIS/Include/core_cm4.h **** /* CONTROL Register Definitions */
  384:Drivers/CMSIS/Include/core_cm4.h **** #define CONTROL_FPCA_Pos                    2U                                            /*!< CONT
@@ -588,6 +598,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  426:Drivers/CMSIS/Include/core_cm4.h **** 
  427:Drivers/CMSIS/Include/core_cm4.h **** /*@} end of group CMSIS_NVIC */
  428:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 11
+
+
  429:Drivers/CMSIS/Include/core_cm4.h **** 
  430:Drivers/CMSIS/Include/core_cm4.h **** /**
  431:Drivers/CMSIS/Include/core_cm4.h ****   \ingroup  CMSIS_core_register
@@ -598,9 +611,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  436:Drivers/CMSIS/Include/core_cm4.h **** 
  437:Drivers/CMSIS/Include/core_cm4.h **** /**
  438:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Structure type to access the System Control Block (SCB).
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 11
-
-
  439:Drivers/CMSIS/Include/core_cm4.h ****  */
  440:Drivers/CMSIS/Include/core_cm4.h **** typedef struct
  441:Drivers/CMSIS/Include/core_cm4.h **** {
@@ -648,6 +658,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  483:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_NMIPENDSET_Msk            (1UL << SCB_ICSR_NMIPENDSET_Pos)               /*!< SCB 
  484:Drivers/CMSIS/Include/core_cm4.h **** 
  485:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSVSET_Pos             28U                                            /*!< SCB 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 12
+
+
  486:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSVSET_Msk             (1UL << SCB_ICSR_PENDSVSET_Pos)                /*!< SCB 
  487:Drivers/CMSIS/Include/core_cm4.h **** 
  488:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSVCLR_Pos             27U                                            /*!< SCB 
@@ -658,9 +671,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  493:Drivers/CMSIS/Include/core_cm4.h **** 
  494:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSTCLR_Pos             25U                                            /*!< SCB 
  495:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSTCLR_Msk             (1UL << SCB_ICSR_PENDSTCLR_Pos)                /*!< SCB 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 12
-
-
  496:Drivers/CMSIS/Include/core_cm4.h **** 
  497:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_ISRPREEMPT_Pos            23U                                            /*!< SCB 
  498:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_ISRPREEMPT_Msk            (1UL << SCB_ICSR_ISRPREEMPT_Pos)               /*!< SCB 
@@ -708,6 +718,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  540:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SEVONPEND_Msk              (1UL << SCB_SCR_SEVONPEND_Pos)                 /*!< SCB 
  541:Drivers/CMSIS/Include/core_cm4.h **** 
  542:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SLEEPDEEP_Pos               2U                                            /*!< SCB 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 13
+
+
  543:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SLEEPDEEP_Msk              (1UL << SCB_SCR_SLEEPDEEP_Pos)                 /*!< SCB 
  544:Drivers/CMSIS/Include/core_cm4.h **** 
  545:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SLEEPONEXIT_Pos             1U                                            /*!< SCB 
@@ -718,9 +731,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  550:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_STKALIGN_Msk               (1UL << SCB_CCR_STKALIGN_Pos)                  /*!< SCB 
  551:Drivers/CMSIS/Include/core_cm4.h **** 
  552:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_BFHFNMIGN_Pos               8U                                            /*!< SCB 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 13
-
-
  553:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_BFHFNMIGN_Msk              (1UL << SCB_CCR_BFHFNMIGN_Pos)                 /*!< SCB 
  554:Drivers/CMSIS/Include/core_cm4.h **** 
  555:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_DIV_0_TRP_Pos               4U                                            /*!< SCB 
@@ -768,6 +778,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  597:Drivers/CMSIS/Include/core_cm4.h **** 
  598:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_SVCALLACT_Pos             7U                                            /*!< SCB 
  599:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_SVCALLACT_Msk            (1UL << SCB_SHCSR_SVCALLACT_Pos)               /*!< SCB 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 14
+
+
  600:Drivers/CMSIS/Include/core_cm4.h **** 
  601:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_USGFAULTACT_Pos           3U                                            /*!< SCB 
  602:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_USGFAULTACT_Msk          (1UL << SCB_SHCSR_USGFAULTACT_Pos)             /*!< SCB 
@@ -778,9 +791,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  607:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_MEMFAULTACT_Pos           0U                                            /*!< SCB 
  608:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_MEMFAULTACT_Msk          (1UL /*<< SCB_SHCSR_MEMFAULTACT_Pos*/)         /*!< SCB 
  609:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 14
-
-
  610:Drivers/CMSIS/Include/core_cm4.h **** /* SCB Configurable Fault Status Register Definitions */
  611:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_USGFAULTSR_Pos            16U                                            /*!< SCB 
  612:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_USGFAULTSR_Msk            (0xFFFFUL << SCB_CFSR_USGFAULTSR_Pos)          /*!< SCB 
@@ -828,6 +838,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  654:Drivers/CMSIS/Include/core_cm4.h **** 
  655:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_PRECISERR_Pos            (SCB_CFSR_BUSFAULTSR_Pos + 1U)                  /*!< SCB 
  656:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_PRECISERR_Msk            (1UL << SCB_CFSR_PRECISERR_Pos)                 /*!< SCB 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 15
+
+
  657:Drivers/CMSIS/Include/core_cm4.h **** 
  658:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_IBUSERR_Pos              (SCB_CFSR_BUSFAULTSR_Pos + 0U)                  /*!< SCB 
  659:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_IBUSERR_Msk              (1UL << SCB_CFSR_IBUSERR_Pos)                   /*!< SCB 
@@ -838,9 +851,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  664:Drivers/CMSIS/Include/core_cm4.h **** 
  665:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_UNALIGNED_Pos            (SCB_CFSR_USGFAULTSR_Pos + 8U)                  /*!< SCB 
  666:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_UNALIGNED_Msk            (1UL << SCB_CFSR_UNALIGNED_Pos)                 /*!< SCB 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 15
-
-
  667:Drivers/CMSIS/Include/core_cm4.h **** 
  668:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_NOCP_Pos                 (SCB_CFSR_USGFAULTSR_Pos + 3U)                  /*!< SCB 
  669:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_NOCP_Msk                 (1UL << SCB_CFSR_NOCP_Pos)                      /*!< SCB 
@@ -888,6 +898,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  711:Drivers/CMSIS/Include/core_cm4.h ****   \defgroup CMSIS_SCnSCB System Controls not in SCB (SCnSCB)
  712:Drivers/CMSIS/Include/core_cm4.h ****   \brief    Type definitions for the System Control and ID Register not in the SCB
  713:Drivers/CMSIS/Include/core_cm4.h ****   @{
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 16
+
+
  714:Drivers/CMSIS/Include/core_cm4.h ****  */
  715:Drivers/CMSIS/Include/core_cm4.h **** 
  716:Drivers/CMSIS/Include/core_cm4.h **** /**
@@ -898,9 +911,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  721:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED0[1U];
  722:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t ICTR;                   /*!< Offset: 0x004 (R/ )  Interrupt Controller Type Regist
  723:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t ACTLR;                  /*!< Offset: 0x008 (R/W)  Auxiliary Control Register */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 16
-
-
  724:Drivers/CMSIS/Include/core_cm4.h **** } SCnSCB_Type;
  725:Drivers/CMSIS/Include/core_cm4.h **** 
  726:Drivers/CMSIS/Include/core_cm4.h **** /* Interrupt Controller Type Register Definitions */
@@ -948,6 +958,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  768:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_COUNTFLAG_Pos         16U                                            /*!< SysT
  769:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_COUNTFLAG_Msk         (1UL << SysTick_CTRL_COUNTFLAG_Pos)            /*!< SysT
  770:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 17
+
+
  771:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_CLKSOURCE_Pos          2U                                            /*!< SysT
  772:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_CLKSOURCE_Msk         (1UL << SysTick_CTRL_CLKSOURCE_Pos)            /*!< SysT
  773:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -958,9 +971,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  778:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_ENABLE_Msk            (1UL /*<< SysTick_CTRL_ENABLE_Pos*/)           /*!< SysT
  779:Drivers/CMSIS/Include/core_cm4.h **** 
  780:Drivers/CMSIS/Include/core_cm4.h **** /* SysTick Reload Register Definitions */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 17
-
-
  781:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_LOAD_RELOAD_Pos             0U                                            /*!< SysT
  782:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_LOAD_RELOAD_Msk            (0xFFFFFFUL /*<< SysTick_LOAD_RELOAD_Pos*/)    /*!< SysT
  783:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1008,6 +1018,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  825:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED3[29U];
  826:Drivers/CMSIS/Include/core_cm4.h ****   __OM  uint32_t IWR;                    /*!< Offset: 0xEF8 ( /W)  ITM Integration Write Register *
  827:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t IRR;                    /*!< Offset: 0xEFC (R/ )  ITM Integration Read Register */
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 18
+
+
  828:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t IMCR;                   /*!< Offset: 0xF00 (R/W)  ITM Integration Mode Control Reg
  829:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED4[43U];
  830:Drivers/CMSIS/Include/core_cm4.h ****   __OM  uint32_t LAR;                    /*!< Offset: 0xFB0 ( /W)  ITM Lock Access Register */
@@ -1018,9 +1031,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  835:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID6;                   /*!< Offset: 0xFD8 (R/ )  ITM Peripheral Identification Re
  836:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID7;                   /*!< Offset: 0xFDC (R/ )  ITM Peripheral Identification Re
  837:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID0;                   /*!< Offset: 0xFE0 (R/ )  ITM Peripheral Identification Re
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 18
-
-
  838:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID1;                   /*!< Offset: 0xFE4 (R/ )  ITM Peripheral Identification Re
  839:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID2;                   /*!< Offset: 0xFE8 (R/ )  ITM Peripheral Identification Re
  840:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID3;                   /*!< Offset: 0xFEC (R/ )  ITM Peripheral Identification Re
@@ -1068,6 +1078,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  882:Drivers/CMSIS/Include/core_cm4.h **** 
  883:Drivers/CMSIS/Include/core_cm4.h **** /* ITM Integration Read Register Definitions */
  884:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_IRR_ATREADYM_Pos                0U                                            /*!< ITM 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 19
+
+
  885:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_IRR_ATREADYM_Msk               (1UL /*<< ITM_IRR_ATREADYM_Pos*/)              /*!< ITM 
  886:Drivers/CMSIS/Include/core_cm4.h **** 
  887:Drivers/CMSIS/Include/core_cm4.h **** /* ITM Integration Mode Control Register Definitions */
@@ -1078,9 +1091,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  892:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_ByteAcc_Pos                 2U                                            /*!< ITM 
  893:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_ByteAcc_Msk                (1UL << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
  894:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 19
-
-
  895:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_Access_Pos                  1U                                            /*!< ITM 
  896:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_Access_Msk                 (1UL << ITM_LSR_Access_Pos)                    /*!< ITM 
  897:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1128,6 +1138,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  939:Drivers/CMSIS/Include/core_cm4.h **** } DWT_Type;
  940:Drivers/CMSIS/Include/core_cm4.h **** 
  941:Drivers/CMSIS/Include/core_cm4.h **** /* DWT Control Register Definitions */
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 20
+
+
  942:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NUMCOMP_Pos               28U                                         /*!< DWT CTR
  943:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NUMCOMP_Msk               (0xFUL << DWT_CTRL_NUMCOMP_Pos)             /*!< DWT CTR
  944:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1138,9 +1151,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  949:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOEXTTRIG_Msk             (0x1UL << DWT_CTRL_NOEXTTRIG_Pos)           /*!< DWT CTR
  950:Drivers/CMSIS/Include/core_cm4.h **** 
  951:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOCYCCNT_Pos              25U                                         /*!< DWT CTR
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 20
-
-
  952:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOCYCCNT_Msk              (0x1UL << DWT_CTRL_NOCYCCNT_Pos)            /*!< DWT CTR
  953:Drivers/CMSIS/Include/core_cm4.h **** 
  954:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOPRFCNT_Pos              24U                                         /*!< DWT CTR
@@ -1188,6 +1198,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
  996:Drivers/CMSIS/Include/core_cm4.h **** /* DWT CPI Count Register Definitions */
  997:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CPICNT_CPICNT_Pos               0U                                         /*!< DWT CPI
  998:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CPICNT_CPICNT_Msk              (0xFFUL /*<< DWT_CPICNT_CPICNT_Pos*/)       /*!< DWT CPI
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 21
+
+
  999:Drivers/CMSIS/Include/core_cm4.h **** 
 1000:Drivers/CMSIS/Include/core_cm4.h **** /* DWT Exception Overhead Count Register Definitions */
 1001:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_EXCCNT_EXCCNT_Pos               0U                                         /*!< DWT EXC
@@ -1198,9 +1211,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1006:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_SLEEPCNT_SLEEPCNT_Msk          (0xFFUL /*<< DWT_SLEEPCNT_SLEEPCNT_Pos*/)   /*!< DWT SLE
 1007:Drivers/CMSIS/Include/core_cm4.h **** 
 1008:Drivers/CMSIS/Include/core_cm4.h **** /* DWT LSU Count Register Definitions */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 21
-
-
 1009:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_LSUCNT_LSUCNT_Pos               0U                                         /*!< DWT LSU
 1010:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_LSUCNT_LSUCNT_Msk              (0xFFUL /*<< DWT_LSUCNT_LSUCNT_Pos*/)       /*!< DWT LSU
 1011:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1248,6 +1258,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1053:Drivers/CMSIS/Include/core_cm4.h ****   \defgroup CMSIS_TPI     Trace Port Interface (TPI)
 1054:Drivers/CMSIS/Include/core_cm4.h ****   \brief    Type definitions for the Trace Port Interface (TPI)
 1055:Drivers/CMSIS/Include/core_cm4.h ****   @{
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 22
+
+
 1056:Drivers/CMSIS/Include/core_cm4.h ****  */
 1057:Drivers/CMSIS/Include/core_cm4.h **** 
 1058:Drivers/CMSIS/Include/core_cm4.h **** /**
@@ -1258,9 +1271,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1063:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t SSPSR;                  /*!< Offset: 0x000 (R/ )  Supported Parallel Port Size Reg
 1064:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t CSPSR;                  /*!< Offset: 0x004 (R/W)  Current Parallel Port Size Regis
 1065:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED0[2U];
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 22
-
-
 1066:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t ACPR;                   /*!< Offset: 0x010 (R/W)  Asynchronous Clock Prescaler Reg
 1067:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED1[55U];
 1068:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t SPPR;                   /*!< Offset: 0x0F0 (R/W)  Selected Pin Protocol Register *
@@ -1308,6 +1318,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1110:Drivers/CMSIS/Include/core_cm4.h **** /* TPI Formatter and Flush Control Register Definitions */
 1111:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FFCR_TrigIn_Pos                 8U                                         /*!< TPI FFC
 1112:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FFCR_TrigIn_Msk                (0x1UL << TPI_FFCR_TrigIn_Pos)              /*!< TPI FFC
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 23
+
+
 1113:Drivers/CMSIS/Include/core_cm4.h **** 
 1114:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FFCR_EnFCont_Pos                1U                                         /*!< TPI FFC
 1115:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FFCR_EnFCont_Msk               (0x1UL << TPI_FFCR_EnFCont_Pos)             /*!< TPI FFC
@@ -1318,9 +1331,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1120:Drivers/CMSIS/Include/core_cm4.h **** 
 1121:Drivers/CMSIS/Include/core_cm4.h **** /* TPI Integration ETM Data Register Definitions (FIFO0) */
 1122:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_ATVALID_Pos          29U                                         /*!< TPI FIF
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 23
-
-
 1123:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_ATVALID_Msk          (0x3UL << TPI_FIFO0_ITM_ATVALID_Pos)        /*!< TPI FIF
 1124:Drivers/CMSIS/Include/core_cm4.h **** 
 1125:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_bytecount_Pos        27U                                         /*!< TPI FIF
@@ -1368,6 +1378,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1167:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO1_ITM1_Msk                 (0xFFUL << TPI_FIFO1_ITM1_Pos)              /*!< TPI FIF
 1168:Drivers/CMSIS/Include/core_cm4.h **** 
 1169:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO1_ITM0_Pos                  0U                                         /*!< TPI FIF
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 24
+
+
 1170:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO1_ITM0_Msk                 (0xFFUL /*<< TPI_FIFO1_ITM0_Pos*/)          /*!< TPI FIF
 1171:Drivers/CMSIS/Include/core_cm4.h **** 
 1172:Drivers/CMSIS/Include/core_cm4.h **** /* TPI ITATBCTR0 Register Definitions */
@@ -1378,9 +1391,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1177:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_ITATBCTR0_ATREADY1_Msk         (0x1UL /*<< TPI_ITATBCTR0_ATREADY1_Pos*/)   /*!< TPI ITA
 1178:Drivers/CMSIS/Include/core_cm4.h **** 
 1179:Drivers/CMSIS/Include/core_cm4.h **** /* TPI Integration Mode Control Register Definitions */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 24
-
-
 1180:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_ITCTRL_Mode_Pos                 0U                                         /*!< TPI ITC
 1181:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_ITCTRL_Mode_Msk                (0x3UL /*<< TPI_ITCTRL_Mode_Pos*/)          /*!< TPI ITC
 1182:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1428,6 +1438,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1224:Drivers/CMSIS/Include/core_cm4.h **** {
 1225:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t TYPE;                   /*!< Offset: 0x000 (R/ )  MPU Type Register */
 1226:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t CTRL;                   /*!< Offset: 0x004 (R/W)  MPU Control Register */
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 25
+
+
 1227:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RNR;                    /*!< Offset: 0x008 (R/W)  MPU Region RNRber Register */
 1228:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RBAR;                   /*!< Offset: 0x00C (R/W)  MPU Region Base Address Register
 1229:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RASR;                   /*!< Offset: 0x010 (R/W)  MPU Region Attribute and Size Re
@@ -1438,9 +1451,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1234:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RBAR_A3;                /*!< Offset: 0x024 (R/W)  MPU Alias 3 Region Base Address 
 1235:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RASR_A3;                /*!< Offset: 0x028 (R/W)  MPU Alias 3 Region Attribute and
 1236:Drivers/CMSIS/Include/core_cm4.h **** } MPU_Type;
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 25
-
-
 1237:Drivers/CMSIS/Include/core_cm4.h **** 
 1238:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_TYPE_RALIASES                  4U
 1239:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1488,6 +1498,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1281:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_AP_Pos                    24U                                            /*!< MPU 
 1282:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_AP_Msk                    (0x7UL << MPU_RASR_AP_Pos)                     /*!< MPU 
 1283:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 26
+
+
 1284:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_TEX_Pos                   19U                                            /*!< MPU 
 1285:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_TEX_Msk                   (0x7UL << MPU_RASR_TEX_Pos)                    /*!< MPU 
 1286:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1498,9 +1511,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1291:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_C_Msk                     (1UL << MPU_RASR_C_Pos)                        /*!< MPU 
 1292:Drivers/CMSIS/Include/core_cm4.h **** 
 1293:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_B_Pos                     16U                                            /*!< MPU 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 26
-
-
 1294:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_B_Msk                     (1UL << MPU_RASR_B_Pos)                        /*!< MPU 
 1295:Drivers/CMSIS/Include/core_cm4.h **** 
 1296:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_SRD_Pos                    8U                                            /*!< MPU 
@@ -1548,6 +1558,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1338:Drivers/CMSIS/Include/core_cm4.h **** 
 1339:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_BFRDY_Pos                 6U                                            /*!< FPCC
 1340:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_BFRDY_Msk                (1UL << FPU_FPCCR_BFRDY_Pos)                   /*!< FPCC
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 27
+
+
 1341:Drivers/CMSIS/Include/core_cm4.h **** 
 1342:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_MMRDY_Pos                 5U                                            /*!< FPCC
 1343:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_MMRDY_Msk                (1UL << FPU_FPCCR_MMRDY_Pos)                   /*!< FPCC
@@ -1558,9 +1571,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1348:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_THREAD_Pos                3U                                            /*!< FPCC
 1349:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_THREAD_Msk               (1UL << FPU_FPCCR_THREAD_Pos)                  /*!< FPCC
 1350:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 27
-
-
 1351:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_USER_Pos                  1U                                            /*!< FPCC
 1352:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_USER_Msk                 (1UL << FPU_FPCCR_USER_Pos)                    /*!< FPCC
 1353:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1608,6 +1618,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1395:Drivers/CMSIS/Include/core_cm4.h **** 
 1396:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR0_A_SIMD_registers_Pos      0U                                            /*!< MVFR
 1397:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR0_A_SIMD_registers_Msk     (0xFUL /*<< FPU_MVFR0_A_SIMD_registers_Pos*/)  /*!< MVFR
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 28
+
+
 1398:Drivers/CMSIS/Include/core_cm4.h **** 
 1399:Drivers/CMSIS/Include/core_cm4.h **** /* Media and FP Feature Register 1 Definitions */
 1400:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_FP_fused_MAC_Pos         28U                                            /*!< MVFR
@@ -1618,9 +1631,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1405:Drivers/CMSIS/Include/core_cm4.h **** 
 1406:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_D_NaN_mode_Pos            4U                                            /*!< MVFR
 1407:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_D_NaN_mode_Msk           (0xFUL << FPU_MVFR1_D_NaN_mode_Pos)            /*!< MVFR
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 28
-
-
 1408:Drivers/CMSIS/Include/core_cm4.h **** 
 1409:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_FtZ_mode_Pos              0U                                            /*!< MVFR
 1410:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_FtZ_mode_Msk             (0xFUL /*<< FPU_MVFR1_FtZ_mode_Pos*/)          /*!< MVFR
@@ -1668,6 +1678,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1452:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_S_REGRDY_Pos       16U                                            /*!< Core
 1453:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_S_REGRDY_Msk       (1UL << CoreDebug_DHCSR_S_REGRDY_Pos)          /*!< Core
 1454:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 29
+
+
 1455:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_SNAPSTALL_Pos     5U                                            /*!< Core
 1456:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_SNAPSTALL_Msk    (1UL << CoreDebug_DHCSR_C_SNAPSTALL_Pos)       /*!< Core
 1457:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1678,9 +1691,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1462:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_STEP_Msk         (1UL << CoreDebug_DHCSR_C_STEP_Pos)            /*!< Core
 1463:Drivers/CMSIS/Include/core_cm4.h **** 
 1464:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_HALT_Pos          1U                                            /*!< Core
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 29
-
-
 1465:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_HALT_Msk         (1UL << CoreDebug_DHCSR_C_HALT_Pos)            /*!< Core
 1466:Drivers/CMSIS/Include/core_cm4.h **** 
 1467:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_DEBUGEN_Pos       0U                                            /*!< Core
@@ -1728,6 +1738,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1509:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_NOCPERR_Msk     (1UL << CoreDebug_DEMCR_VC_NOCPERR_Pos)        /*!< Core
 1510:Drivers/CMSIS/Include/core_cm4.h **** 
 1511:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_MMERR_Pos        4U                                            /*!< Core
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 30
+
+
 1512:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_MMERR_Msk       (1UL << CoreDebug_DEMCR_VC_MMERR_Pos)          /*!< Core
 1513:Drivers/CMSIS/Include/core_cm4.h **** 
 1514:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_CORERESET_Pos    0U                                            /*!< Core
@@ -1738,9 +1751,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1519:Drivers/CMSIS/Include/core_cm4.h **** 
 1520:Drivers/CMSIS/Include/core_cm4.h **** /**
 1521:Drivers/CMSIS/Include/core_cm4.h ****   \ingroup    CMSIS_core_register
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 30
-
-
 1522:Drivers/CMSIS/Include/core_cm4.h ****   \defgroup   CMSIS_core_bitfield     Core register bit field macros
 1523:Drivers/CMSIS/Include/core_cm4.h ****   \brief      Macros for use with bit field definitions (xxx_Pos, xxx_Msk).
 1524:Drivers/CMSIS/Include/core_cm4.h ****   @{
@@ -1788,6 +1798,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1566:Drivers/CMSIS/Include/core_cm4.h **** #define NVIC                ((NVIC_Type      *)     NVIC_BASE     )   /*!< NVIC configuration struc
 1567:Drivers/CMSIS/Include/core_cm4.h **** #define ITM                 ((ITM_Type       *)     ITM_BASE      )   /*!< ITM configuration struct
 1568:Drivers/CMSIS/Include/core_cm4.h **** #define DWT                 ((DWT_Type       *)     DWT_BASE      )   /*!< DWT configuration struct
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 31
+
+
 1569:Drivers/CMSIS/Include/core_cm4.h **** #define TPI                 ((TPI_Type       *)     TPI_BASE      )   /*!< TPI configuration struct
 1570:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug           ((CoreDebug_Type *)     CoreDebug_BASE)   /*!< Core Debug configuration
 1571:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1798,9 +1811,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1576:Drivers/CMSIS/Include/core_cm4.h **** 
 1577:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_BASE            (SCS_BASE +  0x0F30UL)                    /*!< Floating Point Unit */
 1578:Drivers/CMSIS/Include/core_cm4.h **** #define FPU                 ((FPU_Type       *)     FPU_BASE      )   /*!< Floating Point Unit */
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 31
-
-
 1579:Drivers/CMSIS/Include/core_cm4.h **** 
 1580:Drivers/CMSIS/Include/core_cm4.h **** /*@} */
 1581:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1848,6 +1858,9 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1623:Drivers/CMSIS/Include/core_cm4.h ****   #define NVIC_SystemReset            __NVIC_SystemReset
 1624:Drivers/CMSIS/Include/core_cm4.h **** #endif /* CMSIS_NVIC_VIRTUAL */
 1625:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 32
+
+
 1626:Drivers/CMSIS/Include/core_cm4.h **** #ifdef CMSIS_VECTAB_VIRTUAL
 1627:Drivers/CMSIS/Include/core_cm4.h ****   #ifndef CMSIS_VECTAB_VIRTUAL_HEADER_FILE
 1628:Drivers/CMSIS/Include/core_cm4.h ****    #define CMSIS_VECTAB_VIRTUAL_HEADER_FILE "cmsis_vectab_virtual.h"
@@ -1858,9 +1871,6 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1633:Drivers/CMSIS/Include/core_cm4.h ****   #define NVIC_GetVector              __NVIC_GetVector
 1634:Drivers/CMSIS/Include/core_cm4.h **** #endif  /* (CMSIS_VECTAB_VIRTUAL) */
 1635:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 32
-
-
 1636:Drivers/CMSIS/Include/core_cm4.h **** #define NVIC_USER_IRQ_OFFSET          16
 1637:Drivers/CMSIS/Include/core_cm4.h **** 
 1638:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1908,510 +1918,556 @@ ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 1
 1680:Drivers/CMSIS/Include/core_cm4.h **** 
 1681:Drivers/CMSIS/Include/core_cm4.h **** 
 1682:Drivers/CMSIS/Include/core_cm4.h **** /**
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 33
+
+
 1683:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Enable Interrupt
 1684:Drivers/CMSIS/Include/core_cm4.h ****   \details Enables a device specific interrupt in the NVIC interrupt controller.
 1685:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]      IRQn  Device specific interrupt number.
 1686:Drivers/CMSIS/Include/core_cm4.h ****   \note    IRQn must not be negative.
 1687:Drivers/CMSIS/Include/core_cm4.h ****  */
 1688:Drivers/CMSIS/Include/core_cm4.h **** __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
- 109              		.loc 2 1688 22 view .LVU21
- 110              	.LBB5:
+ 116              		.loc 2 1688 22 view .LVU23
+ 117              	.LBB5:
 1689:Drivers/CMSIS/Include/core_cm4.h **** {
 1690:Drivers/CMSIS/Include/core_cm4.h ****   if ((int32_t)(IRQn) >= 0)
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 33
-
-
- 111              		.loc 2 1690 3 view .LVU22
+ 118              		.loc 2 1690 3 view .LVU24
 1691:Drivers/CMSIS/Include/core_cm4.h ****   {
 1692:Drivers/CMSIS/Include/core_cm4.h ****     NVIC->ISER[(((uint32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)IRQn) & 0x1FUL));
- 112              		.loc 2 1692 5 view .LVU23
- 113              		.loc 2 1692 43 is_stmt 0 view .LVU24
- 114 0026 044B     		ldr	r3, .L6+8
- 115 0028 4FF48002 		mov	r2, #4194304
- 116 002c 5A60     		str	r2, [r3, #4]
- 117              	.LVL1:
- 118              		.loc 2 1692 43 view .LVU25
- 119              	.LBE5:
- 120              	.LBE4:
-  28:Core/Src/main.c **** }
- 121              		.loc 1 28 1 view .LVU26
- 122 002e 7047     		bx	lr
- 123              	.L7:
- 124              		.align	2
- 125              	.L6:
- 126 0030 00100240 		.word	1073876992
- 127 0034 00100040 		.word	1073745920
- 128 0038 00E100E0 		.word	-536813312
- 129              		.cfi_endproc
- 130              	.LFE127:
- 132              		.section	.text.main,"ax",%progbits
- 133              		.align	1
- 134              		.global	main
- 135              		.syntax unified
- 136              		.thumb
- 137              		.thumb_func
- 138              		.fpu fpv4-sp-d16
- 140              	main:
- 141              	.LFB128:
-  29:Core/Src/main.c **** 
-  30:Core/Src/main.c **** extern uint8_t demoState;
-  31:Core/Src/main.c **** extern uint8_t intFlag;
+ 119              		.loc 2 1692 5 view .LVU25
+ 120              		.loc 2 1692 43 is_stmt 0 view .LVU26
+ 121 0026 044B     		ldr	r3, .L6+8
+ 122 0028 4FF48002 		mov	r2, #4194304
+ 123 002c 5A60     		str	r2, [r3, #4]
+ 124              	.LVL1:
+ 125              		.loc 2 1692 43 view .LVU27
+ 126              	.LBE5:
+ 127              	.LBE4:
+  31:Core/Src/main.c **** }
+ 128              		.loc 1 31 1 view .LVU28
+ 129 002e 7047     		bx	lr
+ 130              	.L7:
+ 131              		.align	2
+ 132              	.L6:
+ 133 0030 00100240 		.word	1073876992
+ 134 0034 00100040 		.word	1073745920
+ 135 0038 00E100E0 		.word	-536813312
+ 136              		.cfi_endproc
+ 137              	.LFE127:
+ 139              		.section	.text.main,"ax",%progbits
+ 140              		.align	1
+ 141              		.global	main
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.fpu fpv4-sp-d16
+ 147              	main:
+ 148              	.LFB128:
   32:Core/Src/main.c **** 
-  33:Core/Src/main.c **** int main(void)
-  34:Core/Src/main.c **** {
- 142              		.loc 1 34 1 is_stmt 1 view -0
- 143              		.cfi_startproc
- 144              		@ args = 0, pretend = 0, frame = 56
- 145              		@ frame_needed = 0, uses_anonymous_args = 0
- 146 0000 30B5     		push	{r4, r5, lr}
- 147              	.LCFI0:
- 148              		.cfi_def_cfa_offset 12
- 149              		.cfi_offset 4, -12
- 150              		.cfi_offset 5, -8
- 151              		.cfi_offset 14, -4
- 152 0002 91B0     		sub	sp, sp, #68
- 153              	.LCFI1:
- 154              		.cfi_def_cfa_offset 80
-  35:Core/Src/main.c ****     PDU_Data_t data;
- 155              		.loc 1 35 5 view .LVU28
-  36:Core/Src/main.c ****     PDU_Changed_Channels_t* changedChannels;
- 156              		.loc 1 36 5 view .LVU29
-  37:Core/Src/main.c ****     rcCommand_t command;
- 157              		.loc 1 37 5 view .LVU30
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 34
+  33:Core/Src/main.c **** extern uint8_t demoState;
+  34:Core/Src/main.c **** extern uint8_t intFlag;
+  35:Core/Src/main.c **** 
+  36:Core/Src/main.c **** int main(void)
+  37:Core/Src/main.c **** {
+ 149              		.loc 1 37 1 is_stmt 1 view -0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 56
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153 0000 30B5     		push	{r4, r5, lr}
+ 154              	.LCFI0:
+ 155              		.cfi_def_cfa_offset 12
+ 156              		.cfi_offset 4, -12
+ 157              		.cfi_offset 5, -8
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 34
 
 
-  38:Core/Src/main.c ****     uint8_t sendData[8];
- 158              		.loc 1 38 5 view .LVU31
-  39:Core/Src/main.c ****     uint16_t temp;
- 159              		.loc 1 39 5 view .LVU32
-  40:Core/Src/main.c ****     uint32_t tmpR;
- 160              		.loc 1 40 5 view .LVU33
-  41:Core/Src/main.c **** 
-  42:Core/Src/main.c ****     RccClockInit();
- 161              		.loc 1 42 5 view .LVU34
- 162 0004 FFF7FEFF 		bl	RccClockInit
- 163              	.LVL2:
-  43:Core/Src/main.c **** 	timer6Init();
- 164              		.loc 1 43 2 view .LVU35
- 165 0008 FFF7FEFF 		bl	timer6Init
- 166              	.LVL3:
+ 158              		.cfi_offset 14, -4
+ 159 0002 91B0     		sub	sp, sp, #68
+ 160              	.LCFI1:
+ 161              		.cfi_def_cfa_offset 80
+  38:Core/Src/main.c ****     PDU_Data_t data;
+ 162              		.loc 1 38 5 view .LVU30
+  39:Core/Src/main.c ****     PDU_Changed_Channels_t* changedChannels;
+ 163              		.loc 1 39 5 view .LVU31
+  40:Core/Src/main.c ****     rcCommand_t command;
+ 164              		.loc 1 40 5 view .LVU32
+  41:Core/Src/main.c ****     uint8_t sendData[8];
+ 165              		.loc 1 41 5 view .LVU33
+  42:Core/Src/main.c ****     uint16_t temp;
+ 166              		.loc 1 42 5 view .LVU34
+  43:Core/Src/main.c ****     uint32_t tmpR;
+ 167              		.loc 1 43 5 view .LVU35
   44:Core/Src/main.c **** 
-  45:Core/Src/main.c **** 	delayInit();
- 167              		.loc 1 45 2 view .LVU36
- 168 000c FFF7FEFF 		bl	delayInit
- 169              	.LVL4:
-  46:Core/Src/main.c **** 	canInit(0x011c0008);
- 170              		.loc 1 46 2 view .LVU37
- 171 0010 4B48     		ldr	r0, .L24
- 172 0012 FFF7FEFF 		bl	canInit
- 173              	.LVL5:
-  47:Core/Src/main.c ****     sbusInit(36000000,100000);
- 174              		.loc 1 47 5 view .LVU38
- 175 0016 4B49     		ldr	r1, .L24+4
- 176 0018 4B48     		ldr	r0, .L24+8
- 177 001a FFF7FEFF 		bl	sbusInit
- 178              	.LVL6:
- 179 001e 08E0     		b	.L10
- 180              	.L21:
-  48:Core/Src/main.c ****     while(1)
-  49:Core/Src/main.c ****     {
-  50:Core/Src/main.c **** 		if(testTimer>=100)
-  51:Core/Src/main.c ****         {
-  52:Core/Src/main.c ****             sbubRead();
- 181              		.loc 1 52 13 view .LVU39
- 182 0020 FFF7FEFF 		bl	sbubRead
- 183              	.LVL7:
-  53:Core/Src/main.c ****             testTimer=0;
- 184              		.loc 1 53 13 view .LVU40
- 185              		.loc 1 53 22 is_stmt 0 view .LVU41
- 186 0024 494B     		ldr	r3, .L24+12
- 187 0026 0022     		movs	r2, #0
- 188 0028 1A80     		strh	r2, [r3]	@ movhi
- 189              	.L9:
-  54:Core/Src/main.c ****         }
-  55:Core/Src/main.c **** 		if(flag==1)
- 190              		.loc 1 55 3 is_stmt 1 view .LVU42
- 191              		.loc 1 55 10 is_stmt 0 view .LVU43
- 192 002a 494B     		ldr	r3, .L24+16
- 193 002c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 194              		.loc 1 55 5 view .LVU44
- 195 002e 012B     		cmp	r3, #1
- 196 0030 04D0     		beq	.L20
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 35
+  45:Core/Src/main.c ****     RccClockInit();
+ 168              		.loc 1 45 5 view .LVU36
+ 169 0004 FFF7FEFF 		bl	RccClockInit
+ 170              	.LVL2:
+  46:Core/Src/main.c **** 	timer6Init();
+ 171              		.loc 1 46 2 view .LVU37
+ 172 0008 FFF7FEFF 		bl	timer6Init
+ 173              	.LVL3:
+  47:Core/Src/main.c **** 
+  48:Core/Src/main.c **** 	delayInit();
+ 174              		.loc 1 48 2 view .LVU38
+ 175 000c FFF7FEFF 		bl	delayInit
+ 176              	.LVL4:
+  49:Core/Src/main.c **** 	canInit(0x011c0008);
+ 177              		.loc 1 49 2 view .LVU39
+ 178 0010 5148     		ldr	r0, .L26
+ 179 0012 FFF7FEFF 		bl	canInit
+ 180              	.LVL5:
+  50:Core/Src/main.c ****     sbusInit(36000000,100000);
+ 181              		.loc 1 50 5 view .LVU40
+ 182 0016 5149     		ldr	r1, .L26+4
+ 183 0018 5148     		ldr	r0, .L26+8
+ 184 001a FFF7FEFF 		bl	sbusInit
+ 185              	.LVL6:
+  51:Core/Src/main.c **** 	ledInit();
+ 186              		.loc 1 51 2 view .LVU41
+ 187 001e FFF7FEFF 		bl	ledInit
+ 188              	.LVL7:
+ 189 0022 0EE0     		b	.L11
+ 190              	.L22:
+  52:Core/Src/main.c ****     while(1)
+  53:Core/Src/main.c ****     {
+  54:Core/Src/main.c **** 		
+  55:Core/Src/main.c **** 		if(testTimer>=100)
+  56:Core/Src/main.c ****         {
+  57:Core/Src/main.c ****             sbubRead();
+ 191              		.loc 1 57 13 view .LVU42
+ 192 0024 FFF7FEFF 		bl	sbubRead
+ 193              	.LVL8:
+  58:Core/Src/main.c ****             testTimer=0;
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 35
 
 
- 197              	.L10:
-  48:Core/Src/main.c ****     {
- 198              		.loc 1 48 5 is_stmt 1 view .LVU45
-  50:Core/Src/main.c ****         {
- 199              		.loc 1 50 3 view .LVU46
-  50:Core/Src/main.c ****         {
- 200              		.loc 1 50 15 is_stmt 0 view .LVU47
- 201 0032 464B     		ldr	r3, .L24+12
- 202 0034 1B88     		ldrh	r3, [r3]
-  50:Core/Src/main.c ****         {
- 203              		.loc 1 50 5 view .LVU48
- 204 0036 632B     		cmp	r3, #99
- 205 0038 F7D9     		bls	.L9
- 206 003a F1E7     		b	.L21
- 207              	.L20:
-  56:Core/Src/main.c **** 		{
-  57:Core/Src/main.c **** 			flag=0;
- 208              		.loc 1 57 4 is_stmt 1 view .LVU49
- 209              		.loc 1 57 8 is_stmt 0 view .LVU50
- 210 003c 444B     		ldr	r3, .L24+16
- 211 003e 0022     		movs	r2, #0
- 212 0040 1A70     		strb	r2, [r3]
-  58:Core/Src/main.c **** 			if(!pduGetError())
- 213              		.loc 1 58 4 is_stmt 1 view .LVU51
- 214              		.loc 1 58 8 is_stmt 0 view .LVU52
- 215 0042 FFF7FEFF 		bl	pduGetError
- 216              	.LVL8:
- 217              		.loc 1 58 6 view .LVU53
- 218 0046 0028     		cmp	r0, #0
- 219 0048 F3D1     		bne	.L10
-  59:Core/Src/main.c **** 			{
-  60:Core/Src/main.c **** 				decodeSbus();
- 220              		.loc 1 60 5 is_stmt 1 view .LVU54
- 221 004a FFF7FEFF 		bl	decodeSbus
- 222              	.LVL9:
-  61:Core/Src/main.c **** 				readPdu();
- 223              		.loc 1 61 5 view .LVU55
- 224 004e FFF7FEFF 		bl	readPdu
- 225              	.LVL10:
-  62:Core/Src/main.c **** 			    data=getPduData();
- 226              		.loc 1 62 8 view .LVU56
- 227              		.loc 1 62 13 is_stmt 0 view .LVU57
- 228 0052 08A8     		add	r0, sp, #32
- 229 0054 FFF7FEFF 		bl	getPduData
- 230              	.LVL11:
-  63:Core/Src/main.c **** 			    changedChannels=getPduChangedChannels();
- 231              		.loc 1 63 8 is_stmt 1 view .LVU58
- 232              		.loc 1 63 24 is_stmt 0 view .LVU59
- 233 0058 FFF7FEFF 		bl	getPduChangedChannels
- 234              	.LVL12:
- 235 005c 0446     		mov	r4, r0
- 236              	.LVL13:
-  64:Core/Src/main.c **** 			    command=normaliz(data.course,data.speed,data.rotate,data.corstrain,data.ELEV);
- 237              		.loc 1 64 8 is_stmt 1 view .LVU60
- 238              		.loc 1 64 16 is_stmt 0 view .LVU61
- 239 005e 9DF83150 		ldrb	r5, [sp, #49]	@ zero_extendqisi2
- 240 0062 0095     		str	r5, [sp]
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 36
+ 194              		.loc 1 58 13 view .LVU43
+ 195              		.loc 1 58 22 is_stmt 0 view .LVU44
+ 196 0028 4E4B     		ldr	r3, .L26+12
+ 197 002a 0022     		movs	r2, #0
+ 198 002c 1A80     		strh	r2, [r3]	@ movhi
+ 199 002e 0CE0     		b	.L9
+ 200              	.L23:
+  59:Core/Src/main.c ****         }
+  60:Core/Src/main.c **** 		if(animationTImer>20)
+  61:Core/Src/main.c **** 		{
+  62:Core/Src/main.c **** 			animationTImer=0;
+ 201              		.loc 1 62 4 is_stmt 1 view .LVU45
+ 202              		.loc 1 62 18 is_stmt 0 view .LVU46
+ 203 0030 4D4B     		ldr	r3, .L26+16
+ 204 0032 0022     		movs	r2, #0
+ 205 0034 1A80     		strh	r2, [r3]	@ movhi
+  63:Core/Src/main.c **** 			animationLoop();
+ 206              		.loc 1 63 4 is_stmt 1 view .LVU47
+ 207 0036 FFF7FEFF 		bl	animationLoop
+ 208              	.LVL9:
+ 209              	.L10:
+  64:Core/Src/main.c **** 		}
+  65:Core/Src/main.c **** 		if(flag==1)
+ 210              		.loc 1 65 3 view .LVU48
+ 211              		.loc 1 65 10 is_stmt 0 view .LVU49
+ 212 003a 4C4B     		ldr	r3, .L26+20
+ 213 003c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 214              		.loc 1 65 5 view .LVU50
+ 215 003e 012B     		cmp	r3, #1
+ 216 0040 08D0     		beq	.L21
+ 217              	.L11:
+  52:Core/Src/main.c ****     {
+ 218              		.loc 1 52 5 is_stmt 1 view .LVU51
+  55:Core/Src/main.c ****         {
+ 219              		.loc 1 55 3 view .LVU52
+  55:Core/Src/main.c ****         {
+ 220              		.loc 1 55 15 is_stmt 0 view .LVU53
+ 221 0042 484B     		ldr	r3, .L26+12
+ 222 0044 1B88     		ldrh	r3, [r3]
+  55:Core/Src/main.c ****         {
+ 223              		.loc 1 55 5 view .LVU54
+ 224 0046 632B     		cmp	r3, #99
+ 225 0048 ECD8     		bhi	.L22
+ 226              	.L9:
+  60:Core/Src/main.c **** 		{
+ 227              		.loc 1 60 3 is_stmt 1 view .LVU55
+  60:Core/Src/main.c **** 		{
+ 228              		.loc 1 60 20 is_stmt 0 view .LVU56
+ 229 004a 474B     		ldr	r3, .L26+16
+ 230 004c 1B88     		ldrh	r3, [r3]
+  60:Core/Src/main.c **** 		{
+ 231              		.loc 1 60 5 view .LVU57
+ 232 004e 142B     		cmp	r3, #20
+ 233 0050 F3D9     		bls	.L10
+ 234 0052 EDE7     		b	.L23
+ 235              	.L21:
+  66:Core/Src/main.c **** 		{
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 36
 
 
- 241 0064 0A9B     		ldr	r3, [sp, #40]
- 242 0066 0B9A     		ldr	r2, [sp, #44]
- 243 0068 0999     		ldr	r1, [sp, #36]
- 244 006a 0898     		ldr	r0, [sp, #32]
- 245              	.LVL14:
- 246              		.loc 1 64 16 view .LVU62
- 247 006c FFF7FEFF 		bl	normaliz
- 248              	.LVL15:
- 249 0070 8DED050A 		vstr.32	s0, [sp, #20]
- 250 0074 CDED060A 		vstr.32	s1, [sp, #24]
- 251 0078 8DED071A 		vstr.32	s2, [sp, #28]
-  65:Core/Src/main.c **** 			    if(changedChannels->gearChanged)
- 252              		.loc 1 65 8 is_stmt 1 view .LVU63
- 253              		.loc 1 65 26 is_stmt 0 view .LVU64
- 254 007c 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
- 255              		.loc 1 65 10 view .LVU65
- 256 007e 53B1     		cbz	r3, .L12
-  66:Core/Src/main.c **** 				{
-  67:Core/Src/main.c **** 					sendData[0]=0x01;
- 257              		.loc 1 67 6 is_stmt 1 view .LVU66
- 258              		.loc 1 67 17 is_stmt 0 view .LVU67
- 259 0080 0123     		movs	r3, #1
- 260 0082 8DF80C30 		strb	r3, [sp, #12]
-  68:Core/Src/main.c **** 					if(data.GEAR)
- 261              		.loc 1 68 6 is_stmt 1 view .LVU68
- 262              		.loc 1 68 13 is_stmt 0 view .LVU69
- 263 0086 9DF83330 		ldrb	r3, [sp, #51]	@ zero_extendqisi2
- 264              		.loc 1 68 8 view .LVU70
- 265 008a 9BB1     		cbz	r3, .L13
-  69:Core/Src/main.c **** 					{
-  70:Core/Src/main.c **** 						motorStart(BROADCAST_ID);
- 266              		.loc 1 70 7 is_stmt 1 view .LVU71
- 267 008c 0120     		movs	r0, #1
- 268 008e FFF7FEFF 		bl	motorStart
- 269              	.LVL16:
- 270              	.L14:
-  71:Core/Src/main.c **** 					}
-  72:Core/Src/main.c **** 					else
-  73:Core/Src/main.c **** 					{
-  74:Core/Src/main.c **** 						motorStop(BROADCAST_ID);
-  75:Core/Src/main.c **** 					}
-  76:Core/Src/main.c **** 					changedChannels->gearChanged=0;
- 271              		.loc 1 76 6 view .LVU72
- 272              		.loc 1 76 34 is_stmt 0 view .LVU73
- 273 0092 0023     		movs	r3, #0
- 274 0094 2371     		strb	r3, [r4, #4]
- 275              	.L12:
-  77:Core/Src/main.c **** 				}
-  78:Core/Src/main.c **** 				if(changedChannels->motionControlChanged)
- 276              		.loc 1 78 5 is_stmt 1 view .LVU74
- 277              		.loc 1 78 23 is_stmt 0 view .LVU75
- 278 0096 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 279              		.loc 1 78 7 view .LVU76
- 280 0098 83B9     		cbnz	r3, .L22
- 281              	.L15:
-  79:Core/Src/main.c **** 				{
-  80:Core/Src/main.c **** 					temp=(int16_t)((float)(command.V*2048));
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 37
+  67:Core/Src/main.c **** 			flag=0;
+ 236              		.loc 1 67 4 is_stmt 1 view .LVU58
+ 237              		.loc 1 67 8 is_stmt 0 view .LVU59
+ 238 0054 454B     		ldr	r3, .L26+20
+ 239 0056 0022     		movs	r2, #0
+ 240 0058 1A70     		strb	r2, [r3]
+  68:Core/Src/main.c **** 			if(!pduGetError())
+ 241              		.loc 1 68 4 is_stmt 1 view .LVU60
+ 242              		.loc 1 68 8 is_stmt 0 view .LVU61
+ 243 005a FFF7FEFF 		bl	pduGetError
+ 244              	.LVL10:
+ 245              		.loc 1 68 6 view .LVU62
+ 246 005e 0028     		cmp	r0, #0
+ 247 0060 EFD1     		bne	.L11
+  69:Core/Src/main.c **** 			{
+  70:Core/Src/main.c **** 				decodeSbus();
+ 248              		.loc 1 70 5 is_stmt 1 view .LVU63
+ 249 0062 FFF7FEFF 		bl	decodeSbus
+ 250              	.LVL11:
+  71:Core/Src/main.c **** 				readPdu();
+ 251              		.loc 1 71 5 view .LVU64
+ 252 0066 FFF7FEFF 		bl	readPdu
+ 253              	.LVL12:
+  72:Core/Src/main.c **** 			    data=getPduData();
+ 254              		.loc 1 72 8 view .LVU65
+ 255              		.loc 1 72 13 is_stmt 0 view .LVU66
+ 256 006a 08A8     		add	r0, sp, #32
+ 257 006c FFF7FEFF 		bl	getPduData
+ 258              	.LVL13:
+  73:Core/Src/main.c **** 			    changedChannels=getPduChangedChannels();
+ 259              		.loc 1 73 8 is_stmt 1 view .LVU67
+ 260              		.loc 1 73 24 is_stmt 0 view .LVU68
+ 261 0070 FFF7FEFF 		bl	getPduChangedChannels
+ 262              	.LVL14:
+ 263 0074 0446     		mov	r4, r0
+ 264              	.LVL15:
+  74:Core/Src/main.c **** 			    command=normaliz(data.course,data.speed,data.rotate,data.corstrain,data.ELEV);
+ 265              		.loc 1 74 8 is_stmt 1 view .LVU69
+ 266              		.loc 1 74 16 is_stmt 0 view .LVU70
+ 267 0076 9DF83150 		ldrb	r5, [sp, #49]	@ zero_extendqisi2
+ 268 007a 0095     		str	r5, [sp]
+ 269 007c 0A9B     		ldr	r3, [sp, #40]
+ 270 007e 0B9A     		ldr	r2, [sp, #44]
+ 271 0080 0999     		ldr	r1, [sp, #36]
+ 272 0082 0898     		ldr	r0, [sp, #32]
+ 273              	.LVL16:
+ 274              		.loc 1 74 16 view .LVU71
+ 275 0084 FFF7FEFF 		bl	normaliz
+ 276              	.LVL17:
+ 277 0088 8DED050A 		vstr.32	s0, [sp, #20]
+ 278 008c CDED060A 		vstr.32	s1, [sp, #24]
+ 279 0090 8DED071A 		vstr.32	s2, [sp, #28]
+  75:Core/Src/main.c **** 			    if(changedChannels->gearChanged)
+ 280              		.loc 1 75 8 is_stmt 1 view .LVU72
+ 281              		.loc 1 75 26 is_stmt 0 view .LVU73
+ 282 0094 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
+ 283              		.loc 1 75 10 view .LVU74
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 37
 
 
-  81:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
-  82:Core/Src/main.c **** 					sendData[1]=(temp>>8);
-  83:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
-  84:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
-  85:Core/Src/main.c **** 					sendData[3]=(temp>>8);
-  86:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
-  87:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
-  88:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
-  89:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
-  90:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
-  91:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
-  92:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
-  93:Core/Src/main.c **** 				}
-  94:Core/Src/main.c **** 				if(changedChannels->mixChanged)
- 282              		.loc 1 94 5 is_stmt 1 view .LVU77
- 283              		.loc 1 94 23 is_stmt 0 view .LVU78
- 284 009a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
- 285              		.loc 1 94 7 view .LVU79
- 286 009c 002B     		cmp	r3, #0
- 287 009e 46D1     		bne	.L23
- 288              	.L16:
-  95:Core/Src/main.c **** 				{
-  96:Core/Src/main.c **** 					motorSetCommunicationMode(data.MIX,BROADCAST_ID);
-  97:Core/Src/main.c **** 					changedChannels->mixChanged=0;
-  98:Core/Src/main.c **** 				}
-  99:Core/Src/main.c **** 				if(changedChannels->elevChanged)
- 289              		.loc 1 99 5 is_stmt 1 view .LVU80
- 290              		.loc 1 99 23 is_stmt 0 view .LVU81
- 291 00a0 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
- 292              		.loc 1 99 7 view .LVU82
- 293 00a2 002B     		cmp	r3, #0
- 294 00a4 C5D0     		beq	.L10
- 100:Core/Src/main.c **** 				{
- 101:Core/Src/main.c **** 					motorSetMotionMode(data.ELEV,BROADCAST_ID);
- 295              		.loc 1 101 6 is_stmt 1 view .LVU83
- 296 00a6 0121     		movs	r1, #1
- 297 00a8 2846     		mov	r0, r5
- 298 00aa FFF7FEFF 		bl	motorSetMotionMode
- 299              	.LVL17:
- 102:Core/Src/main.c **** 					changedChannels->elevChanged=0;
- 300              		.loc 1 102 6 view .LVU84
- 301              		.loc 1 102 34 is_stmt 0 view .LVU85
- 302 00ae 0023     		movs	r3, #0
- 303 00b0 A370     		strb	r3, [r4, #2]
- 304 00b2 BEE7     		b	.L10
- 305              	.L13:
-  74:Core/Src/main.c **** 					}
- 306              		.loc 1 74 7 is_stmt 1 view .LVU86
- 307 00b4 0120     		movs	r0, #1
- 308 00b6 FFF7FEFF 		bl	motorStop
- 309              	.LVL18:
- 310 00ba EAE7     		b	.L14
- 311              	.L22:
-  80:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
- 312              		.loc 1 80 6 view .LVU87
-  80:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
- 313              		.loc 1 80 11 is_stmt 0 view .LVU88
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 38
+ 284 0096 53B1     		cbz	r3, .L13
+  76:Core/Src/main.c **** 				{
+  77:Core/Src/main.c **** 					sendData[0]=0x01;
+ 285              		.loc 1 77 6 is_stmt 1 view .LVU75
+ 286              		.loc 1 77 17 is_stmt 0 view .LVU76
+ 287 0098 0123     		movs	r3, #1
+ 288 009a 8DF80C30 		strb	r3, [sp, #12]
+  78:Core/Src/main.c **** 					if(data.GEAR)
+ 289              		.loc 1 78 6 is_stmt 1 view .LVU77
+ 290              		.loc 1 78 13 is_stmt 0 view .LVU78
+ 291 009e 9DF83330 		ldrb	r3, [sp, #51]	@ zero_extendqisi2
+ 292              		.loc 1 78 8 view .LVU79
+ 293 00a2 9BB1     		cbz	r3, .L14
+  79:Core/Src/main.c **** 					{
+  80:Core/Src/main.c **** 						motorStart(BROADCAST_ID);
+ 294              		.loc 1 80 7 is_stmt 1 view .LVU80
+ 295 00a4 0120     		movs	r0, #1
+ 296 00a6 FFF7FEFF 		bl	motorStart
+ 297              	.LVL18:
+ 298              	.L15:
+  81:Core/Src/main.c **** 					}
+  82:Core/Src/main.c **** 					else
+  83:Core/Src/main.c **** 					{
+  84:Core/Src/main.c **** 						motorStop(BROADCAST_ID);
+  85:Core/Src/main.c **** 					}
+  86:Core/Src/main.c **** 					changedChannels->gearChanged=0;
+ 299              		.loc 1 86 6 view .LVU81
+ 300              		.loc 1 86 34 is_stmt 0 view .LVU82
+ 301 00aa 0023     		movs	r3, #0
+ 302 00ac 2371     		strb	r3, [r4, #4]
+ 303              	.L13:
+  87:Core/Src/main.c **** 				}
+  88:Core/Src/main.c **** 				if(changedChannels->motionControlChanged)
+ 304              		.loc 1 88 5 is_stmt 1 view .LVU83
+ 305              		.loc 1 88 23 is_stmt 0 view .LVU84
+ 306 00ae 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 307              		.loc 1 88 7 view .LVU85
+ 308 00b0 83B9     		cbnz	r3, .L24
+ 309              	.L16:
+  89:Core/Src/main.c **** 				{
+  90:Core/Src/main.c **** 					temp=(int16_t)((float)(command.V*2048));
+  91:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
+  92:Core/Src/main.c **** 					sendData[1]=(temp>>8);
+  93:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+  94:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+  95:Core/Src/main.c **** 					sendData[3]=(temp>>8);
+  96:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+  97:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+  98:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
+  99:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 100:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 101:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 102:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
+ 103:Core/Src/main.c **** 				}
+ 104:Core/Src/main.c **** 				if(changedChannels->mixChanged)
+ 310              		.loc 1 104 5 is_stmt 1 view .LVU86
+ 311              		.loc 1 104 23 is_stmt 0 view .LVU87
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 38
 
 
- 314 00bc DDED057A 		vldr.32	s15, [sp, #20]
- 315 00c0 B0EE677A 		vmov.f32	s14, s15
- 316 00c4 BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
- 317 00c8 17EE103A 		vmov	r3, s14	@ int
- 318              	.LVL19:
-  81:Core/Src/main.c **** 					sendData[1]=(temp>>8);
- 319              		.loc 1 81 6 is_stmt 1 view .LVU89
-  81:Core/Src/main.c **** 					sendData[1]=(temp>>8);
- 320              		.loc 1 81 17 is_stmt 0 view .LVU90
- 321 00cc 8DF80C30 		strb	r3, [sp, #12]
-  82:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
- 322              		.loc 1 82 6 is_stmt 1 view .LVU91
-  82:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
- 323              		.loc 1 82 17 is_stmt 0 view .LVU92
- 324 00d0 C3F30723 		ubfx	r3, r3, #8, #8
- 325              	.LVL20:
-  82:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
- 326              		.loc 1 82 17 view .LVU93
- 327 00d4 8DF80D30 		strb	r3, [sp, #13]
-  83:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
- 328              		.loc 1 83 6 is_stmt 1 view .LVU94
-  83:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
- 329              		.loc 1 83 13 is_stmt 0 view .LVU95
- 330 00d8 DDED077A 		vldr.32	s15, [sp, #28]
- 331 00dc B0EE677A 		vmov.f32	s14, s15
- 332              	.LVL21:
-  83:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
- 333              		.loc 1 83 13 view .LVU96
- 334 00e0 BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
- 335 00e4 17EE103A 		vmov	r3, s14	@ int
- 336              	.LVL22:
-  84:Core/Src/main.c **** 					sendData[3]=(temp>>8);
- 337              		.loc 1 84 6 is_stmt 1 view .LVU97
-  84:Core/Src/main.c **** 					sendData[3]=(temp>>8);
- 338              		.loc 1 84 17 is_stmt 0 view .LVU98
- 339 00e8 8DF80E30 		strb	r3, [sp, #14]
-  85:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
- 340              		.loc 1 85 6 is_stmt 1 view .LVU99
-  85:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
- 341              		.loc 1 85 17 is_stmt 0 view .LVU100
- 342 00ec C3F30723 		ubfx	r3, r3, #8, #8
- 343              	.LVL23:
-  85:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
- 344              		.loc 1 85 17 view .LVU101
- 345 00f0 8DF80F30 		strb	r3, [sp, #15]
-  86:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 346              		.loc 1 86 6 is_stmt 1 view .LVU102
-  86:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 347              		.loc 1 86 39 is_stmt 0 view .LVU103
- 348 00f4 DDED067A 		vldr.32	s15, [sp, #24]
- 349 00f8 9FED167A 		vldr.32	s14, .L24+20
- 350              	.LVL24:
-  86:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 351              		.loc 1 86 39 view .LVU104
- 352 00fc 67EE877A 		vmul.f32	s15, s15, s14
-  86:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 353              		.loc 1 86 13 view .LVU105
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 39
+ 312 00b2 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 313              		.loc 1 104 7 view .LVU88
+ 314 00b4 002B     		cmp	r3, #0
+ 315 00b6 46D1     		bne	.L25
+ 316              	.L17:
+ 105:Core/Src/main.c **** 				{
+ 106:Core/Src/main.c **** 					motorSetCommunicationMode(data.MIX,BROADCAST_ID);
+ 107:Core/Src/main.c **** 					changedChannels->mixChanged=0;
+ 108:Core/Src/main.c **** 				}
+ 109:Core/Src/main.c **** 				if(changedChannels->elevChanged)
+ 317              		.loc 1 109 5 is_stmt 1 view .LVU89
+ 318              		.loc 1 109 23 is_stmt 0 view .LVU90
+ 319 00b8 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
+ 320              		.loc 1 109 7 view .LVU91
+ 321 00ba 002B     		cmp	r3, #0
+ 322 00bc C1D0     		beq	.L11
+ 110:Core/Src/main.c **** 				{
+ 111:Core/Src/main.c **** 					motorSetMotionMode(data.ELEV,BROADCAST_ID);
+ 323              		.loc 1 111 6 is_stmt 1 view .LVU92
+ 324 00be 0121     		movs	r1, #1
+ 325 00c0 2846     		mov	r0, r5
+ 326 00c2 FFF7FEFF 		bl	motorSetMotionMode
+ 327              	.LVL19:
+ 112:Core/Src/main.c **** 					changedChannels->elevChanged=0;
+ 328              		.loc 1 112 6 view .LVU93
+ 329              		.loc 1 112 34 is_stmt 0 view .LVU94
+ 330 00c6 0023     		movs	r3, #0
+ 331 00c8 A370     		strb	r3, [r4, #2]
+ 332 00ca BAE7     		b	.L11
+ 333              	.L14:
+  84:Core/Src/main.c **** 					}
+ 334              		.loc 1 84 7 is_stmt 1 view .LVU95
+ 335 00cc 0120     		movs	r0, #1
+ 336 00ce FFF7FEFF 		bl	motorStop
+ 337              	.LVL20:
+ 338 00d2 EAE7     		b	.L15
+ 339              	.L24:
+  90:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
+ 340              		.loc 1 90 6 view .LVU96
+  90:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
+ 341              		.loc 1 90 11 is_stmt 0 view .LVU97
+ 342 00d4 DDED057A 		vldr.32	s15, [sp, #20]
+ 343 00d8 B0EE677A 		vmov.f32	s14, s15
+ 344 00dc BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
+ 345 00e0 17EE103A 		vmov	r3, s14	@ int
+ 346              	.LVL21:
+  91:Core/Src/main.c **** 					sendData[1]=(temp>>8);
+ 347              		.loc 1 91 6 is_stmt 1 view .LVU98
+  91:Core/Src/main.c **** 					sendData[1]=(temp>>8);
+ 348              		.loc 1 91 17 is_stmt 0 view .LVU99
+ 349 00e4 8DF80C30 		strb	r3, [sp, #12]
+  92:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 350              		.loc 1 92 6 is_stmt 1 view .LVU100
+  92:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 351              		.loc 1 92 17 is_stmt 0 view .LVU101
+ 352 00e8 C3F30723 		ubfx	r3, r3, #8, #8
+ 353              	.LVL22:
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 39
 
 
- 354 0100 FDEEE77A 		vcvt.s32.f32	s15, s15
- 355 0104 17EE903A 		vmov	r3, s15	@ int
- 356              	.LVL25:
-  87:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
- 357              		.loc 1 87 6 is_stmt 1 view .LVU106
-  87:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
- 358              		.loc 1 87 17 is_stmt 0 view .LVU107
- 359 0108 8DF81030 		strb	r3, [sp, #16]
-  88:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 360              		.loc 1 88 6 is_stmt 1 view .LVU108
-  88:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 361              		.loc 1 88 37 is_stmt 0 view .LVU109
- 362 010c 1A0A     		lsrs	r2, r3, #8
-  88:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 363              		.loc 1 88 17 view .LVU110
- 364 010e 8DF81120 		strb	r2, [sp, #17]
-  89:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 365              		.loc 1 89 6 is_stmt 1 view .LVU111
-  89:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 366              		.loc 1 89 37 is_stmt 0 view .LVU112
- 367 0112 1A0C     		lsrs	r2, r3, #16
-  89:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 368              		.loc 1 89 17 view .LVU113
- 369 0114 8DF81220 		strb	r2, [sp, #18]
-  90:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 370              		.loc 1 90 6 is_stmt 1 view .LVU114
-  90:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 371              		.loc 1 90 37 is_stmt 0 view .LVU115
- 372 0118 1B0E     		lsrs	r3, r3, #24
- 373              	.LVL26:
-  90:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 374              		.loc 1 90 17 view .LVU116
- 375 011a 8DF81330 		strb	r3, [sp, #19]
-  91:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
- 376              		.loc 1 91 6 is_stmt 1 view .LVU117
- 377 011e 0222     		movs	r2, #2
- 378 0120 0821     		movs	r1, #8
- 379 0122 03A8     		add	r0, sp, #12
- 380 0124 FFF7FEFF 		bl	canWrite
- 381              	.LVL27:
-  92:Core/Src/main.c **** 				}
- 382              		.loc 1 92 6 view .LVU118
-  92:Core/Src/main.c **** 				}
- 383              		.loc 1 92 43 is_stmt 0 view .LVU119
- 384 0128 0023     		movs	r3, #0
- 385 012a 2370     		strb	r3, [r4]
- 386 012c B5E7     		b	.L15
- 387              	.LVL28:
- 388              	.L23:
-  96:Core/Src/main.c **** 					changedChannels->mixChanged=0;
- 389              		.loc 1 96 6 is_stmt 1 view .LVU120
- 390 012e 0121     		movs	r1, #1
- 391 0130 9DF83400 		ldrb	r0, [sp, #52]	@ zero_extendqisi2
- 392 0134 FFF7FEFF 		bl	motorSetCommunicationMode
- 393              	.LVL29:
-  97:Core/Src/main.c **** 				}
- 394              		.loc 1 97 6 view .LVU121
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 40
+  92:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 354              		.loc 1 92 17 view .LVU102
+ 355 00ec 8DF80D30 		strb	r3, [sp, #13]
+  93:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 356              		.loc 1 93 6 is_stmt 1 view .LVU103
+  93:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 357              		.loc 1 93 13 is_stmt 0 view .LVU104
+ 358 00f0 DDED077A 		vldr.32	s15, [sp, #28]
+ 359 00f4 B0EE677A 		vmov.f32	s14, s15
+ 360              	.LVL23:
+  93:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 361              		.loc 1 93 13 view .LVU105
+ 362 00f8 BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
+ 363 00fc 17EE103A 		vmov	r3, s14	@ int
+ 364              	.LVL24:
+  94:Core/Src/main.c **** 					sendData[3]=(temp>>8);
+ 365              		.loc 1 94 6 is_stmt 1 view .LVU106
+  94:Core/Src/main.c **** 					sendData[3]=(temp>>8);
+ 366              		.loc 1 94 17 is_stmt 0 view .LVU107
+ 367 0100 8DF80E30 		strb	r3, [sp, #14]
+  95:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 368              		.loc 1 95 6 is_stmt 1 view .LVU108
+  95:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 369              		.loc 1 95 17 is_stmt 0 view .LVU109
+ 370 0104 C3F30723 		ubfx	r3, r3, #8, #8
+ 371              	.LVL25:
+  95:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 372              		.loc 1 95 17 view .LVU110
+ 373 0108 8DF80F30 		strb	r3, [sp, #15]
+  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 374              		.loc 1 96 6 is_stmt 1 view .LVU111
+  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 375              		.loc 1 96 39 is_stmt 0 view .LVU112
+ 376 010c DDED067A 		vldr.32	s15, [sp, #24]
+ 377 0110 9FED177A 		vldr.32	s14, .L26+24
+ 378              	.LVL26:
+  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 379              		.loc 1 96 39 view .LVU113
+ 380 0114 67EE877A 		vmul.f32	s15, s15, s14
+  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 381              		.loc 1 96 13 view .LVU114
+ 382 0118 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 383 011c 17EE903A 		vmov	r3, s15	@ int
+ 384              	.LVL27:
+  97:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
+ 385              		.loc 1 97 6 is_stmt 1 view .LVU115
+  97:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
+ 386              		.loc 1 97 17 is_stmt 0 view .LVU116
+ 387 0120 8DF81030 		strb	r3, [sp, #16]
+  98:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 388              		.loc 1 98 6 is_stmt 1 view .LVU117
+  98:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 389              		.loc 1 98 37 is_stmt 0 view .LVU118
+ 390 0124 1A0A     		lsrs	r2, r3, #8
+  98:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 391              		.loc 1 98 17 view .LVU119
+ 392 0126 8DF81120 		strb	r2, [sp, #17]
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 40
 
 
-  97:Core/Src/main.c **** 				}
- 395              		.loc 1 97 33 is_stmt 0 view .LVU122
- 396 0138 0023     		movs	r3, #0
- 397 013a 6371     		strb	r3, [r4, #5]
- 398 013c B0E7     		b	.L16
- 399              	.L25:
- 400 013e 00BF     		.align	2
- 401              	.L24:
- 402 0140 08001C01 		.word	18612232
- 403 0144 A0860100 		.word	100000
- 404 0148 00512502 		.word	36000000
- 405 014c 00000000 		.word	.LANCHOR0
- 406 0150 00000000 		.word	flag
- 407 0154 00FF7F47 		.word	1199570688
- 408              		.cfi_endproc
- 409              	.LFE128:
- 411              		.global	state
- 412              		.section	.bss.TimingDelay,"aw",%nobits
- 413              		.align	2
- 416              	TimingDelay:
- 417 0000 00000000 		.space	4
- 418              		.section	.bss.state,"aw",%nobits
- 421              	state:
- 422 0000 00       		.space	1
- 423              		.section	.bss.testTimer,"aw",%nobits
- 424              		.align	1
- 425              		.set	.LANCHOR0,. + 0
- 428              	testTimer:
- 429 0000 0000     		.space	2
- 430              		.text
- 431              	.Letext0:
- 432              		.file 3 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h"
- 433              		.file 4 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\machine\\_defau
- 434              		.file 5 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
- 435              		.file 6 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 436              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
- 437              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
- 438              		.file 9 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
- 439              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\reent.h"
- 440              		.file 11 "Core/Inc/pdu.h"
- 441              		.file 12 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
- 442              		.file 13 "Core/Inc/rcc.h"
- 443              		.file 14 "Core/Inc/can.h"
- 444              		.file 15 "Core/Inc/MotorCommunication.h"
-ARM GAS  C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s 			page 41
+  99:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 393              		.loc 1 99 6 is_stmt 1 view .LVU120
+  99:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 394              		.loc 1 99 37 is_stmt 0 view .LVU121
+ 395 012a 1A0C     		lsrs	r2, r3, #16
+  99:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 396              		.loc 1 99 17 view .LVU122
+ 397 012c 8DF81220 		strb	r2, [sp, #18]
+ 100:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 398              		.loc 1 100 6 is_stmt 1 view .LVU123
+ 100:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 399              		.loc 1 100 37 is_stmt 0 view .LVU124
+ 400 0130 1B0E     		lsrs	r3, r3, #24
+ 401              	.LVL28:
+ 100:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 402              		.loc 1 100 17 view .LVU125
+ 403 0132 8DF81330 		strb	r3, [sp, #19]
+ 101:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
+ 404              		.loc 1 101 6 is_stmt 1 view .LVU126
+ 405 0136 0222     		movs	r2, #2
+ 406 0138 0821     		movs	r1, #8
+ 407 013a 03A8     		add	r0, sp, #12
+ 408 013c FFF7FEFF 		bl	canWrite
+ 409              	.LVL29:
+ 102:Core/Src/main.c **** 				}
+ 410              		.loc 1 102 6 view .LVU127
+ 102:Core/Src/main.c **** 				}
+ 411              		.loc 1 102 43 is_stmt 0 view .LVU128
+ 412 0140 0023     		movs	r3, #0
+ 413 0142 2370     		strb	r3, [r4]
+ 414 0144 B5E7     		b	.L16
+ 415              	.LVL30:
+ 416              	.L25:
+ 106:Core/Src/main.c **** 					changedChannels->mixChanged=0;
+ 417              		.loc 1 106 6 is_stmt 1 view .LVU129
+ 418 0146 0121     		movs	r1, #1
+ 419 0148 9DF83400 		ldrb	r0, [sp, #52]	@ zero_extendqisi2
+ 420 014c FFF7FEFF 		bl	motorSetCommunicationMode
+ 421              	.LVL31:
+ 107:Core/Src/main.c **** 				}
+ 422              		.loc 1 107 6 view .LVU130
+ 107:Core/Src/main.c **** 				}
+ 423              		.loc 1 107 33 is_stmt 0 view .LVU131
+ 424 0150 0023     		movs	r3, #0
+ 425 0152 6371     		strb	r3, [r4, #5]
+ 426 0154 B0E7     		b	.L17
+ 427              	.L27:
+ 428 0156 00BF     		.align	2
+ 429              	.L26:
+ 430 0158 08001C01 		.word	18612232
+ 431 015c A0860100 		.word	100000
+ 432 0160 00512502 		.word	36000000
+ 433 0164 00000000 		.word	.LANCHOR0
+ 434 0168 00000000 		.word	.LANCHOR1
+ 435 016c 00000000 		.word	flag
+ 436 0170 00FF7F47 		.word	1199570688
+ 437              		.cfi_endproc
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 41
+
+
+ 438              	.LFE128:
+ 440              		.global	state
+ 441              		.section	.bss.TimingDelay,"aw",%nobits
+ 442              		.align	2
+ 445              	TimingDelay:
+ 446 0000 00000000 		.space	4
+ 447              		.section	.bss.animationTImer,"aw",%nobits
+ 448              		.align	1
+ 449              		.set	.LANCHOR1,. + 0
+ 452              	animationTImer:
+ 453 0000 0000     		.space	2
+ 454              		.section	.bss.state,"aw",%nobits
+ 457              	state:
+ 458 0000 00       		.space	1
+ 459              		.section	.bss.testTimer,"aw",%nobits
+ 460              		.align	1
+ 461              		.set	.LANCHOR0,. + 0
+ 464              	testTimer:
+ 465 0000 0000     		.space	2
+ 466              		.text
+ 467              	.Letext0:
+ 468              		.file 3 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h"
+ 469              		.file 4 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\machine\\_defau
+ 470              		.file 5 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 471              		.file 6 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 472              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
+ 473              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
+ 474              		.file 9 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
+ 475              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\reent.h"
+ 476              		.file 11 "Core/Inc/pdu.h"
+ 477              		.file 12 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
+ 478              		.file 13 "Core/Inc/rcc.h"
+ 479              		.file 14 "Core/Inc/can.h"
+ 480              		.file 15 "Core/Inc/LedControl.h"
+ 481              		.file 16 "Core/Inc/animation.h"
+ 482              		.file 17 "Core/Inc/MotorCommunication.h"
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s 			page 42
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:18     .text.TIM6_DAC1_IRQHandler:0000000000000000 $t
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:26     .text.TIM6_DAC1_IRQHandler:0000000000000000 TIM6_DAC1_IRQHandler
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:59     .text.TIM6_DAC1_IRQHandler:0000000000000020 $d
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:65     .text.timer6Init:0000000000000000 $t
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:72     .text.timer6Init:0000000000000000 timer6Init
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:126    .text.timer6Init:0000000000000030 $d
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:133    .text.main:0000000000000000 $t
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:140    .text.main:0000000000000000 main
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:402    .text.main:0000000000000140 $d
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:421    .bss.state:0000000000000000 state
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:413    .bss.TimingDelay:0000000000000000 $d
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:416    .bss.TimingDelay:0000000000000000 TimingDelay
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:422    .bss.state:0000000000000000 $d
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:424    .bss.testTimer:0000000000000000 $d
-C:\Users\ba123\AppData\Local\Temp\ccjCViDB.s:428    .bss.testTimer:0000000000000000 testTimer
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:18     .text.TIM6_DAC1_IRQHandler:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:26     .text.TIM6_DAC1_IRQHandler:0000000000000000 TIM6_DAC1_IRQHandler
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:65     .text.TIM6_DAC1_IRQHandler:0000000000000028 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:72     .text.timer6Init:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:79     .text.timer6Init:0000000000000000 timer6Init
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:133    .text.timer6Init:0000000000000030 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:140    .text.main:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:147    .text.main:0000000000000000 main
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:430    .text.main:0000000000000158 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:457    .bss.state:0000000000000000 state
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:442    .bss.TimingDelay:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:445    .bss.TimingDelay:0000000000000000 TimingDelay
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:448    .bss.animationTImer:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:452    .bss.animationTImer:0000000000000000 animationTImer
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:458    .bss.state:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:460    .bss.testTimer:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccOQPQuD.s:464    .bss.testTimer:0000000000000000 testTimer
 
 UNDEFINED SYMBOLS
 RccClockInit
 delayInit
 canInit
 sbusInit
+ledInit
 sbubRead
+animationLoop
 pduGetError
 decodeSbus
 readPdu
