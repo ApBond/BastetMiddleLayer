@@ -41,7 +41,8 @@ int main(void)
     uint8_t sendData[8];
     uint16_t temp;
     uint32_t tmpR;
-
+	uint8_t lightAnimation=0;
+	uint8_t lightDir=0;
     RccClockInit();
 	timer6Init();
 
@@ -57,11 +58,56 @@ int main(void)
             sbubRead();
             testTimer=0;
         }
-		if(animationTImer>10)
+		if(animationTImer>5)
 		{
 			animationTImer=0;
-			animationLoop();
-		}
+			if(data.MIX==1)
+			{
+				ledSetBlockRGB(BACK_LIGHT_LEFT_BEGIN,BACK_LIGHT_LEFT_COUNT,255,0,0);
+				ledSetBlockRGB(BLUE_LIGHT_LEGT_BEGIN,BLUE_LIGHT_LEFT_COUNT,0,0,255);
+				ledSetBlockRGB(FORW_LIGHT_LEFT_BEGIN,FORW_LIGHT_LEFT_COUNT,255,255,255);
+				ledSetBlockRGB(FORW_LIGHT_RIGHT_BEGIN,FORW_LIGHT_RIGHT_COUNT,255,255,255);
+				ledSetBlockRGB(BLUE_LIGHT_RIGHT_BEGIN,BLUE_LIGHT_RIGHT_COUNT,0,0,255);
+				ledSetBlockRGB(BACK_LIGHT_RIGHT_BEGIN,BACK_LIGHT_RIGHT_COUNT,255,0,0);
+			}
+			else if(data.MIX==0)
+			{
+				ledSetBlockRGB(0,LEDS_COUNT,0,0,0);	
+			}
+			else if(data.MIX==2)
+			{
+				
+				if(data.AILE==1)
+				{
+					animationLoop();
+				}
+				else
+				{
+					
+					if(lightAnimation==255)
+					{
+						lightDir=1;
+					}
+					else if(lightAnimation==0)
+					{
+						lightDir=0;
+					}
+					if(lightDir)
+						lightAnimation--;
+					else
+						lightAnimation++;
+
+					ledSetBlockRGB(BACK_LIGHT_LEFT_BEGIN,BACK_LIGHT_LEFT_COUNT,255,0,0);
+					ledSetBlockRGB(FORW_LIGHT_LEFT_BEGIN,FORW_LIGHT_LEFT_COUNT,255,255,255);
+					ledSetBlockRGB(FORW_LIGHT_RIGHT_BEGIN,FORW_LIGHT_RIGHT_COUNT,255,255,255);
+					ledSetBlockRGB(BACK_LIGHT_RIGHT_BEGIN,BACK_LIGHT_RIGHT_COUNT,255,0,0);
+					ledSetBlockRGB(BLUE_LIGHT_LEGT_BEGIN,BLUE_LIGHT_LEFT_COUNT,0,0,lightAnimation);
+					ledSetBlockRGB(BLUE_LIGHT_RIGHT_BEGIN,BLUE_LIGHT_RIGHT_COUNT,0,0,lightAnimation);
+				}
+			}
+			ledUpdate();
+		 	
+		} 
 		if(flag==1)
 		{
 			flag=0;
@@ -101,15 +147,20 @@ int main(void)
 					canWrite(sendData,8,0x02);
 					changedChannels->motionControlChanged=0;
 				}
-				if(changedChannels->mixChanged)
-				{
-					motorSetCommunicationMode(data.MIX,BROADCAST_ID);
-					changedChannels->mixChanged=0;
-				}
+				// if(changedChannels->mixChanged)
+				// {
+				// 	motorSetCommunicationMode(data.MIX,BROADCAST_ID);
+				// 	changedChannels->mixChanged=0;
+				// }
 				if(changedChannels->elevChanged)
 				{
 					motorSetMotionMode(data.ELEV,BROADCAST_ID);
 					changedChannels->elevChanged=0;
+				}
+				if(changedChannels->mixChanged)
+				{
+					lightAnimation=255;
+					changedChannels->mixChanged=0;
 				}
 			}
 			else

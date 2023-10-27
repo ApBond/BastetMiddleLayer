@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
   16:Core/Src/main.c ****     {
   17:Core/Src/main.c ****         TIM6->SR &=~TIM_SR_UIF;
   41              		.loc 1 17 9 is_stmt 1 view .LVU4
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 2
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 2
 
 
   42              		.loc 1 17 18 is_stmt 0 view .LVU5
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
   90 0004 43F01003 		orr	r3, r3, #16
   91 0008 D361     		str	r3, [r2, #28]
   26:Core/Src/main.c ****     TIM6->PSC = 7200-1;
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 3
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 3
 
 
   92              		.loc 1 26 5 is_stmt 1 view .LVU14
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
   27:Drivers/CMSIS/Include/core_cm4.h **** #elif defined (__clang__)
   28:Drivers/CMSIS/Include/core_cm4.h ****   #pragma clang system_header   /* treat file as system include file */
   29:Drivers/CMSIS/Include/core_cm4.h **** #endif
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 4
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 4
 
 
   30:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
   84:Drivers/CMSIS/Include/core_cm4.h ****   #else
   85:Drivers/CMSIS/Include/core_cm4.h ****     #define __FPU_USED         0U
   86:Drivers/CMSIS/Include/core_cm4.h ****   #endif
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 5
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 5
 
 
   87:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  141:Drivers/CMSIS/Include/core_cm4.h ****       #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
  142:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       0U
  143:Drivers/CMSIS/Include/core_cm4.h ****     #endif
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 6
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 6
 
 
  144:Drivers/CMSIS/Include/core_cm4.h ****   #else
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  198:Drivers/CMSIS/Include/core_cm4.h ****     #define __NVIC_PRIO_BITS          3U
  199:Drivers/CMSIS/Include/core_cm4.h ****     #warning "__NVIC_PRIO_BITS not defined in device header file; using default!"
  200:Drivers/CMSIS/Include/core_cm4.h ****   #endif
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 7
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 7
 
 
  201:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  255:Drivers/CMSIS/Include/core_cm4.h **** 
  256:Drivers/CMSIS/Include/core_cm4.h **** /**
  257:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Union type to access the Application Program Status Register (APSR).
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 8
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 8
 
 
  258:Drivers/CMSIS/Include/core_cm4.h ****  */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  312:Drivers/CMSIS/Include/core_cm4.h **** 
  313:Drivers/CMSIS/Include/core_cm4.h **** /**
  314:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Union type to access the Special-Purpose Program Status Registers (xPSR).
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 9
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 9
 
 
  315:Drivers/CMSIS/Include/core_cm4.h ****  */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  369:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Union type to access the Control Registers (CONTROL).
  370:Drivers/CMSIS/Include/core_cm4.h ****  */
  371:Drivers/CMSIS/Include/core_cm4.h **** typedef union
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 10
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 10
 
 
  372:Drivers/CMSIS/Include/core_cm4.h **** {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  426:Drivers/CMSIS/Include/core_cm4.h **** 
  427:Drivers/CMSIS/Include/core_cm4.h **** /*@} end of group CMSIS_NVIC */
  428:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 11
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 11
 
 
  429:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  483:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_NMIPENDSET_Msk            (1UL << SCB_ICSR_NMIPENDSET_Pos)               /*!< SCB 
  484:Drivers/CMSIS/Include/core_cm4.h **** 
  485:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSVSET_Pos             28U                                            /*!< SCB 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 12
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 12
 
 
  486:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSVSET_Msk             (1UL << SCB_ICSR_PENDSVSET_Pos)                /*!< SCB 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  540:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SEVONPEND_Msk              (1UL << SCB_SCR_SEVONPEND_Pos)                 /*!< SCB 
  541:Drivers/CMSIS/Include/core_cm4.h **** 
  542:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SLEEPDEEP_Pos               2U                                            /*!< SCB 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 13
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 13
 
 
  543:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SCR_SLEEPDEEP_Msk              (1UL << SCB_SCR_SLEEPDEEP_Pos)                 /*!< SCB 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  597:Drivers/CMSIS/Include/core_cm4.h **** 
  598:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_SVCALLACT_Pos             7U                                            /*!< SCB 
  599:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_SVCALLACT_Msk            (1UL << SCB_SHCSR_SVCALLACT_Pos)               /*!< SCB 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 14
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 14
 
 
  600:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  654:Drivers/CMSIS/Include/core_cm4.h **** 
  655:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_PRECISERR_Pos            (SCB_CFSR_BUSFAULTSR_Pos + 1U)                  /*!< SCB 
  656:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_PRECISERR_Msk            (1UL << SCB_CFSR_PRECISERR_Pos)                 /*!< SCB 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 15
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 15
 
 
  657:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  711:Drivers/CMSIS/Include/core_cm4.h ****   \defgroup CMSIS_SCnSCB System Controls not in SCB (SCnSCB)
  712:Drivers/CMSIS/Include/core_cm4.h ****   \brief    Type definitions for the System Control and ID Register not in the SCB
  713:Drivers/CMSIS/Include/core_cm4.h ****   @{
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 16
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 16
 
 
  714:Drivers/CMSIS/Include/core_cm4.h ****  */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  768:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_COUNTFLAG_Pos         16U                                            /*!< SysT
  769:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_COUNTFLAG_Msk         (1UL << SysTick_CTRL_COUNTFLAG_Pos)            /*!< SysT
  770:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 17
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 17
 
 
  771:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_CLKSOURCE_Pos          2U                                            /*!< SysT
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  825:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED3[29U];
  826:Drivers/CMSIS/Include/core_cm4.h ****   __OM  uint32_t IWR;                    /*!< Offset: 0xEF8 ( /W)  ITM Integration Write Register *
  827:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t IRR;                    /*!< Offset: 0xEFC (R/ )  ITM Integration Read Register */
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 18
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 18
 
 
  828:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t IMCR;                   /*!< Offset: 0xF00 (R/W)  ITM Integration Mode Control Reg
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  882:Drivers/CMSIS/Include/core_cm4.h **** 
  883:Drivers/CMSIS/Include/core_cm4.h **** /* ITM Integration Read Register Definitions */
  884:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_IRR_ATREADYM_Pos                0U                                            /*!< ITM 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 19
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 19
 
 
  885:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_IRR_ATREADYM_Msk               (1UL /*<< ITM_IRR_ATREADYM_Pos*/)              /*!< ITM 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  939:Drivers/CMSIS/Include/core_cm4.h **** } DWT_Type;
  940:Drivers/CMSIS/Include/core_cm4.h **** 
  941:Drivers/CMSIS/Include/core_cm4.h **** /* DWT Control Register Definitions */
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 20
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 20
 
 
  942:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NUMCOMP_Pos               28U                                         /*!< DWT CTR
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  996:Drivers/CMSIS/Include/core_cm4.h **** /* DWT CPI Count Register Definitions */
  997:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CPICNT_CPICNT_Pos               0U                                         /*!< DWT CPI
  998:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CPICNT_CPICNT_Msk              (0xFFUL /*<< DWT_CPICNT_CPICNT_Pos*/)       /*!< DWT CPI
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 21
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 21
 
 
  999:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1053:Drivers/CMSIS/Include/core_cm4.h ****   \defgroup CMSIS_TPI     Trace Port Interface (TPI)
 1054:Drivers/CMSIS/Include/core_cm4.h ****   \brief    Type definitions for the Trace Port Interface (TPI)
 1055:Drivers/CMSIS/Include/core_cm4.h ****   @{
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 22
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 22
 
 
 1056:Drivers/CMSIS/Include/core_cm4.h ****  */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1110:Drivers/CMSIS/Include/core_cm4.h **** /* TPI Formatter and Flush Control Register Definitions */
 1111:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FFCR_TrigIn_Pos                 8U                                         /*!< TPI FFC
 1112:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FFCR_TrigIn_Msk                (0x1UL << TPI_FFCR_TrigIn_Pos)              /*!< TPI FFC
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 23
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 23
 
 
 1113:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1167:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO1_ITM1_Msk                 (0xFFUL << TPI_FIFO1_ITM1_Pos)              /*!< TPI FIF
 1168:Drivers/CMSIS/Include/core_cm4.h **** 
 1169:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO1_ITM0_Pos                  0U                                         /*!< TPI FIF
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 24
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 24
 
 
 1170:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO1_ITM0_Msk                 (0xFFUL /*<< TPI_FIFO1_ITM0_Pos*/)          /*!< TPI FIF
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1224:Drivers/CMSIS/Include/core_cm4.h **** {
 1225:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t TYPE;                   /*!< Offset: 0x000 (R/ )  MPU Type Register */
 1226:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t CTRL;                   /*!< Offset: 0x004 (R/W)  MPU Control Register */
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 25
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 25
 
 
 1227:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RNR;                    /*!< Offset: 0x008 (R/W)  MPU Region RNRber Register */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1281:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_AP_Pos                    24U                                            /*!< MPU 
 1282:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_AP_Msk                    (0x7UL << MPU_RASR_AP_Pos)                     /*!< MPU 
 1283:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 26
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 26
 
 
 1284:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_TEX_Pos                   19U                                            /*!< MPU 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1338:Drivers/CMSIS/Include/core_cm4.h **** 
 1339:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_BFRDY_Pos                 6U                                            /*!< FPCC
 1340:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_BFRDY_Msk                (1UL << FPU_FPCCR_BFRDY_Pos)                   /*!< FPCC
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 27
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 27
 
 
 1341:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1395:Drivers/CMSIS/Include/core_cm4.h **** 
 1396:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR0_A_SIMD_registers_Pos      0U                                            /*!< MVFR
 1397:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR0_A_SIMD_registers_Msk     (0xFUL /*<< FPU_MVFR0_A_SIMD_registers_Pos*/)  /*!< MVFR
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 28
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 28
 
 
 1398:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1452:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_S_REGRDY_Pos       16U                                            /*!< Core
 1453:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_S_REGRDY_Msk       (1UL << CoreDebug_DHCSR_S_REGRDY_Pos)          /*!< Core
 1454:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 29
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 29
 
 
 1455:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_SNAPSTALL_Pos     5U                                            /*!< Core
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1509:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_NOCPERR_Msk     (1UL << CoreDebug_DEMCR_VC_NOCPERR_Pos)        /*!< Core
 1510:Drivers/CMSIS/Include/core_cm4.h **** 
 1511:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_MMERR_Pos        4U                                            /*!< Core
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 30
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 30
 
 
 1512:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DEMCR_VC_MMERR_Msk       (1UL << CoreDebug_DEMCR_VC_MMERR_Pos)          /*!< Core
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1566:Drivers/CMSIS/Include/core_cm4.h **** #define NVIC                ((NVIC_Type      *)     NVIC_BASE     )   /*!< NVIC configuration struc
 1567:Drivers/CMSIS/Include/core_cm4.h **** #define ITM                 ((ITM_Type       *)     ITM_BASE      )   /*!< ITM configuration struct
 1568:Drivers/CMSIS/Include/core_cm4.h **** #define DWT                 ((DWT_Type       *)     DWT_BASE      )   /*!< DWT configuration struct
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 31
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 31
 
 
 1569:Drivers/CMSIS/Include/core_cm4.h **** #define TPI                 ((TPI_Type       *)     TPI_BASE      )   /*!< TPI configuration struct
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1623:Drivers/CMSIS/Include/core_cm4.h ****   #define NVIC_SystemReset            __NVIC_SystemReset
 1624:Drivers/CMSIS/Include/core_cm4.h **** #endif /* CMSIS_NVIC_VIRTUAL */
 1625:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 32
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 32
 
 
 1626:Drivers/CMSIS/Include/core_cm4.h **** #ifdef CMSIS_VECTAB_VIRTUAL
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
 1680:Drivers/CMSIS/Include/core_cm4.h **** 
 1681:Drivers/CMSIS/Include/core_cm4.h **** 
 1682:Drivers/CMSIS/Include/core_cm4.h **** /**
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 33
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 33
 
 
 1683:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Enable Interrupt
@@ -1973,492 +1973,782 @@ ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 1
  150              		.cfi_startproc
  151              		@ args = 0, pretend = 0, frame = 56
  152              		@ frame_needed = 0, uses_anonymous_args = 0
- 153 0000 30B5     		push	{r4, r5, lr}
+ 153 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  154              	.LCFI0:
- 155              		.cfi_def_cfa_offset 12
- 156              		.cfi_offset 4, -12
- 157              		.cfi_offset 5, -8
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 34
+ 155              		.cfi_def_cfa_offset 20
+ 156              		.cfi_offset 4, -20
+ 157              		.cfi_offset 5, -16
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 34
 
 
- 158              		.cfi_offset 14, -4
- 159 0002 91B0     		sub	sp, sp, #68
- 160              	.LCFI1:
- 161              		.cfi_def_cfa_offset 80
+ 158              		.cfi_offset 6, -12
+ 159              		.cfi_offset 7, -8
+ 160              		.cfi_offset 14, -4
+ 161 0002 91B0     		sub	sp, sp, #68
+ 162              	.LCFI1:
+ 163              		.cfi_def_cfa_offset 88
   38:Core/Src/main.c ****     PDU_Data_t data;
- 162              		.loc 1 38 5 view .LVU30
+ 164              		.loc 1 38 5 view .LVU30
   39:Core/Src/main.c ****     PDU_Changed_Channels_t* changedChannels;
- 163              		.loc 1 39 5 view .LVU31
+ 165              		.loc 1 39 5 view .LVU31
   40:Core/Src/main.c ****     rcCommand_t command;
- 164              		.loc 1 40 5 view .LVU32
+ 166              		.loc 1 40 5 view .LVU32
   41:Core/Src/main.c ****     uint8_t sendData[8];
- 165              		.loc 1 41 5 view .LVU33
+ 167              		.loc 1 41 5 view .LVU33
   42:Core/Src/main.c ****     uint16_t temp;
- 166              		.loc 1 42 5 view .LVU34
+ 168              		.loc 1 42 5 view .LVU34
   43:Core/Src/main.c ****     uint32_t tmpR;
- 167              		.loc 1 43 5 view .LVU35
-  44:Core/Src/main.c **** 
-  45:Core/Src/main.c ****     RccClockInit();
- 168              		.loc 1 45 5 view .LVU36
- 169 0004 FFF7FEFF 		bl	RccClockInit
- 170              	.LVL2:
-  46:Core/Src/main.c **** 	timer6Init();
- 171              		.loc 1 46 2 view .LVU37
- 172 0008 FFF7FEFF 		bl	timer6Init
- 173              	.LVL3:
-  47:Core/Src/main.c **** 
-  48:Core/Src/main.c **** 	delayInit();
- 174              		.loc 1 48 2 view .LVU38
- 175 000c FFF7FEFF 		bl	delayInit
- 176              	.LVL4:
-  49:Core/Src/main.c **** 	canInit(0x011c0008);
- 177              		.loc 1 49 2 view .LVU39
- 178 0010 5148     		ldr	r0, .L26
- 179 0012 FFF7FEFF 		bl	canInit
- 180              	.LVL5:
-  50:Core/Src/main.c ****     sbusInit(36000000,100000);
- 181              		.loc 1 50 5 view .LVU40
- 182 0016 5149     		ldr	r1, .L26+4
- 183 0018 5148     		ldr	r0, .L26+8
- 184 001a FFF7FEFF 		bl	sbusInit
+ 169              		.loc 1 43 5 view .LVU35
+  44:Core/Src/main.c **** 	uint8_t lightAnimation=0;
+ 170              		.loc 1 44 2 view .LVU36
+ 171              	.LVL2:
+  45:Core/Src/main.c **** 	uint8_t lightDir=0;
+ 172              		.loc 1 45 2 view .LVU37
+  46:Core/Src/main.c ****     RccClockInit();
+ 173              		.loc 1 46 5 view .LVU38
+ 174 0004 FFF7FEFF 		bl	RccClockInit
+ 175              	.LVL3:
+  47:Core/Src/main.c **** 	timer6Init();
+ 176              		.loc 1 47 2 view .LVU39
+ 177 0008 FFF7FEFF 		bl	timer6Init
+ 178              	.LVL4:
+  48:Core/Src/main.c **** 
+  49:Core/Src/main.c **** 	delayInit();
+ 179              		.loc 1 49 2 view .LVU40
+ 180 000c FFF7FEFF 		bl	delayInit
+ 181              	.LVL5:
+  50:Core/Src/main.c **** 	canInit(0x011c0008);
+ 182              		.loc 1 50 2 view .LVU41
+ 183 0010 8E48     		ldr	r0, .L35
+ 184 0012 FFF7FEFF 		bl	canInit
  185              	.LVL6:
-  51:Core/Src/main.c **** 	ledInit();
- 186              		.loc 1 51 2 view .LVU41
- 187 001e FFF7FEFF 		bl	ledInit
- 188              	.LVL7:
- 189 0022 0EE0     		b	.L11
- 190              	.L22:
-  52:Core/Src/main.c ****     while(1)
-  53:Core/Src/main.c ****     {
-  54:Core/Src/main.c **** 		
-  55:Core/Src/main.c **** 		if(testTimer>=100)
-  56:Core/Src/main.c ****         {
-  57:Core/Src/main.c ****             sbubRead();
- 191              		.loc 1 57 13 view .LVU42
- 192 0024 FFF7FEFF 		bl	sbubRead
+  51:Core/Src/main.c ****     sbusInit(36000000,100000);
+ 186              		.loc 1 51 5 view .LVU42
+ 187 0016 8E49     		ldr	r1, .L35+4
+ 188 0018 8E48     		ldr	r0, .L35+8
+ 189 001a FFF7FEFF 		bl	sbusInit
+ 190              	.LVL7:
+  52:Core/Src/main.c **** 	ledInit();
+ 191              		.loc 1 52 2 view .LVU43
+ 192 001e FFF7FEFF 		bl	ledInit
  193              	.LVL8:
-  58:Core/Src/main.c ****             testTimer=0;
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 35
+  45:Core/Src/main.c ****     RccClockInit();
+ 194              		.loc 1 45 10 is_stmt 0 view .LVU44
+ 195 0022 0025     		movs	r5, #0
+  44:Core/Src/main.c **** 	uint8_t lightDir=0;
+ 196              		.loc 1 44 10 view .LVU45
+ 197 0024 2C46     		mov	r4, r5
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 35
 
 
- 194              		.loc 1 58 13 view .LVU43
- 195              		.loc 1 58 22 is_stmt 0 view .LVU44
- 196 0028 4E4B     		ldr	r3, .L26+12
- 197 002a 0022     		movs	r2, #0
- 198 002c 1A80     		strh	r2, [r3]	@ movhi
- 199 002e 0CE0     		b	.L9
- 200              	.L23:
-  59:Core/Src/main.c ****         }
-  60:Core/Src/main.c **** 		if(animationTImer>10)
+ 198 0026 40E0     		b	.L9
+ 199              	.LVL9:
+ 200              	.L29:
+  53:Core/Src/main.c ****     while(1)
+  54:Core/Src/main.c ****     {
+  55:Core/Src/main.c **** 		
+  56:Core/Src/main.c **** 		if(testTimer>=100)
+  57:Core/Src/main.c ****         {
+  58:Core/Src/main.c ****             sbubRead();
+ 201              		.loc 1 58 13 is_stmt 1 view .LVU46
+ 202 0028 FFF7FEFF 		bl	sbubRead
+ 203              	.LVL10:
+  59:Core/Src/main.c ****             testTimer=0;
+ 204              		.loc 1 59 13 view .LVU47
+ 205              		.loc 1 59 22 is_stmt 0 view .LVU48
+ 206 002c 8A4B     		ldr	r3, .L35+12
+ 207 002e 0022     		movs	r2, #0
+ 208 0030 1A80     		strh	r2, [r3]	@ movhi
+ 209 0032 3EE0     		b	.L10
+ 210              	.L30:
+  60:Core/Src/main.c ****         }
+  61:Core/Src/main.c **** 		if(animationTImer>5)
+  62:Core/Src/main.c **** 		{
+  63:Core/Src/main.c **** 			animationTImer=0;
+  64:Core/Src/main.c **** 			if(data.MIX==1)
+  65:Core/Src/main.c **** 			{
+  66:Core/Src/main.c **** 				ledSetBlockRGB(BACK_LIGHT_LEFT_BEGIN,BACK_LIGHT_LEFT_COUNT,255,0,0);
+ 211              		.loc 1 66 5 is_stmt 1 view .LVU49
+ 212 0034 1746     		mov	r7, r2
+ 213 0036 0092     		str	r2, [sp]
+ 214 0038 1346     		mov	r3, r2
+ 215 003a FF22     		movs	r2, #255
+ 216 003c 0F21     		movs	r1, #15
+ 217 003e 3846     		mov	r0, r7
+ 218 0040 FFF7FEFF 		bl	ledSetBlockRGB
+ 219              	.LVL11:
+  67:Core/Src/main.c **** 				ledSetBlockRGB(BLUE_LIGHT_LEGT_BEGIN,BLUE_LIGHT_LEFT_COUNT,0,0,255);
+ 220              		.loc 1 67 5 view .LVU50
+ 221 0044 FF26     		movs	r6, #255
+ 222 0046 0096     		str	r6, [sp]
+ 223 0048 3B46     		mov	r3, r7
+ 224 004a 3A46     		mov	r2, r7
+ 225 004c 4121     		movs	r1, #65
+ 226 004e 0F20     		movs	r0, #15
+ 227 0050 FFF7FEFF 		bl	ledSetBlockRGB
+ 228              	.LVL12:
+  68:Core/Src/main.c **** 				ledSetBlockRGB(FORW_LIGHT_LEFT_BEGIN,FORW_LIGHT_LEFT_COUNT,255,255,255);
+ 229              		.loc 1 68 5 view .LVU51
+ 230 0054 0096     		str	r6, [sp]
+ 231 0056 3346     		mov	r3, r6
+ 232 0058 3246     		mov	r2, r6
+ 233 005a 0F21     		movs	r1, #15
+ 234 005c 5020     		movs	r0, #80
+ 235 005e FFF7FEFF 		bl	ledSetBlockRGB
+ 236              	.LVL13:
+  69:Core/Src/main.c **** 				ledSetBlockRGB(FORW_LIGHT_RIGHT_BEGIN,FORW_LIGHT_RIGHT_COUNT,255,255,255);
+ 237              		.loc 1 69 5 view .LVU52
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 36
+
+
+ 238 0062 0096     		str	r6, [sp]
+ 239 0064 3346     		mov	r3, r6
+ 240 0066 3246     		mov	r2, r6
+ 241 0068 0F21     		movs	r1, #15
+ 242 006a 5F20     		movs	r0, #95
+ 243 006c FFF7FEFF 		bl	ledSetBlockRGB
+ 244              	.LVL14:
+  70:Core/Src/main.c **** 				ledSetBlockRGB(BLUE_LIGHT_RIGHT_BEGIN,BLUE_LIGHT_RIGHT_COUNT,0,0,255);
+ 245              		.loc 1 70 5 view .LVU53
+ 246 0070 0096     		str	r6, [sp]
+ 247 0072 3B46     		mov	r3, r7
+ 248 0074 3A46     		mov	r2, r7
+ 249 0076 4121     		movs	r1, #65
+ 250 0078 6E20     		movs	r0, #110
+ 251 007a FFF7FEFF 		bl	ledSetBlockRGB
+ 252              	.LVL15:
+  71:Core/Src/main.c **** 				ledSetBlockRGB(BACK_LIGHT_RIGHT_BEGIN,BACK_LIGHT_RIGHT_COUNT,255,0,0);
+ 253              		.loc 1 71 5 view .LVU54
+ 254 007e 0097     		str	r7, [sp]
+ 255 0080 3B46     		mov	r3, r7
+ 256 0082 3246     		mov	r2, r6
+ 257 0084 0F21     		movs	r1, #15
+ 258 0086 AF20     		movs	r0, #175
+ 259 0088 FFF7FEFF 		bl	ledSetBlockRGB
+ 260              	.LVL16:
+ 261 008c 07E0     		b	.L13
+ 262              	.L31:
+  72:Core/Src/main.c **** 			}
+  73:Core/Src/main.c **** 			else if(data.MIX==0)
+  74:Core/Src/main.c **** 			{
+  75:Core/Src/main.c **** 				ledSetBlockRGB(0,LEDS_COUNT,0,0,0);	
+ 263              		.loc 1 75 5 view .LVU55
+ 264 008e 0020     		movs	r0, #0
+ 265 0090 0090     		str	r0, [sp]
+ 266 0092 0346     		mov	r3, r0
+ 267 0094 0246     		mov	r2, r0
+ 268 0096 4FF49571 		mov	r1, #298
+ 269 009a FFF7FEFF 		bl	ledSetBlockRGB
+ 270              	.LVL17:
+ 271              	.L13:
+  76:Core/Src/main.c **** 			}
+  77:Core/Src/main.c **** 			else if(data.MIX==2)
+  78:Core/Src/main.c **** 			{
+  79:Core/Src/main.c **** 				
+  80:Core/Src/main.c **** 				if(data.AILE==1)
+  81:Core/Src/main.c **** 				{
+  82:Core/Src/main.c **** 					animationLoop();
+  83:Core/Src/main.c **** 				}
+  84:Core/Src/main.c **** 				else
+  85:Core/Src/main.c **** 				{
+  86:Core/Src/main.c **** 					
+  87:Core/Src/main.c **** 					if(lightAnimation==255)
+  88:Core/Src/main.c **** 					{
+  89:Core/Src/main.c **** 						lightDir=1;
+  90:Core/Src/main.c **** 					}
+  91:Core/Src/main.c **** 					else if(lightAnimation==0)
+  92:Core/Src/main.c **** 					{
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 37
+
+
+  93:Core/Src/main.c **** 						lightDir=0;
+  94:Core/Src/main.c **** 					}
+  95:Core/Src/main.c **** 					if(lightDir)
+  96:Core/Src/main.c **** 						lightAnimation--;
+  97:Core/Src/main.c **** 					else
+  98:Core/Src/main.c **** 						lightAnimation++;
+  99:Core/Src/main.c **** 
+ 100:Core/Src/main.c **** 					ledSetBlockRGB(BACK_LIGHT_LEFT_BEGIN,BACK_LIGHT_LEFT_COUNT,255,0,0);
+ 101:Core/Src/main.c **** 					ledSetBlockRGB(FORW_LIGHT_LEFT_BEGIN,FORW_LIGHT_LEFT_COUNT,255,255,255);
+ 102:Core/Src/main.c **** 					ledSetBlockRGB(FORW_LIGHT_RIGHT_BEGIN,FORW_LIGHT_RIGHT_COUNT,255,255,255);
+ 103:Core/Src/main.c **** 					ledSetBlockRGB(BACK_LIGHT_RIGHT_BEGIN,BACK_LIGHT_RIGHT_COUNT,255,0,0);
+ 104:Core/Src/main.c **** 					ledSetBlockRGB(BLUE_LIGHT_LEGT_BEGIN,BLUE_LIGHT_LEFT_COUNT,0,0,lightAnimation);
+ 105:Core/Src/main.c **** 					ledSetBlockRGB(BLUE_LIGHT_RIGHT_BEGIN,BLUE_LIGHT_RIGHT_COUNT,0,0,lightAnimation);
+ 106:Core/Src/main.c **** 				}
+ 107:Core/Src/main.c **** 			}
+ 108:Core/Src/main.c **** 			ledUpdate();
+ 272              		.loc 1 108 4 view .LVU56
+ 273 009e FFF7FEFF 		bl	ledUpdate
+ 274              	.LVL18:
+ 275              	.L11:
+ 109:Core/Src/main.c **** 		 	
+ 110:Core/Src/main.c **** 		} 
+ 111:Core/Src/main.c **** 		if(flag==1)
+ 276              		.loc 1 111 3 view .LVU57
+ 277              		.loc 1 111 10 is_stmt 0 view .LVU58
+ 278 00a2 6E4B     		ldr	r3, .L35+16
+ 279 00a4 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 280              		.loc 1 111 5 view .LVU59
+ 281 00a6 012B     		cmp	r3, #1
+ 282 00a8 52D0     		beq	.L28
+ 283              	.LVL19:
+ 284              	.L9:
+  53:Core/Src/main.c ****     {
+ 285              		.loc 1 53 5 is_stmt 1 view .LVU60
+  56:Core/Src/main.c ****         {
+ 286              		.loc 1 56 3 view .LVU61
+  56:Core/Src/main.c ****         {
+ 287              		.loc 1 56 15 is_stmt 0 view .LVU62
+ 288 00aa 6B4B     		ldr	r3, .L35+12
+ 289 00ac 1B88     		ldrh	r3, [r3]
+  56:Core/Src/main.c ****         {
+ 290              		.loc 1 56 5 view .LVU63
+ 291 00ae 632B     		cmp	r3, #99
+ 292 00b0 BAD8     		bhi	.L29
+ 293              	.L10:
   61:Core/Src/main.c **** 		{
-  62:Core/Src/main.c **** 			animationTImer=0;
- 201              		.loc 1 62 4 is_stmt 1 view .LVU45
- 202              		.loc 1 62 18 is_stmt 0 view .LVU46
- 203 0030 4D4B     		ldr	r3, .L26+16
- 204 0032 0022     		movs	r2, #0
- 205 0034 1A80     		strh	r2, [r3]	@ movhi
-  63:Core/Src/main.c **** 			animationLoop();
- 206              		.loc 1 63 4 is_stmt 1 view .LVU47
- 207 0036 FFF7FEFF 		bl	animationLoop
- 208              	.LVL9:
- 209              	.L10:
-  64:Core/Src/main.c **** 		}
-  65:Core/Src/main.c **** 		if(flag==1)
- 210              		.loc 1 65 3 view .LVU48
- 211              		.loc 1 65 10 is_stmt 0 view .LVU49
- 212 003a 4C4B     		ldr	r3, .L26+20
- 213 003c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 214              		.loc 1 65 5 view .LVU50
- 215 003e 012B     		cmp	r3, #1
- 216 0040 08D0     		beq	.L21
- 217              	.L11:
-  52:Core/Src/main.c ****     {
- 218              		.loc 1 52 5 is_stmt 1 view .LVU51
-  55:Core/Src/main.c ****         {
- 219              		.loc 1 55 3 view .LVU52
-  55:Core/Src/main.c ****         {
- 220              		.loc 1 55 15 is_stmt 0 view .LVU53
- 221 0042 484B     		ldr	r3, .L26+12
- 222 0044 1B88     		ldrh	r3, [r3]
-  55:Core/Src/main.c ****         {
- 223              		.loc 1 55 5 view .LVU54
- 224 0046 632B     		cmp	r3, #99
- 225 0048 ECD8     		bhi	.L22
- 226              	.L9:
-  60:Core/Src/main.c **** 		{
- 227              		.loc 1 60 3 is_stmt 1 view .LVU55
-  60:Core/Src/main.c **** 		{
- 228              		.loc 1 60 20 is_stmt 0 view .LVU56
- 229 004a 474B     		ldr	r3, .L26+16
- 230 004c 1B88     		ldrh	r3, [r3]
-  60:Core/Src/main.c **** 		{
- 231              		.loc 1 60 5 view .LVU57
- 232 004e 0A2B     		cmp	r3, #10
- 233 0050 F3D9     		bls	.L10
- 234 0052 EDE7     		b	.L23
- 235              	.L21:
-  66:Core/Src/main.c **** 		{
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 36
+ 294              		.loc 1 61 3 is_stmt 1 view .LVU64
+  61:Core/Src/main.c **** 		{
+ 295              		.loc 1 61 20 is_stmt 0 view .LVU65
+ 296 00b2 6B4B     		ldr	r3, .L35+20
+ 297 00b4 1B88     		ldrh	r3, [r3]
+  61:Core/Src/main.c **** 		{
+ 298              		.loc 1 61 5 view .LVU66
+ 299 00b6 052B     		cmp	r3, #5
+ 300 00b8 F3D9     		bls	.L11
+  63:Core/Src/main.c **** 			if(data.MIX==1)
+ 301              		.loc 1 63 4 is_stmt 1 view .LVU67
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 38
 
 
-  67:Core/Src/main.c **** 			flag=0;
- 236              		.loc 1 67 4 is_stmt 1 view .LVU58
- 237              		.loc 1 67 8 is_stmt 0 view .LVU59
- 238 0054 454B     		ldr	r3, .L26+20
- 239 0056 0022     		movs	r2, #0
- 240 0058 1A70     		strb	r2, [r3]
-  68:Core/Src/main.c **** 			if(!pduGetError())
- 241              		.loc 1 68 4 is_stmt 1 view .LVU60
- 242              		.loc 1 68 8 is_stmt 0 view .LVU61
- 243 005a FFF7FEFF 		bl	pduGetError
- 244              	.LVL10:
- 245              		.loc 1 68 6 view .LVU62
- 246 005e 0028     		cmp	r0, #0
- 247 0060 EFD1     		bne	.L11
-  69:Core/Src/main.c **** 			{
-  70:Core/Src/main.c **** 				decodeSbus();
- 248              		.loc 1 70 5 is_stmt 1 view .LVU63
- 249 0062 FFF7FEFF 		bl	decodeSbus
- 250              	.LVL11:
-  71:Core/Src/main.c **** 				readPdu();
- 251              		.loc 1 71 5 view .LVU64
- 252 0066 FFF7FEFF 		bl	readPdu
- 253              	.LVL12:
-  72:Core/Src/main.c **** 			    data=getPduData();
- 254              		.loc 1 72 8 view .LVU65
- 255              		.loc 1 72 13 is_stmt 0 view .LVU66
- 256 006a 08A8     		add	r0, sp, #32
- 257 006c FFF7FEFF 		bl	getPduData
- 258              	.LVL13:
-  73:Core/Src/main.c **** 			    changedChannels=getPduChangedChannels();
- 259              		.loc 1 73 8 is_stmt 1 view .LVU67
- 260              		.loc 1 73 24 is_stmt 0 view .LVU68
- 261 0070 FFF7FEFF 		bl	getPduChangedChannels
- 262              	.LVL14:
- 263 0074 0446     		mov	r4, r0
- 264              	.LVL15:
-  74:Core/Src/main.c **** 			    command=normaliz(data.course,data.speed,data.rotate,data.corstrain,data.ELEV);
- 265              		.loc 1 74 8 is_stmt 1 view .LVU69
- 266              		.loc 1 74 16 is_stmt 0 view .LVU70
- 267 0076 9DF83150 		ldrb	r5, [sp, #49]	@ zero_extendqisi2
- 268 007a 0095     		str	r5, [sp]
- 269 007c 0A9B     		ldr	r3, [sp, #40]
- 270 007e 0B9A     		ldr	r2, [sp, #44]
- 271 0080 0999     		ldr	r1, [sp, #36]
- 272 0082 0898     		ldr	r0, [sp, #32]
- 273              	.LVL16:
- 274              		.loc 1 74 16 view .LVU71
- 275 0084 FFF7FEFF 		bl	normaliz
- 276              	.LVL17:
- 277 0088 8DED050A 		vstr.32	s0, [sp, #20]
- 278 008c CDED060A 		vstr.32	s1, [sp, #24]
- 279 0090 8DED071A 		vstr.32	s2, [sp, #28]
-  75:Core/Src/main.c **** 			    if(changedChannels->gearChanged)
- 280              		.loc 1 75 8 is_stmt 1 view .LVU72
- 281              		.loc 1 75 26 is_stmt 0 view .LVU73
- 282 0094 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
- 283              		.loc 1 75 10 view .LVU74
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 37
+  63:Core/Src/main.c **** 			if(data.MIX==1)
+ 302              		.loc 1 63 18 is_stmt 0 view .LVU68
+ 303 00ba 694B     		ldr	r3, .L35+20
+ 304 00bc 0022     		movs	r2, #0
+ 305 00be 1A80     		strh	r2, [r3]	@ movhi
+  64:Core/Src/main.c **** 			{
+ 306              		.loc 1 64 4 is_stmt 1 view .LVU69
+  64:Core/Src/main.c **** 			{
+ 307              		.loc 1 64 11 is_stmt 0 view .LVU70
+ 308 00c0 9DF83430 		ldrb	r3, [sp, #52]	@ zero_extendqisi2
+  64:Core/Src/main.c **** 			{
+ 309              		.loc 1 64 6 view .LVU71
+ 310 00c4 012B     		cmp	r3, #1
+ 311 00c6 B5D0     		beq	.L30
+  73:Core/Src/main.c **** 			{
+ 312              		.loc 1 73 9 is_stmt 1 view .LVU72
+  73:Core/Src/main.c **** 			{
+ 313              		.loc 1 73 11 is_stmt 0 view .LVU73
+ 314 00c8 002B     		cmp	r3, #0
+ 315 00ca E0D0     		beq	.L31
+  77:Core/Src/main.c **** 			{
+ 316              		.loc 1 77 9 is_stmt 1 view .LVU74
+  77:Core/Src/main.c **** 			{
+ 317              		.loc 1 77 11 is_stmt 0 view .LVU75
+ 318 00cc 022B     		cmp	r3, #2
+ 319 00ce E6D1     		bne	.L13
+  80:Core/Src/main.c **** 				{
+ 320              		.loc 1 80 5 is_stmt 1 view .LVU76
+  80:Core/Src/main.c **** 				{
+ 321              		.loc 1 80 12 is_stmt 0 view .LVU77
+ 322 00d0 9DF83230 		ldrb	r3, [sp, #50]	@ zero_extendqisi2
+  80:Core/Src/main.c **** 				{
+ 323              		.loc 1 80 7 view .LVU78
+ 324 00d4 012B     		cmp	r3, #1
+ 325 00d6 04D0     		beq	.L32
+  87:Core/Src/main.c **** 					{
+ 326              		.loc 1 87 6 is_stmt 1 view .LVU79
+  87:Core/Src/main.c **** 					{
+ 327              		.loc 1 87 8 is_stmt 0 view .LVU80
+ 328 00d8 FF2C     		cmp	r4, #255
+ 329 00da 05D0     		beq	.L25
+  91:Core/Src/main.c **** 					{
+ 330              		.loc 1 91 11 is_stmt 1 view .LVU81
+  91:Core/Src/main.c **** 					{
+ 331              		.loc 1 91 13 is_stmt 0 view .LVU82
+ 332 00dc A4B3     		cbz	r4, .L26
+  95:Core/Src/main.c **** 						lightAnimation--;
+ 333              		.loc 1 95 6 is_stmt 1 view .LVU83
+  95:Core/Src/main.c **** 						lightAnimation--;
+ 334              		.loc 1 95 8 is_stmt 0 view .LVU84
+ 335 00de A5B3     		cbz	r5, .L17
+ 336 00e0 03E0     		b	.L16
+ 337              	.L32:
+  82:Core/Src/main.c **** 				}
+ 338              		.loc 1 82 6 is_stmt 1 view .LVU85
+ 339 00e2 FFF7FEFF 		bl	animationLoop
+ 340              	.LVL20:
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 39
 
 
- 284 0096 53B1     		cbz	r3, .L13
-  76:Core/Src/main.c **** 				{
-  77:Core/Src/main.c **** 					sendData[0]=0x01;
- 285              		.loc 1 77 6 is_stmt 1 view .LVU75
- 286              		.loc 1 77 17 is_stmt 0 view .LVU76
- 287 0098 0123     		movs	r3, #1
- 288 009a 8DF80C30 		strb	r3, [sp, #12]
-  78:Core/Src/main.c **** 					if(data.GEAR)
- 289              		.loc 1 78 6 is_stmt 1 view .LVU77
- 290              		.loc 1 78 13 is_stmt 0 view .LVU78
- 291 009e 9DF83330 		ldrb	r3, [sp, #51]	@ zero_extendqisi2
- 292              		.loc 1 78 8 view .LVU79
- 293 00a2 9BB1     		cbz	r3, .L14
-  79:Core/Src/main.c **** 					{
-  80:Core/Src/main.c **** 						motorStart(BROADCAST_ID);
- 294              		.loc 1 80 7 is_stmt 1 view .LVU80
- 295 00a4 0120     		movs	r0, #1
- 296 00a6 FFF7FEFF 		bl	motorStart
- 297              	.LVL18:
- 298              	.L15:
-  81:Core/Src/main.c **** 					}
-  82:Core/Src/main.c **** 					else
-  83:Core/Src/main.c **** 					{
-  84:Core/Src/main.c **** 						motorStop(BROADCAST_ID);
-  85:Core/Src/main.c **** 					}
-  86:Core/Src/main.c **** 					changedChannels->gearChanged=0;
- 299              		.loc 1 86 6 view .LVU81
- 300              		.loc 1 86 34 is_stmt 0 view .LVU82
- 301 00aa 0023     		movs	r3, #0
- 302 00ac 2371     		strb	r3, [r4, #4]
- 303              	.L13:
-  87:Core/Src/main.c **** 				}
-  88:Core/Src/main.c **** 				if(changedChannels->motionControlChanged)
- 304              		.loc 1 88 5 is_stmt 1 view .LVU83
- 305              		.loc 1 88 23 is_stmt 0 view .LVU84
- 306 00ae 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 307              		.loc 1 88 7 view .LVU85
- 308 00b0 83B9     		cbnz	r3, .L24
- 309              	.L16:
-  89:Core/Src/main.c **** 				{
-  90:Core/Src/main.c **** 					temp=(int16_t)((float)(command.V*2048));
-  91:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
-  92:Core/Src/main.c **** 					sendData[1]=(temp>>8);
-  93:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
-  94:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
-  95:Core/Src/main.c **** 					sendData[3]=(temp>>8);
-  96:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
-  97:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
-  98:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
-  99:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 100:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 101:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 102:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
- 103:Core/Src/main.c **** 				}
- 104:Core/Src/main.c **** 				if(changedChannels->mixChanged)
- 310              		.loc 1 104 5 is_stmt 1 view .LVU86
- 311              		.loc 1 104 23 is_stmt 0 view .LVU87
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 38
+ 341 00e6 DAE7     		b	.L13
+ 342              	.L25:
+  89:Core/Src/main.c **** 					}
+ 343              		.loc 1 89 15 is_stmt 0 view .LVU86
+ 344 00e8 0125     		movs	r5, #1
+ 345              	.LVL21:
+ 346              	.L16:
+  96:Core/Src/main.c **** 					else
+ 347              		.loc 1 96 7 is_stmt 1 view .LVU87
+  96:Core/Src/main.c **** 					else
+ 348              		.loc 1 96 21 is_stmt 0 view .LVU88
+ 349 00ea 013C     		subs	r4, r4, #1
+ 350              	.LVL22:
+  96:Core/Src/main.c **** 					else
+ 351              		.loc 1 96 21 view .LVU89
+ 352 00ec E4B2     		uxtb	r4, r4
+ 353              	.LVL23:
+ 354              	.L18:
+ 100:Core/Src/main.c **** 					ledSetBlockRGB(FORW_LIGHT_LEFT_BEGIN,FORW_LIGHT_LEFT_COUNT,255,255,255);
+ 355              		.loc 1 100 6 is_stmt 1 view .LVU90
+ 356 00ee 0026     		movs	r6, #0
+ 357 00f0 0096     		str	r6, [sp]
+ 358 00f2 3346     		mov	r3, r6
+ 359 00f4 FF22     		movs	r2, #255
+ 360 00f6 0F21     		movs	r1, #15
+ 361 00f8 3046     		mov	r0, r6
+ 362 00fa FFF7FEFF 		bl	ledSetBlockRGB
+ 363              	.LVL24:
+ 101:Core/Src/main.c **** 					ledSetBlockRGB(FORW_LIGHT_RIGHT_BEGIN,FORW_LIGHT_RIGHT_COUNT,255,255,255);
+ 364              		.loc 1 101 6 view .LVU91
+ 365 00fe FF27     		movs	r7, #255
+ 366 0100 0097     		str	r7, [sp]
+ 367 0102 3B46     		mov	r3, r7
+ 368 0104 3A46     		mov	r2, r7
+ 369 0106 0F21     		movs	r1, #15
+ 370 0108 5020     		movs	r0, #80
+ 371 010a FFF7FEFF 		bl	ledSetBlockRGB
+ 372              	.LVL25:
+ 102:Core/Src/main.c **** 					ledSetBlockRGB(BACK_LIGHT_RIGHT_BEGIN,BACK_LIGHT_RIGHT_COUNT,255,0,0);
+ 373              		.loc 1 102 6 view .LVU92
+ 374 010e 0097     		str	r7, [sp]
+ 375 0110 3B46     		mov	r3, r7
+ 376 0112 3A46     		mov	r2, r7
+ 377 0114 0F21     		movs	r1, #15
+ 378 0116 5F20     		movs	r0, #95
+ 379 0118 FFF7FEFF 		bl	ledSetBlockRGB
+ 380              	.LVL26:
+ 103:Core/Src/main.c **** 					ledSetBlockRGB(BLUE_LIGHT_LEGT_BEGIN,BLUE_LIGHT_LEFT_COUNT,0,0,lightAnimation);
+ 381              		.loc 1 103 6 view .LVU93
+ 382 011c 0096     		str	r6, [sp]
+ 383 011e 3346     		mov	r3, r6
+ 384 0120 3A46     		mov	r2, r7
+ 385 0122 0F21     		movs	r1, #15
+ 386 0124 AF20     		movs	r0, #175
+ 387 0126 FFF7FEFF 		bl	ledSetBlockRGB
+ 388              	.LVL27:
+ 104:Core/Src/main.c **** 					ledSetBlockRGB(BLUE_LIGHT_RIGHT_BEGIN,BLUE_LIGHT_RIGHT_COUNT,0,0,lightAnimation);
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 40
 
 
- 312 00b2 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
- 313              		.loc 1 104 7 view .LVU88
- 314 00b4 002B     		cmp	r3, #0
- 315 00b6 46D1     		bne	.L25
- 316              	.L17:
- 105:Core/Src/main.c **** 				{
- 106:Core/Src/main.c **** 					motorSetCommunicationMode(data.MIX,BROADCAST_ID);
- 107:Core/Src/main.c **** 					changedChannels->mixChanged=0;
- 108:Core/Src/main.c **** 				}
- 109:Core/Src/main.c **** 				if(changedChannels->elevChanged)
- 317              		.loc 1 109 5 is_stmt 1 view .LVU89
- 318              		.loc 1 109 23 is_stmt 0 view .LVU90
- 319 00b8 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
- 320              		.loc 1 109 7 view .LVU91
- 321 00ba 002B     		cmp	r3, #0
- 322 00bc C1D0     		beq	.L11
- 110:Core/Src/main.c **** 				{
- 111:Core/Src/main.c **** 					motorSetMotionMode(data.ELEV,BROADCAST_ID);
- 323              		.loc 1 111 6 is_stmt 1 view .LVU92
- 324 00be 0121     		movs	r1, #1
- 325 00c0 2846     		mov	r0, r5
- 326 00c2 FFF7FEFF 		bl	motorSetMotionMode
- 327              	.LVL19:
- 112:Core/Src/main.c **** 					changedChannels->elevChanged=0;
- 328              		.loc 1 112 6 view .LVU93
- 329              		.loc 1 112 34 is_stmt 0 view .LVU94
- 330 00c6 0023     		movs	r3, #0
- 331 00c8 A370     		strb	r3, [r4, #2]
- 332 00ca BAE7     		b	.L11
- 333              	.L14:
-  84:Core/Src/main.c **** 					}
- 334              		.loc 1 84 7 is_stmt 1 view .LVU95
- 335 00cc 0120     		movs	r0, #1
- 336 00ce FFF7FEFF 		bl	motorStop
- 337              	.LVL20:
- 338 00d2 EAE7     		b	.L15
- 339              	.L24:
-  90:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
- 340              		.loc 1 90 6 view .LVU96
-  90:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
- 341              		.loc 1 90 11 is_stmt 0 view .LVU97
- 342 00d4 DDED057A 		vldr.32	s15, [sp, #20]
- 343 00d8 B0EE677A 		vmov.f32	s14, s15
- 344 00dc BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
- 345 00e0 17EE103A 		vmov	r3, s14	@ int
- 346              	.LVL21:
-  91:Core/Src/main.c **** 					sendData[1]=(temp>>8);
- 347              		.loc 1 91 6 is_stmt 1 view .LVU98
-  91:Core/Src/main.c **** 					sendData[1]=(temp>>8);
- 348              		.loc 1 91 17 is_stmt 0 view .LVU99
- 349 00e4 8DF80C30 		strb	r3, [sp, #12]
-  92:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
- 350              		.loc 1 92 6 is_stmt 1 view .LVU100
-  92:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
- 351              		.loc 1 92 17 is_stmt 0 view .LVU101
- 352 00e8 C3F30723 		ubfx	r3, r3, #8, #8
- 353              	.LVL22:
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 39
+ 389              		.loc 1 104 6 view .LVU94
+ 390 012a 0094     		str	r4, [sp]
+ 391 012c 3346     		mov	r3, r6
+ 392 012e 3246     		mov	r2, r6
+ 393 0130 4121     		movs	r1, #65
+ 394 0132 0F20     		movs	r0, #15
+ 395 0134 FFF7FEFF 		bl	ledSetBlockRGB
+ 396              	.LVL28:
+ 105:Core/Src/main.c **** 				}
+ 397              		.loc 1 105 6 view .LVU95
+ 398 0138 0094     		str	r4, [sp]
+ 399 013a 3346     		mov	r3, r6
+ 400 013c 3246     		mov	r2, r6
+ 401 013e 4121     		movs	r1, #65
+ 402 0140 6E20     		movs	r0, #110
+ 403 0142 FFF7FEFF 		bl	ledSetBlockRGB
+ 404              	.LVL29:
+ 405 0146 AAE7     		b	.L13
+ 406              	.LVL30:
+ 407              	.L26:
+  93:Core/Src/main.c **** 					}
+ 408              		.loc 1 93 15 is_stmt 0 view .LVU96
+ 409 0148 2546     		mov	r5, r4
+ 410              	.LVL31:
+ 411              	.L17:
+  98:Core/Src/main.c **** 
+ 412              		.loc 1 98 7 is_stmt 1 view .LVU97
+  98:Core/Src/main.c **** 
+ 413              		.loc 1 98 21 is_stmt 0 view .LVU98
+ 414 014a 0134     		adds	r4, r4, #1
+ 415              	.LVL32:
+  98:Core/Src/main.c **** 
+ 416              		.loc 1 98 21 view .LVU99
+ 417 014c E4B2     		uxtb	r4, r4
+ 418              	.LVL33:
+  98:Core/Src/main.c **** 
+ 419              		.loc 1 98 21 view .LVU100
+ 420 014e CEE7     		b	.L18
+ 421              	.LVL34:
+ 422              	.L28:
+ 112:Core/Src/main.c **** 		{
+ 113:Core/Src/main.c **** 			flag=0;
+ 423              		.loc 1 113 4 is_stmt 1 view .LVU101
+ 424              		.loc 1 113 8 is_stmt 0 view .LVU102
+ 425 0150 424B     		ldr	r3, .L35+16
+ 426 0152 0022     		movs	r2, #0
+ 427 0154 1A70     		strb	r2, [r3]
+ 114:Core/Src/main.c **** 			if(!pduGetError())
+ 428              		.loc 1 114 4 is_stmt 1 view .LVU103
+ 429              		.loc 1 114 8 is_stmt 0 view .LVU104
+ 430 0156 FFF7FEFF 		bl	pduGetError
+ 431              	.LVL35:
+ 432              		.loc 1 114 6 view .LVU105
+ 433 015a 0028     		cmp	r0, #0
+ 434 015c A5D1     		bne	.L9
+ 115:Core/Src/main.c **** 			{
+ 116:Core/Src/main.c **** 				decodeSbus();
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 41
 
 
-  92:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
- 354              		.loc 1 92 17 view .LVU102
- 355 00ec 8DF80D30 		strb	r3, [sp, #13]
-  93:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
- 356              		.loc 1 93 6 is_stmt 1 view .LVU103
-  93:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
- 357              		.loc 1 93 13 is_stmt 0 view .LVU104
- 358 00f0 DDED077A 		vldr.32	s15, [sp, #28]
- 359 00f4 B0EE677A 		vmov.f32	s14, s15
- 360              	.LVL23:
-  93:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
- 361              		.loc 1 93 13 view .LVU105
- 362 00f8 BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
- 363 00fc 17EE103A 		vmov	r3, s14	@ int
- 364              	.LVL24:
-  94:Core/Src/main.c **** 					sendData[3]=(temp>>8);
- 365              		.loc 1 94 6 is_stmt 1 view .LVU106
-  94:Core/Src/main.c **** 					sendData[3]=(temp>>8);
- 366              		.loc 1 94 17 is_stmt 0 view .LVU107
- 367 0100 8DF80E30 		strb	r3, [sp, #14]
-  95:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
- 368              		.loc 1 95 6 is_stmt 1 view .LVU108
-  95:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
- 369              		.loc 1 95 17 is_stmt 0 view .LVU109
- 370 0104 C3F30723 		ubfx	r3, r3, #8, #8
- 371              	.LVL25:
-  95:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
- 372              		.loc 1 95 17 view .LVU110
- 373 0108 8DF80F30 		strb	r3, [sp, #15]
-  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 374              		.loc 1 96 6 is_stmt 1 view .LVU111
-  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 375              		.loc 1 96 39 is_stmt 0 view .LVU112
- 376 010c DDED067A 		vldr.32	s15, [sp, #24]
- 377 0110 9FED177A 		vldr.32	s14, .L26+24
- 378              	.LVL26:
-  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 379              		.loc 1 96 39 view .LVU113
- 380 0114 67EE877A 		vmul.f32	s15, s15, s14
-  96:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
- 381              		.loc 1 96 13 view .LVU114
- 382 0118 FDEEE77A 		vcvt.s32.f32	s15, s15
- 383 011c 17EE903A 		vmov	r3, s15	@ int
- 384              	.LVL27:
-  97:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
- 385              		.loc 1 97 6 is_stmt 1 view .LVU115
-  97:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
- 386              		.loc 1 97 17 is_stmt 0 view .LVU116
- 387 0120 8DF81030 		strb	r3, [sp, #16]
-  98:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 388              		.loc 1 98 6 is_stmt 1 view .LVU117
-  98:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 389              		.loc 1 98 37 is_stmt 0 view .LVU118
- 390 0124 1A0A     		lsrs	r2, r3, #8
-  98:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
- 391              		.loc 1 98 17 view .LVU119
- 392 0126 8DF81120 		strb	r2, [sp, #17]
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 40
+ 435              		.loc 1 116 5 is_stmt 1 view .LVU106
+ 436 015e FFF7FEFF 		bl	decodeSbus
+ 437              	.LVL36:
+ 117:Core/Src/main.c **** 				readPdu();
+ 438              		.loc 1 117 5 view .LVU107
+ 439 0162 FFF7FEFF 		bl	readPdu
+ 440              	.LVL37:
+ 118:Core/Src/main.c **** 			    data=getPduData();
+ 441              		.loc 1 118 8 view .LVU108
+ 442              		.loc 1 118 13 is_stmt 0 view .LVU109
+ 443 0166 08A8     		add	r0, sp, #32
+ 444 0168 FFF7FEFF 		bl	getPduData
+ 445              	.LVL38:
+ 119:Core/Src/main.c **** 			    changedChannels=getPduChangedChannels();
+ 446              		.loc 1 119 8 is_stmt 1 view .LVU110
+ 447              		.loc 1 119 24 is_stmt 0 view .LVU111
+ 448 016c FFF7FEFF 		bl	getPduChangedChannels
+ 449              	.LVL39:
+ 450 0170 0646     		mov	r6, r0
+ 451              	.LVL40:
+ 120:Core/Src/main.c **** 			    command=normaliz(data.course,data.speed,data.rotate,data.corstrain,data.ELEV);
+ 452              		.loc 1 120 8 is_stmt 1 view .LVU112
+ 453              		.loc 1 120 16 is_stmt 0 view .LVU113
+ 454 0172 9DF83170 		ldrb	r7, [sp, #49]	@ zero_extendqisi2
+ 455 0176 0097     		str	r7, [sp]
+ 456 0178 0A9B     		ldr	r3, [sp, #40]
+ 457 017a 0B9A     		ldr	r2, [sp, #44]
+ 458 017c 0999     		ldr	r1, [sp, #36]
+ 459 017e 0898     		ldr	r0, [sp, #32]
+ 460              	.LVL41:
+ 461              		.loc 1 120 16 view .LVU114
+ 462 0180 FFF7FEFF 		bl	normaliz
+ 463              	.LVL42:
+ 464 0184 8DED050A 		vstr.32	s0, [sp, #20]
+ 465 0188 CDED060A 		vstr.32	s1, [sp, #24]
+ 466 018c 8DED071A 		vstr.32	s2, [sp, #28]
+ 121:Core/Src/main.c **** 			    if(changedChannels->gearChanged)
+ 467              		.loc 1 121 8 is_stmt 1 view .LVU115
+ 468              		.loc 1 121 26 is_stmt 0 view .LVU116
+ 469 0190 3379     		ldrb	r3, [r6, #4]	@ zero_extendqisi2
+ 470              		.loc 1 121 10 view .LVU117
+ 471 0192 53B1     		cbz	r3, .L20
+ 122:Core/Src/main.c **** 				{
+ 123:Core/Src/main.c **** 					sendData[0]=0x01;
+ 472              		.loc 1 123 6 is_stmt 1 view .LVU118
+ 473              		.loc 1 123 17 is_stmt 0 view .LVU119
+ 474 0194 0123     		movs	r3, #1
+ 475 0196 8DF80C30 		strb	r3, [sp, #12]
+ 124:Core/Src/main.c **** 					if(data.GEAR)
+ 476              		.loc 1 124 6 is_stmt 1 view .LVU120
+ 477              		.loc 1 124 13 is_stmt 0 view .LVU121
+ 478 019a 9DF83330 		ldrb	r3, [sp, #51]	@ zero_extendqisi2
+ 479              		.loc 1 124 8 view .LVU122
+ 480 019e 8BB1     		cbz	r3, .L21
+ 125:Core/Src/main.c **** 					{
+ 126:Core/Src/main.c **** 						motorStart(BROADCAST_ID);
+ 481              		.loc 1 126 7 is_stmt 1 view .LVU123
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 42
 
 
-  99:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 393              		.loc 1 99 6 is_stmt 1 view .LVU120
-  99:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 394              		.loc 1 99 37 is_stmt 0 view .LVU121
- 395 012a 1A0C     		lsrs	r2, r3, #16
-  99:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
- 396              		.loc 1 99 17 view .LVU122
- 397 012c 8DF81220 		strb	r2, [sp, #18]
- 100:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 398              		.loc 1 100 6 is_stmt 1 view .LVU123
- 100:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 399              		.loc 1 100 37 is_stmt 0 view .LVU124
- 400 0130 1B0E     		lsrs	r3, r3, #24
- 401              	.LVL28:
- 100:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
- 402              		.loc 1 100 17 view .LVU125
- 403 0132 8DF81330 		strb	r3, [sp, #19]
- 101:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
- 404              		.loc 1 101 6 is_stmt 1 view .LVU126
- 405 0136 0222     		movs	r2, #2
- 406 0138 0821     		movs	r1, #8
- 407 013a 03A8     		add	r0, sp, #12
- 408 013c FFF7FEFF 		bl	canWrite
- 409              	.LVL29:
- 102:Core/Src/main.c **** 				}
- 410              		.loc 1 102 6 view .LVU127
- 102:Core/Src/main.c **** 				}
- 411              		.loc 1 102 43 is_stmt 0 view .LVU128
- 412 0140 0023     		movs	r3, #0
- 413 0142 2370     		strb	r3, [r4]
- 414 0144 B5E7     		b	.L16
- 415              	.LVL30:
- 416              	.L25:
- 106:Core/Src/main.c **** 					changedChannels->mixChanged=0;
- 417              		.loc 1 106 6 is_stmt 1 view .LVU129
- 418 0146 0121     		movs	r1, #1
- 419 0148 9DF83400 		ldrb	r0, [sp, #52]	@ zero_extendqisi2
- 420 014c FFF7FEFF 		bl	motorSetCommunicationMode
- 421              	.LVL31:
- 107:Core/Src/main.c **** 				}
- 422              		.loc 1 107 6 view .LVU130
- 107:Core/Src/main.c **** 				}
- 423              		.loc 1 107 33 is_stmt 0 view .LVU131
- 424 0150 0023     		movs	r3, #0
- 425 0152 6371     		strb	r3, [r4, #5]
- 426 0154 B0E7     		b	.L17
- 427              	.L27:
- 428 0156 00BF     		.align	2
- 429              	.L26:
- 430 0158 08001C01 		.word	18612232
- 431 015c A0860100 		.word	100000
- 432 0160 00512502 		.word	36000000
- 433 0164 00000000 		.word	.LANCHOR0
- 434 0168 00000000 		.word	.LANCHOR1
- 435 016c 00000000 		.word	flag
- 436 0170 00FF7F47 		.word	1199570688
- 437              		.cfi_endproc
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 41
+ 482 01a0 0120     		movs	r0, #1
+ 483 01a2 FFF7FEFF 		bl	motorStart
+ 484              	.LVL43:
+ 485              	.L22:
+ 127:Core/Src/main.c **** 					}
+ 128:Core/Src/main.c **** 					else
+ 129:Core/Src/main.c **** 					{
+ 130:Core/Src/main.c **** 						motorStop(BROADCAST_ID);
+ 131:Core/Src/main.c **** 					}
+ 132:Core/Src/main.c **** 					changedChannels->gearChanged=0;
+ 486              		.loc 1 132 6 view .LVU124
+ 487              		.loc 1 132 34 is_stmt 0 view .LVU125
+ 488 01a6 0023     		movs	r3, #0
+ 489 01a8 3371     		strb	r3, [r6, #4]
+ 490              	.L20:
+ 133:Core/Src/main.c **** 				}
+ 134:Core/Src/main.c **** 				if(changedChannels->motionControlChanged)
+ 491              		.loc 1 134 5 is_stmt 1 view .LVU126
+ 492              		.loc 1 134 23 is_stmt 0 view .LVU127
+ 493 01aa 3378     		ldrb	r3, [r6]	@ zero_extendqisi2
+ 494              		.loc 1 134 7 view .LVU128
+ 495 01ac 73B9     		cbnz	r3, .L33
+ 496              	.L23:
+ 135:Core/Src/main.c **** 				{
+ 136:Core/Src/main.c **** 					temp=(int16_t)((float)(command.V*2048));
+ 137:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
+ 138:Core/Src/main.c **** 					sendData[1]=(temp>>8);
+ 139:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 140:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 141:Core/Src/main.c **** 					sendData[3]=(temp>>8);
+ 142:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 143:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 144:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
+ 145:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 146:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 147:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 148:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
+ 149:Core/Src/main.c **** 				}
+ 150:Core/Src/main.c **** 				// if(changedChannels->mixChanged)
+ 151:Core/Src/main.c **** 				// {
+ 152:Core/Src/main.c **** 				// 	motorSetCommunicationMode(data.MIX,BROADCAST_ID);
+ 153:Core/Src/main.c **** 				// 	changedChannels->mixChanged=0;
+ 154:Core/Src/main.c **** 				// }
+ 155:Core/Src/main.c **** 				if(changedChannels->elevChanged)
+ 497              		.loc 1 155 5 is_stmt 1 view .LVU129
+ 498              		.loc 1 155 23 is_stmt 0 view .LVU130
+ 499 01ae B378     		ldrb	r3, [r6, #2]	@ zero_extendqisi2
+ 500              		.loc 1 155 7 view .LVU131
+ 501 01b0 002B     		cmp	r3, #0
+ 502 01b2 44D1     		bne	.L34
+ 503              	.L24:
+ 156:Core/Src/main.c **** 				{
+ 157:Core/Src/main.c **** 					motorSetMotionMode(data.ELEV,BROADCAST_ID);
+ 158:Core/Src/main.c **** 					changedChannels->elevChanged=0;
+ 159:Core/Src/main.c **** 				}
+ 160:Core/Src/main.c **** 				if(changedChannels->mixChanged)
+ 504              		.loc 1 160 5 is_stmt 1 view .LVU132
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 43
 
 
- 438              	.LFE128:
- 440              		.global	state
- 441              		.section	.bss.TimingDelay,"aw",%nobits
- 442              		.align	2
- 445              	TimingDelay:
- 446 0000 00000000 		.space	4
- 447              		.section	.bss.animationTImer,"aw",%nobits
- 448              		.align	1
- 449              		.set	.LANCHOR1,. + 0
- 452              	animationTImer:
- 453 0000 0000     		.space	2
- 454              		.section	.bss.state,"aw",%nobits
- 457              	state:
- 458 0000 00       		.space	1
- 459              		.section	.bss.testTimer,"aw",%nobits
- 460              		.align	1
- 461              		.set	.LANCHOR0,. + 0
- 464              	testTimer:
- 465 0000 0000     		.space	2
- 466              		.text
- 467              	.Letext0:
- 468              		.file 3 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h"
- 469              		.file 4 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\machine\\_defau
- 470              		.file 5 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
- 471              		.file 6 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
- 472              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
- 473              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
- 474              		.file 9 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
- 475              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\reent.h"
- 476              		.file 11 "Core/Inc/pdu.h"
- 477              		.file 12 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
- 478              		.file 13 "Core/Inc/rcc.h"
- 479              		.file 14 "Core/Inc/can.h"
- 480              		.file 15 "Core/Inc/LedControl.h"
- 481              		.file 16 "Core/Inc/animation.h"
- 482              		.file 17 "Core/Inc/MotorCommunication.h"
-ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s 			page 42
+ 505              		.loc 1 160 23 is_stmt 0 view .LVU133
+ 506 01b4 7379     		ldrb	r3, [r6, #5]	@ zero_extendqisi2
+ 507              		.loc 1 160 7 view .LVU134
+ 508 01b6 002B     		cmp	r3, #0
+ 509 01b8 3FF477AF 		beq	.L9
+ 161:Core/Src/main.c **** 				{
+ 162:Core/Src/main.c **** 					lightAnimation=255;
+ 510              		.loc 1 162 6 is_stmt 1 view .LVU135
+ 511              	.LVL44:
+ 163:Core/Src/main.c **** 					changedChannels->mixChanged=0;
+ 512              		.loc 1 163 6 view .LVU136
+ 513              		.loc 1 163 33 is_stmt 0 view .LVU137
+ 514 01bc 0023     		movs	r3, #0
+ 515 01be 7371     		strb	r3, [r6, #5]
+ 162:Core/Src/main.c **** 					changedChannels->mixChanged=0;
+ 516              		.loc 1 162 20 view .LVU138
+ 517 01c0 FF24     		movs	r4, #255
+ 518 01c2 72E7     		b	.L9
+ 519              	.LVL45:
+ 520              	.L21:
+ 130:Core/Src/main.c **** 					}
+ 521              		.loc 1 130 7 is_stmt 1 view .LVU139
+ 522 01c4 0120     		movs	r0, #1
+ 523 01c6 FFF7FEFF 		bl	motorStop
+ 524              	.LVL46:
+ 525 01ca ECE7     		b	.L22
+ 526              	.L33:
+ 136:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
+ 527              		.loc 1 136 6 view .LVU140
+ 136:Core/Src/main.c **** 					sendData[0]=temp&0x00FF;
+ 528              		.loc 1 136 11 is_stmt 0 view .LVU141
+ 529 01cc DDED057A 		vldr.32	s15, [sp, #20]
+ 530 01d0 B0EE677A 		vmov.f32	s14, s15
+ 531 01d4 BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
+ 532 01d8 17EE103A 		vmov	r3, s14	@ int
+ 533              	.LVL47:
+ 137:Core/Src/main.c **** 					sendData[1]=(temp>>8);
+ 534              		.loc 1 137 6 is_stmt 1 view .LVU142
+ 137:Core/Src/main.c **** 					sendData[1]=(temp>>8);
+ 535              		.loc 1 137 17 is_stmt 0 view .LVU143
+ 536 01dc 8DF80C30 		strb	r3, [sp, #12]
+ 138:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 537              		.loc 1 138 6 is_stmt 1 view .LVU144
+ 138:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 538              		.loc 1 138 17 is_stmt 0 view .LVU145
+ 539 01e0 C3F30723 		ubfx	r3, r3, #8, #8
+ 540              	.LVL48:
+ 138:Core/Src/main.c **** 					temp = (int16_t)((float)command.gam*2048);
+ 541              		.loc 1 138 17 view .LVU146
+ 542 01e4 8DF80D30 		strb	r3, [sp, #13]
+ 139:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 543              		.loc 1 139 6 is_stmt 1 view .LVU147
+ 139:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 544              		.loc 1 139 13 is_stmt 0 view .LVU148
+ 545 01e8 DDED077A 		vldr.32	s15, [sp, #28]
+ 546 01ec B0EE677A 		vmov.f32	s14, s15
+ 547              	.LVL49:
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 44
+
+
+ 139:Core/Src/main.c **** 					sendData[2]=temp&0x00FF;
+ 548              		.loc 1 139 13 view .LVU149
+ 549 01f0 BEEEEA7A 		vcvt.s32.f32	s14, s14, #11
+ 550 01f4 17EE103A 		vmov	r3, s14	@ int
+ 551              	.LVL50:
+ 140:Core/Src/main.c **** 					sendData[3]=(temp>>8);
+ 552              		.loc 1 140 6 is_stmt 1 view .LVU150
+ 140:Core/Src/main.c **** 					sendData[3]=(temp>>8);
+ 553              		.loc 1 140 17 is_stmt 0 view .LVU151
+ 554 01f8 8DF80E30 		strb	r3, [sp, #14]
+ 141:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 555              		.loc 1 141 6 is_stmt 1 view .LVU152
+ 141:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 556              		.loc 1 141 17 is_stmt 0 view .LVU153
+ 557 01fc C3F30723 		ubfx	r3, r3, #8, #8
+ 558              	.LVL51:
+ 141:Core/Src/main.c **** 					tmpR = (int32_t)((float)command.R*65535);
+ 559              		.loc 1 141 17 view .LVU154
+ 560 0200 8DF80F30 		strb	r3, [sp, #15]
+ 142:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 561              		.loc 1 142 6 is_stmt 1 view .LVU155
+ 142:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 562              		.loc 1 142 39 is_stmt 0 view .LVU156
+ 563 0204 DDED067A 		vldr.32	s15, [sp, #24]
+ 564 0208 9FED167A 		vldr.32	s14, .L35+24
+ 565              	.LVL52:
+ 142:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 566              		.loc 1 142 39 view .LVU157
+ 567 020c 67EE877A 		vmul.f32	s15, s15, s14
+ 142:Core/Src/main.c **** 					sendData[4]=tmpR & 0x000000FF;
+ 568              		.loc 1 142 13 view .LVU158
+ 569 0210 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 570 0214 17EE903A 		vmov	r3, s15	@ int
+ 571              	.LVL53:
+ 143:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
+ 572              		.loc 1 143 6 is_stmt 1 view .LVU159
+ 143:Core/Src/main.c **** 					sendData[5]=(tmpR & 0x0000FF00)>>8;
+ 573              		.loc 1 143 17 is_stmt 0 view .LVU160
+ 574 0218 8DF81030 		strb	r3, [sp, #16]
+ 144:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 575              		.loc 1 144 6 is_stmt 1 view .LVU161
+ 144:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 576              		.loc 1 144 37 is_stmt 0 view .LVU162
+ 577 021c 1A0A     		lsrs	r2, r3, #8
+ 144:Core/Src/main.c **** 					sendData[6]=(tmpR & 0x00FF0000)>>16;
+ 578              		.loc 1 144 17 view .LVU163
+ 579 021e 8DF81120 		strb	r2, [sp, #17]
+ 145:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 580              		.loc 1 145 6 is_stmt 1 view .LVU164
+ 145:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 581              		.loc 1 145 37 is_stmt 0 view .LVU165
+ 582 0222 1A0C     		lsrs	r2, r3, #16
+ 145:Core/Src/main.c **** 					sendData[7]=(tmpR & 0xFF000000)>>24;
+ 583              		.loc 1 145 17 view .LVU166
+ 584 0224 8DF81220 		strb	r2, [sp, #18]
+ 146:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 585              		.loc 1 146 6 is_stmt 1 view .LVU167
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 45
+
+
+ 146:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 586              		.loc 1 146 37 is_stmt 0 view .LVU168
+ 587 0228 1B0E     		lsrs	r3, r3, #24
+ 588              	.LVL54:
+ 146:Core/Src/main.c **** 					canWrite(sendData,8,0x02);
+ 589              		.loc 1 146 17 view .LVU169
+ 590 022a 8DF81330 		strb	r3, [sp, #19]
+ 147:Core/Src/main.c **** 					changedChannels->motionControlChanged=0;
+ 591              		.loc 1 147 6 is_stmt 1 view .LVU170
+ 592 022e 0222     		movs	r2, #2
+ 593 0230 0821     		movs	r1, #8
+ 594 0232 03A8     		add	r0, sp, #12
+ 595 0234 FFF7FEFF 		bl	canWrite
+ 596              	.LVL55:
+ 148:Core/Src/main.c **** 				}
+ 597              		.loc 1 148 6 view .LVU171
+ 148:Core/Src/main.c **** 				}
+ 598              		.loc 1 148 43 is_stmt 0 view .LVU172
+ 599 0238 0023     		movs	r3, #0
+ 600 023a 3370     		strb	r3, [r6]
+ 601 023c B7E7     		b	.L23
+ 602              	.LVL56:
+ 603              	.L34:
+ 157:Core/Src/main.c **** 					changedChannels->elevChanged=0;
+ 604              		.loc 1 157 6 is_stmt 1 view .LVU173
+ 605 023e 0121     		movs	r1, #1
+ 606 0240 3846     		mov	r0, r7
+ 607 0242 FFF7FEFF 		bl	motorSetMotionMode
+ 608              	.LVL57:
+ 158:Core/Src/main.c **** 				}
+ 609              		.loc 1 158 6 view .LVU174
+ 158:Core/Src/main.c **** 				}
+ 610              		.loc 1 158 34 is_stmt 0 view .LVU175
+ 611 0246 0023     		movs	r3, #0
+ 612 0248 B370     		strb	r3, [r6, #2]
+ 613 024a B3E7     		b	.L24
+ 614              	.L36:
+ 615              		.align	2
+ 616              	.L35:
+ 617 024c 08001C01 		.word	18612232
+ 618 0250 A0860100 		.word	100000
+ 619 0254 00512502 		.word	36000000
+ 620 0258 00000000 		.word	.LANCHOR0
+ 621 025c 00000000 		.word	flag
+ 622 0260 00000000 		.word	.LANCHOR1
+ 623 0264 00FF7F47 		.word	1199570688
+ 624              		.cfi_endproc
+ 625              	.LFE128:
+ 627              		.global	state
+ 628              		.section	.bss.TimingDelay,"aw",%nobits
+ 629              		.align	2
+ 632              	TimingDelay:
+ 633 0000 00000000 		.space	4
+ 634              		.section	.bss.animationTImer,"aw",%nobits
+ 635              		.align	1
+ 636              		.set	.LANCHOR1,. + 0
+ 639              	animationTImer:
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 46
+
+
+ 640 0000 0000     		.space	2
+ 641              		.section	.bss.state,"aw",%nobits
+ 644              	state:
+ 645 0000 00       		.space	1
+ 646              		.section	.bss.testTimer,"aw",%nobits
+ 647              		.align	1
+ 648              		.set	.LANCHOR0,. + 0
+ 651              	testTimer:
+ 652 0000 0000     		.space	2
+ 653              		.text
+ 654              	.Letext0:
+ 655              		.file 3 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h"
+ 656              		.file 4 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\machine\\_defau
+ 657              		.file 5 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 658              		.file 6 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h"
+ 659              		.file 7 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\lock.h"
+ 660              		.file 8 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\_types.h"
+ 661              		.file 9 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\lib\\gcc\\arm-none-eabi\\9.2.1\\include
+ 662              		.file 10 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\sys\\reent.h"
+ 663              		.file 11 "Core/Inc/pdu.h"
+ 664              		.file 12 "c:\\work\\arm\\xpack-arm-none-eabi-gcc-9.2.1-1.1\\arm-none-eabi\\include\\stdlib.h"
+ 665              		.file 13 "Core/Inc/rcc.h"
+ 666              		.file 14 "Core/Inc/can.h"
+ 667              		.file 15 "Core/Inc/LedControl.h"
+ 668              		.file 16 "Core/Inc/animation.h"
+ 669              		.file 17 "Core/Inc/MotorCommunication.h"
+ARM GAS  C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s 			page 47
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:18     .text.TIM6_DAC1_IRQHandler:0000000000000000 $t
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:26     .text.TIM6_DAC1_IRQHandler:0000000000000000 TIM6_DAC1_IRQHandler
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:65     .text.TIM6_DAC1_IRQHandler:0000000000000028 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:72     .text.timer6Init:0000000000000000 $t
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:79     .text.timer6Init:0000000000000000 timer6Init
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:133    .text.timer6Init:0000000000000030 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:140    .text.main:0000000000000000 $t
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:147    .text.main:0000000000000000 main
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:430    .text.main:0000000000000158 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:457    .bss.state:0000000000000000 state
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:442    .bss.TimingDelay:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:445    .bss.TimingDelay:0000000000000000 TimingDelay
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:448    .bss.animationTImer:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:452    .bss.animationTImer:0000000000000000 animationTImer
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:458    .bss.state:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:460    .bss.testTimer:0000000000000000 $d
-C:\Users\DMFILA~1\AppData\Local\Temp\ccBVb43e.s:464    .bss.testTimer:0000000000000000 testTimer
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:18     .text.TIM6_DAC1_IRQHandler:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:26     .text.TIM6_DAC1_IRQHandler:0000000000000000 TIM6_DAC1_IRQHandler
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:65     .text.TIM6_DAC1_IRQHandler:0000000000000028 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:72     .text.timer6Init:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:79     .text.timer6Init:0000000000000000 timer6Init
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:133    .text.timer6Init:0000000000000030 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:140    .text.main:0000000000000000 $t
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:147    .text.main:0000000000000000 main
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:617    .text.main:000000000000024c $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:644    .bss.state:0000000000000000 state
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:629    .bss.TimingDelay:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:632    .bss.TimingDelay:0000000000000000 TimingDelay
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:635    .bss.animationTImer:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:639    .bss.animationTImer:0000000000000000 animationTImer
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:645    .bss.state:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:647    .bss.testTimer:0000000000000000 $d
+C:\Users\DMFILA~1\AppData\Local\Temp\ccmc1fzY.s:651    .bss.testTimer:0000000000000000 testTimer
 
 UNDEFINED SYMBOLS
 RccClockInit
@@ -2467,6 +2757,8 @@ canInit
 sbusInit
 ledInit
 sbubRead
+ledSetBlockRGB
+ledUpdate
 animationLoop
 pduGetError
 decodeSbus
@@ -2475,8 +2767,7 @@ getPduData
 getPduChangedChannels
 normaliz
 motorStart
-motorSetMotionMode
 motorStop
 canWrite
-motorSetCommunicationMode
+motorSetMotionMode
 flag

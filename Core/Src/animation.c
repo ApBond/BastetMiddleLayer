@@ -48,7 +48,6 @@ void animationLoop(void)
 	else
 	hueAnimation++;
 	ledSetBlockHSV(0,LEDS_COUNT,hueAnimation,255,255);
-	ledUpdate();
 
 }
 
